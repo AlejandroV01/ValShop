@@ -3,6 +3,7 @@ import { createTheme } from '@mui/material/styles'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import CartPage from 'scenes/cartPage'
 import HomePage from 'scenes/homePage'
 import LoginPage from 'scenes/loginPage'
 import Navbar from 'scenes/navbar'
@@ -21,6 +22,7 @@ function App() {
             <Route path='/' element={<LoginPage />}></Route>
             <Route path='/home' element={<HomePage />}></Route>
             <Route path='/profile/:userId' element={<ProfilePage />}></Route>
+            <Route path='/cart' element={<CartPage />}></Route>
           </Routes>
         </ThemeProvider>
       </BrowserRouter>
