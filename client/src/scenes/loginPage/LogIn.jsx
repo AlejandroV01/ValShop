@@ -2,6 +2,8 @@ import { Email, Key, RememberMe, Visibility, VisibilityOff } from '@mui/icons-ma
 import { Box, Button, FormControl, Icon, IconButton, InputAdornment, InputLabel, Link, OutlinedInput, Typography, useTheme } from '@mui/material'
 import FlexBetween from 'components/FlexBetween'
 import React, { useState } from 'react'
+import { colorTokens } from '../../theme'
+
 const LogIn = ({ toggleLoginPage }) => {
   const theme = useTheme()
   const neutralLight = theme.palette.neutral.light
@@ -13,7 +15,7 @@ const LogIn = ({ toggleLoginPage }) => {
 
   return (
     <>
-      <Box display='flex' flexDirection='column' alignItems='flex-start'>
+      <Box display='flex' flexDirection='column' alignItems='flex-start' zIndex={10}>
         <Typography variant='h5' color={theme.palette.neutral.mediumMain}>
           WELCOME BACK
         </Typography>
@@ -36,7 +38,7 @@ const LogIn = ({ toggleLoginPage }) => {
           </Link>
         </Typography>
       </Box>
-      <Box display='flex' flexDirection='column' gap='0.75rem'>
+      <Box display='flex' flexDirection='column' gap='0.75rem' zIndex={10}>
         <FormControl>
           <InputLabel>Email</InputLabel>
           <OutlinedInput

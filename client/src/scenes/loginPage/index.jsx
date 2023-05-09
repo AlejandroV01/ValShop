@@ -1,5 +1,18 @@
 import { Email, Key, RememberMe, Visibility, VisibilityOff } from '@mui/icons-material'
-import { Box, Button, FormControl, Icon, IconButton, InputAdornment, InputLabel, Link, OutlinedInput, Typography, useTheme } from '@mui/material'
+import {
+  Box,
+  Button,
+  FormControl,
+  Icon,
+  IconButton,
+  InputAdornment,
+  InputLabel,
+  Link,
+  OutlinedInput,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material'
 import FlexBetween from 'components/FlexBetween'
 import { useState } from 'react'
 import LogIn from './LogIn'
@@ -16,8 +29,10 @@ const LoginPage = () => {
     setShowLoginPage(!showLoginPage)
   }
   return (
-    <Box display='flex' justifyContent='flex-start' flexDirection='column' padding={'5rem 6%'} maxWidth='700px'>
-      {!showLoginPage ? <SignUp toggleLoginPage={toggleLoginPage} /> : <LogIn toggleLoginPage={toggleLoginPage} />}
+    <Box width='100%' height='calc(100% - 80px)' display='flex'>
+      <Box display='flex' justifyContent='flex-start' flexDirection='column' padding={'5rem 6%'}>
+        {!showLoginPage ? <SignUp toggleLoginPage={toggleLoginPage} /> : <LogIn toggleLoginPage={toggleLoginPage} />}
+      </Box>
     </Box>
   )
 }
