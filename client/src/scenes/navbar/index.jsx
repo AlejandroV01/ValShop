@@ -4,13 +4,15 @@ import FlexBetween from 'components/FlexBetween'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { setLogout, setMode } from 'state'
+import { setCart, setLogout, setMode } from 'state'
 
 const Navbar = () => {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false)
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const user = useSelector(state => state.user)
+  const likes = useSelector(state => state.likes)
+  const cart = useSelector(state => state.cart)
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)')
   const theme = useTheme()
   const neutralLight = theme.palette.neutral.light
@@ -19,7 +21,6 @@ const Navbar = () => {
   const primaryLight = theme.palette.primary.light
   const alt = theme.palette.background.alt
   // const fullName = `${user.firstName} ${user.lastName}`
-
   return (
     <FlexBetween padding={'1rem 6%'} backgroundColor={alt}>
       <FlexBetween gap='1.75rem'>
@@ -50,12 +51,12 @@ const Navbar = () => {
       {isNonMobileScreens ? (
         <FlexBetween gap='2rem'>
           <IconButton onClick={() => navigate('/cart')}>
-            <Badge badgeContent={2} color='primary'>
+            <Badge badgeContent={likes.length} color='primary'>
               <Favorite sx={{ color: dark, fontSize: '25px' }} />
             </Badge>
           </IconButton>
           <IconButton onClick={() => navigate('/cart')}>
-            <Badge badgeContent={2} color='primary'>
+            <Badge badgeContent={cart.length} color='primary'>
               <ShoppingCart sx={{ color: dark, fontSize: '25px' }} />
             </Badge>
           </IconButton>

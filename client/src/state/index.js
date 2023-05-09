@@ -4,7 +4,8 @@ const initialState = {
   mode: 'light',
   user: null,
   token: null,
-  cart: [],
+  cart: ['item'],
+  likes: [],
 }
 
 export const authSlice = createSlice({
@@ -32,8 +33,11 @@ export const authSlice = createSlice({
     setCart: (state, action) => {
       state.cart = action.payload.cart
     },
+    setLikes: (state, action) => {
+      state.likes = action.payload.likes
+    },
   },
 })
 
-export const { setMode, setLogin, setLogout, setFavoriteSkins, setCart } = authSlice.actions
+export const { setMode, setLogin, setLogout, setFavoriteSkins, setCart, setLikes } = authSlice.actions
 export default authSlice.reducer
