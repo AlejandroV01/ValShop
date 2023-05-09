@@ -39,7 +39,7 @@ const Navbar = () => {
           ValShop
         </Typography>
         {isNonMobileScreens && (
-          <FlexBetween backgroundColor={neutralLight} borderRadius={'9px'} gap={'3rem'} padding={'0.1rem 1.5rem'}>
+          <FlexBetween backgroundColor={neutralLight} borderRadius={'4px'} gap={'3rem'} padding={'0.1rem 1.5rem'}>
             <InputBase placeholder='Search...' />
             <IconButton>
               <Search />
@@ -50,7 +50,7 @@ const Navbar = () => {
       {/* DESKTOP NAV */}
       {isNonMobileScreens ? (
         <FlexBetween gap='2rem'>
-          <IconButton onClick={() => navigate('/cart')}>
+          <IconButton onClick={() => navigate('/likes')}>
             <Badge badgeContent={likes.length} color='primary'>
               <Favorite sx={{ color: dark, fontSize: '25px' }} />
             </Badge>
