@@ -42,8 +42,9 @@ const SkinContainer = ({
         <IconButton
           sx={{
             backgroundColor: theme.palette.neutral.medium,
-            color: theme.palette.neutral.dark,
-            '&:hover': { backgroundColor: '#F0F0F0' },
+            color: '#FF6363',
+            backgroundColor: '#FFD7D7',
+            '&:hover': { backgroundColor: '#FFB0B0' },
           }}
         >
           <Favorite />

@@ -81,7 +81,7 @@ const Navbar = () => {
               }}
               input={<InputBase />}
             >
-              <MenuItem value='Ale Vera'>
+              <MenuItem value='Ale Vera' onClick={() => navigate('/profile/999')}>
                 <Typography>Ale Vera</Typography>
               </MenuItem>
               <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
