@@ -17,10 +17,12 @@ const SkinContainer = ({
       display='flex'
       flexDirection='column'
       alignItems='flex-start'
+      justifyContent={'space-evenly'}
       backgroundColor={neutralLight}
       borderRadius='4px'
       padding='1rem 1rem'
       maxWidth='380px'
+      height={'230px'}
     >
       <img src={picture} alt={name} style={{ borderRadius: '4px', width: `${width}px` }} id='i' />
       <Box display='flex' alignItems='center' justifyContent='space-between' width='100%'>
