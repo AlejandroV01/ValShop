@@ -1,14 +1,17 @@
-import { Avatar, Badge, Box, FormControl, Icon, IconButton, InputBase, MenuItem, Select, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { CalendarMonth } from '@mui/icons-material'
+import { Avatar, Box, Chip, Divider, InputBase, Item, MenuItem, Paper, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import UserAvatar from 'components/UserAvatar'
 const ProfilePage = () => {
   const theme = useTheme()
   const background = theme.palette.background.default
+  const dark = theme.palette.neutral.dark
+  const gridStacked = useMediaQuery('(max-width: 1396px)')
 
   return (
     <>
       <Box
         width='100%'
-        sx={{ backgroundImage: "url('/assets/tokyo.jpg')", backgroundPosition: 'center', position: 'relative' }}
+        sx={{ backgroundImage: "url('/assets/tokyo.jpg')", backgroundPosition: 'center bottom', position: 'relative' }}
         height={350}
         marginBottom='2rem'
       >
@@ -21,34 +24,66 @@ const ProfilePage = () => {
         </Box>
       </Box>
 
-      <Box width='100%' display='flex' padding={'1rem 6%'} height='calc(100% - 80px)'>
-        <Box flexGrow={0.35} backgroundColor='red' height='100%' display='flex' flexDirection='column'>
-          <Typography variant='h2' marginBottom='1rem'>
-            Alejandro Vera
-          </Typography>
-          <Typography variant='h5' gutterBottom>
+      <Box width='100%' display='flex' padding={'1rem 6%'} flexWrap='wrap' gap='2rem'>
+        <Box flexGrow={0.2} backgroundColor='red' height='100%' display='flex' flexDirection='column' gap='1rem'>
+          <Typography variant='h2'>Alejandro Vera</Typography>
+          <Typography variant='h5' color={theme.palette.neutral.main}>
             @randomUserName
           </Typography>
-          <Box display='grid' gridTemplateColumns='repeat(2, minmax(200px, 200px))' border='1px solid black' width='fit-content' p='1rem'>
+          <Box
+            display='grid'
+            gridTemplateColumns='repeat(auto-fit, minmax(175px, 1fr))'
+            borderRadius='4px'
+            width='100%'
+            p='1rem'
+            backgroundColor={theme.palette.neutral.light}
+          >
             <Box display='flex' flexDirection='column'>
-              <Typography>{Math.floor(Math.random() * 35)}</Typography>
-              <Typography>Liked Skins</Typography>
+              <Typography variant='h4'>{Math.floor(Math.random() * 35)}</Typography>
+              <Typography variant='h6'>Liked Skins</Typography>
+              <Divider />
             </Box>
             <Box display='flex' flexDirection='column'>
-              <Typography>{Math.floor(Math.random() * 35000)}</Typography>
-              <Typography>Total Value</Typography>
+              <Typography variant='h4'>{Math.floor(Math.random() * 35000)}</Typography>
+              <Typography variant='h6'>Total Value</Typography>
+              <Divider />
             </Box>
             <Box display='flex' flexDirection='column'>
-              <Typography>{Math.floor(Math.random() * 20)}</Typography>
-              <Typography>Friends</Typography>
+              <Typography variant='h4'>{Math.floor(Math.random() * 20)}</Typography>
+              <Typography variant='h6'>Friends</Typography>
+              {gridStacked && <Divider />}
             </Box>
             <Box display='flex' flexDirection='column'>
-              <Typography>{Math.floor(Math.random() * 35)}</Typography>
-              <Typography>Owned Skins</Typography>
+              <Typography variant='h4'>{Math.floor(Math.random() * 35)}</Typography>
+              <Typography variant='h6'>Owned Skins</Typography>
             </Box>
           </Box>
+          <Chip icon={<CalendarMonth />} color='primary' label='Created Dec 08, 2022' sx={{ width: 'fit-content' }} />
         </Box>
-        <Box flexGrow={0.65} backgroundColor='blue' height='100%'></Box>
+        <Box flexGrow={0.8} height='100%'>
+          <Stack direction='row'>
+            <Stack direction='row' alignItems='center' gap='5px' borderBottom={`3px solid ${theme.palette.neutral.dark}`} p='0 1rem 7px 1rem'>
+              <Typography variant='h5'>Owned Skins</Typography>
+              <Box sx={{ width: 'fit-content', backgroundColor: theme.palette.primary.main }} p='0 0.5rem' borderRadius='4px'>
+                <Typography color={theme.palette.neutral.light}>{Math.floor(Math.random() * 35)}</Typography>
+              </Box>
+            </Stack>
+            <Stack direction='row' alignItems='center' gap='5px' borderBottom={`3px solid ${theme.palette.neutral.dark}`} p='0 1rem 7px 1rem'>
+              <Typography variant='h5'>Favorite Skins</Typography>
+              <Box sx={{ width: 'fit-content', backgroundColor: theme.palette.primary.main }} p='0 0.5rem' borderRadius='4px'>
+                <Typography color={theme.palette.neutral.light}>{Math.floor(Math.random() * 35)}</Typography>
+              </Box>
+            </Stack>
+            <Stack
+              direction='row'
+              alignItems='center'
+              gap='5px'
+              borderBottom={`3px solid ${theme.palette.neutral.dark}`}
+              p='0 1rem 7px 1rem'
+              flexGrow={1}
+            ></Stack>
+          </Stack>
+        </Box>
       </Box>
     </>
   )
