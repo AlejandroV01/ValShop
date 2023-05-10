@@ -4,6 +4,7 @@ import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import CartPage from 'scenes/cartPage'
+import ExplorePage from 'scenes/explorePage'
 import HomePage from 'scenes/homePage'
 import LikePage from 'scenes/likePage'
 import LoginPage from 'scenes/loginPage'
@@ -25,6 +26,7 @@ function App() {
             <Route path='/profile/:userId' element={<ProfilePage />}></Route>
             <Route path='/cart' element={<CartPage />}></Route>
             <Route path='/likes' element={<LikePage />}></Route>
+            <Route path='/explore' element={<ExplorePage />}></Route>
           </Routes>
         </ThemeProvider>
       </BrowserRouter>

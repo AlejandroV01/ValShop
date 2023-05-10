@@ -56,7 +56,7 @@ const HomePage = () => {
         </Box>
         {isNonMobileScreens && (
           <>
-            <Divider textAlign='center' sx={{ width: '100%', margin: '1rem 0' }}>
+            <Divider textAlign='left' sx={{ width: '100%', margin: '1rem 0' }}>
               <Typography variant='h4'>REAVER</Typography>
             </Divider>
             <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(380px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }} width={'100%'}>
@@ -65,7 +65,7 @@ const HomePage = () => {
               <SkinContainer></SkinContainer>
               <SkinContainer></SkinContainer>
             </Box>
-            <Divider textAlign='center' sx={{ width: '100%', margin: '1rem 0' }}>
+            <Divider textAlign='left' sx={{ width: '100%', margin: '1rem 0' }}>
               <Typography variant='h4'>GLITCHPOP</Typography>
             </Divider>
             <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(380px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }} width={'100%'}>
