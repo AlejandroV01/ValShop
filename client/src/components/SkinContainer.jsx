@@ -6,6 +6,7 @@ const SkinContainer = ({
   name = 'Reaver Vandal',
   price = '1775',
   picture = 'https://media.valorant-api.com/weaponskins/30388628-42f0-606c-82c0-73ad43de997f/displayicon.png',
+  width = 350,
 }) => {
   const theme = useTheme()
   const background = theme.palette.background.default
@@ -21,7 +22,7 @@ const SkinContainer = ({
       padding='1rem 1rem'
       maxWidth='380px'
     >
-      <img src={picture} alt={name} style={{ borderRadius: '4px', width: '350px' }} id='i' />
+      <img src={picture} alt={name} style={{ borderRadius: '4px', width: `${width}px` }} id='i' />
       <Box display='flex' alignItems='center' justifyContent='space-between' width='100%'>
         <Box display='flex' flexDirection='column'>
           <Box display='flex' alignItems='center'>
