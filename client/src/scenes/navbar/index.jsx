@@ -1,4 +1,4 @@
-import { Close, DarkMode, Favorite, LightMode, Menu, Search, ShoppingCart } from '@mui/icons-material'
+import { Close, DarkMode, Explore, Favorite, LightMode, Menu, Search } from '@mui/icons-material'
 import { Badge, Box, FormControl, Icon, IconButton, InputBase, MenuItem, Select, Typography, useMediaQuery, useTheme } from '@mui/material'
 import FlexBetween from 'components/FlexBetween'
 import { useState } from 'react'
@@ -55,9 +55,9 @@ const Navbar = () => {
               <Favorite sx={{ color: dark, fontSize: '25px' }} />
             </Badge>
           </IconButton>
-          <IconButton onClick={() => navigate('/cart')}>
+          <IconButton onClick={() => navigate('/explore')}>
             <Badge badgeContent={cart.length} color='primary'>
-              <ShoppingCart sx={{ color: dark, fontSize: '25px' }} />
+              <Explore sx={{ color: dark, fontSize: '25px' }} />
             </Badge>
           </IconButton>
           <IconButton onClick={() => dispatch(setMode())}>
