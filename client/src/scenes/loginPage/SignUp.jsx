@@ -14,8 +14,31 @@ import {
   useTheme,
 } from '@mui/material'
 import FlexBetween from 'components/FlexBetween'
+import { Formik } from 'formik'
 import React, { useState } from 'react'
+import Dropzone from 'react-dropzone'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { setLogin } from 'state'
+import * as yup from 'yup'
 import { colorTokens } from '../../theme'
+
+const registerSchema = yup.object().shape({
+  firstName: yup.string().required('required'),
+  lastName: yup.string().required('required'),
+  email: yup.string().email('invalid email').required('required'),
+  password: yup.string().required('required'),
+  picture: yup.string(),
+})
+
+const initialValuesRegister = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  password: '',
+  picture: '',
+}
+
 const SignUp = ({ toggleLoginPage }) => {
   const theme = useTheme()
   const neutralLight = theme.palette.neutral.light

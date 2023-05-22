@@ -13,6 +13,7 @@ import { themeSettings } from './theme'
 function App() {
   const mode = useSelector(state => state.mode)
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
+  const isAuth = Boolean(useSelector(state => state.token))
   return (
     <div className='app'>
       <BrowserRouter>
@@ -23,7 +24,7 @@ function App() {
             <Route path='/' element={<LoginPage />}></Route>
             <Route path='/home' element={<HomePage />}></Route>
             <Route path='/profile/:userId' element={<ProfilePage />}></Route>
-            <Route path='/likes' element={<LikePage />}></Route>
+            <Route path='/likes' element={isAuth ? <LikePage /> : <Navigate to='/' />}></Route>
             <Route path='/explore' element={<ExplorePage />}></Route>
           </Routes>
         </ThemeProvider>

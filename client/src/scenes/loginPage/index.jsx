@@ -9,12 +9,14 @@ import {
   InputLabel,
   Link,
   OutlinedInput,
+  Stack,
   Typography,
   useMediaQuery,
   useTheme,
 } from '@mui/material'
 import FlexBetween from 'components/FlexBetween'
 import { useState } from 'react'
+import Form from './Form'
 import LogIn from './LogIn'
 import SignUp from './SignUp'
 const LoginPage = () => {
@@ -29,11 +31,9 @@ const LoginPage = () => {
     setShowLoginPage(!showLoginPage)
   }
   return (
-    <Box width='100%' height='calc(100% - 80px)' display='flex'>
-      <Box display='flex' justifyContent='flex-start' flexDirection='column' padding={'5rem 6%'}>
-        {!showLoginPage ? <SignUp toggleLoginPage={toggleLoginPage} /> : <LogIn toggleLoginPage={toggleLoginPage} />}
-      </Box>
-    </Box>
+    <Stack width='100%' height='calc(100% - 80px)' display='flex' padding={'5rem 6%'} flexDirection={'row'} justifyContent={'center'}>
+      <Form></Form>
+    </Stack>
   )
 }
 

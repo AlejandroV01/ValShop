@@ -20,6 +20,7 @@ import {
 import Grid from '@mui/material/Unstable_Grid2' // Grid version 2
 import SkinContainer from 'components/SkinContainer'
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import SideBar from './SideBar'
 const ExplorePage = () => {
@@ -31,6 +32,7 @@ const ExplorePage = () => {
   const background = theme.palette.background.default
   const primaryLight = theme.palette.primary.light
   const alt = theme.palette.background.alt
+
   return (
     <Stack direction={'row'} padding={'1rem 6%'} gap={'1rem'}>
       <SideBar />

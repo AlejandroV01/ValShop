@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const UserSchema = new mongoose.Schema(
   {
-    userName: {
+    username: {
       type: String,
       required: true,
       min: 2,
@@ -27,7 +27,7 @@ const UserSchema = new mongoose.Schema(
       type: Array,
       default: [],
     },
-    cart: {
+    friends: {
       type: Array,
       default: [],
     },

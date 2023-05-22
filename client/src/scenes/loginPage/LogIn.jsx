@@ -2,8 +2,17 @@ import { Email, Key, RememberMe, Visibility, VisibilityOff } from '@mui/icons-ma
 import { Box, Button, FormControl, Icon, IconButton, InputAdornment, InputLabel, Link, OutlinedInput, Typography, useTheme } from '@mui/material'
 import FlexBetween from 'components/FlexBetween'
 import React, { useState } from 'react'
+import * as yup from 'yup'
 import { colorTokens } from '../../theme'
 
+const registerSchema = yup.object().shape({
+  email: yup.string().email('invalid email').required('required'),
+  password: yup.string().required('required'),
+})
+const initialValuesRegister = {
+  email: '',
+  password: '',
+}
 const LogIn = ({ toggleLoginPage }) => {
   const theme = useTheme()
   const neutralLight = theme.palette.neutral.light
