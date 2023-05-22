@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 const SideBar = () => {
   const [expandWeapons, setExpandWeapons] = useState(false)
   const [expandSkins, setExpandSkins] = useState(false)
+  const theme = useTheme()
 
   const sideBarContent = {
     Weapons: [
@@ -139,8 +140,10 @@ const SideBar = () => {
       ],
     ],
   }
+  const background = theme.palette.background.alt
+
   return (
-    <Stack divider={<Divider />} direction={'column'} flexGrow={0.05}>
+    <Stack divider={<Divider />} direction={'column'} flexGrow={0.05} sx={{ backgroundColor: background }} borderRadius={'0.25rem'}>
       <Typography variant='h5'>Filter</Typography>
       <Stack direction={'column'}>
         <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>

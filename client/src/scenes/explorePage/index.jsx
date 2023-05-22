@@ -17,10 +17,11 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material'
+import Grid from '@mui/material/Unstable_Grid2' // Grid version 2
+import SkinContainer from 'components/SkinContainer'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import SideBar from './SideBar'
-
 const ExplorePage = () => {
   const [currentSort, setCurrentSort] = useState('Recent')
   const theme = useTheme()
@@ -31,13 +32,13 @@ const ExplorePage = () => {
   const primaryLight = theme.palette.primary.light
   const alt = theme.palette.background.alt
   return (
-    <Stack direction={'row'}>
+    <Stack direction={'row'} padding={'1rem 6%'} gap={'1rem'}>
       <SideBar />
-      <Stack flexGrow={0.95}>
-        <Stack direction={'row'} justifyContent={'space-between'}>
+      <Stack flexGrow={0.95} direction={'column'} gap={'1rem'}>
+        <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
           <Typography>Showing 9 results from a total 37</Typography>
-          <Stack direction={'row'} alignItems={'center'}>
-            <Typography>Sort By</Typography>
+          <Stack direction={'row'} alignItems={'center'} gap='1rem'>
+            <Typography>Sort By:</Typography>
             <FormControl variant='standard' value={currentSort}>
               <Select
                 value={currentSort}
@@ -75,6 +76,23 @@ const ExplorePage = () => {
             <Chip label='Deletable' onDelete={() => console.log('deleted')} />
           </Stack>
         </Stack>
+        <Grid container spacing={'1rem'}>
+          <Grid xs={3}>
+            <SkinContainer width={300}></SkinContainer>
+          </Grid>
+          <Grid xs={3}>
+            <SkinContainer width={300}></SkinContainer>
+          </Grid>
+          <Grid xs={3}>
+            <SkinContainer width={300}></SkinContainer>
+          </Grid>
+          <Grid xs={3}>
+            <SkinContainer width={300}></SkinContainer>
+          </Grid>
+          <Grid xs={3}>
+            <SkinContainer width={300}></SkinContainer>
+          </Grid>
+        </Grid>
       </Stack>
       {/**START A GRID IMPLEMENT */}
     </Stack>
