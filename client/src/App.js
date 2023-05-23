@@ -21,10 +21,10 @@ function App() {
           <CssBaseline />
           <Navbar />
           <Routes>
-            <Route path='/' element={<LoginPage />}></Route>
-            <Route path='/home' element={<HomePage />}></Route>
-            <Route path='/profile/:userId' element={<ProfilePage />}></Route>
-            <Route path='/likes' element={isAuth ? <LikePage /> : <Navigate to='/' />}></Route>
+            <Route path='/login' element={<LoginPage />}></Route>
+            <Route path='/' element={<HomePage />}></Route>
+            <Route path='/profile/:username' element={isAuth ? <ProfilePage /> : <Navigate to='/login' />}></Route>
+            <Route path='/likes' element={isAuth ? <LikePage /> : <Navigate to='/login' />}></Route>
             <Route path='/explore' element={<ExplorePage />}></Route>
           </Routes>
         </ThemeProvider>

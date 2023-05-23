@@ -31,6 +31,18 @@ const UserSchema = new mongoose.Schema(
       type: Array,
       default: [],
     },
+    ownedSkins: {
+      type: Array,
+      default: [],
+    },
+    likedSkins: {
+      type: Array,
+      default: [],
+    },
+    totalValue: {
+      type: Number,
+      default: 0,
+    },
   },
   { timestamps: true }
 )

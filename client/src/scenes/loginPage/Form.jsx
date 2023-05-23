@@ -37,22 +37,23 @@ const registerSchema = yup.object().shape({
   username: yup.string().required('required'),
   email: yup.string().email('invalid email').required('required'),
   password: yup.string().required('required'),
-  picture: yup.string(),
+  picturePath: yup.string(),
 })
 
 const initialValuesRegister = {
   username: '',
   email: '',
   password: '',
-  picture: '',
+  picturePath: '',
 }
 
 const Form = () => {
   const [isLogin, setIsLogin] = useState(true)
   const { palette } = useTheme()
-  const dispatch = useDispatch
-  const navigate = useNavigate
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const isNonMobile = useMediaQuery('(min-width: 600px)')
+
   const register = async (values, onSubmitProps) => {
     const formData = new FormData()
     for (let value in values) {
@@ -60,22 +61,19 @@ const Form = () => {
     }
     formData.append(
       'picturePath',
-      values.picture
-        ? values.picture.name
+      values.picturePath
+        ? values.picturePath.name
         : `https://api.dicebear.com/6.x/fun-emoji/svg?seed=${values.email}&backgroundColor=059ff2,71cf62,d84be5,d9915b,f6d594,b6e3f4,c0aede,d1d4f9,fcbc34,ffd5dc,ffdfbf&backgroundType=solid,gradientLinear`
     )
     for (const pair of formData.entries()) {
       console.log(pair[0], pair[1])
     }
-
     const savedUserResponse = await fetch('http://localhost:3001/auth/register', {
       method: 'POST',
       body: formData,
     })
     const savedUser = await savedUserResponse.json()
-
     onSubmitProps.resetForm()
-
     if (savedUser) {
       setIsLogin(true)
     }
@@ -89,10 +87,10 @@ const Form = () => {
     })
     const loggedIn = await loggedInResponse.json()
     onSubmitProps.resetForm()
-
+    console.log(loggedIn)
     if (loggedIn) {
       dispatch(setLogin({ user: loggedIn.user, token: loggedIn.token }))
-      navigate('/home')
+      navigate('/')
     }
   }
 

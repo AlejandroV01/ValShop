@@ -1,5 +1,5 @@
 import { Close, DarkMode, Explore, Favorite, LightMode, Menu, Search } from '@mui/icons-material'
-import { Badge, Box, FormControl, Icon, IconButton, InputBase, MenuItem, Select, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Badge, Box, Button, FormControl, IconButton, InputBase, MenuItem, Select, Typography, useMediaQuery, useTheme } from '@mui/material'
 import FlexBetween from 'components/FlexBetween'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -20,6 +20,8 @@ const Navbar = () => {
   const background = theme.palette.background.default
   const primaryLight = theme.palette.primary.light
   const alt = theme.palette.background.alt
+  const isAuth = Boolean(useSelector(state => state.token))
+
   // const fullName = `${user.firstName} ${user.lastName}`
   return (
     <FlexBetween padding={'1rem 6%'} backgroundColor={alt}>
@@ -28,7 +30,7 @@ const Navbar = () => {
           fontWeight='bold'
           fontSize='clamp(1rem, 2rem, 2.25rem)'
           color='primary'
-          onClick={() => navigate('/home')}
+          onClick={() => navigate('/')}
           sx={{
             '&:hover': {
               color: primaryLight,
@@ -63,30 +65,34 @@ const Navbar = () => {
           <IconButton onClick={() => dispatch(setMode())}>
             {theme.palette.mode === 'dark' ? <DarkMode sx={{ fontSize: '25px' }} /> : <LightMode sx={{ color: dark, fontSize: '25px' }} />}
           </IconButton>
-          <FormControl variant='standard' value='Ale Vera'>
-            <Select
-              value={'Ale Vera'}
-              sx={{
-                backgroundColor: neutralLight,
-                width: '150px',
-                borderRadius: '0.25rem',
-                p: '0.25rem 1rem',
-                '& .MuiSvgIcon-root': {
-                  pr: '0.25rem',
-                  width: '3rem',
-                },
-                '& .MuiSelect-select:focus': {
+          {isAuth ? (
+            <FormControl variant='standard' value={user.username}>
+              <Select
+                value={user.username}
+                sx={{
                   backgroundColor: neutralLight,
-                },
-              }}
-              input={<InputBase />}
-            >
-              <MenuItem value='Ale Vera' onClick={() => navigate('/profile/999')}>
-                <Typography>Ale Vera</Typography>
-              </MenuItem>
-              <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
-            </Select>
-          </FormControl>
+                  width: '150px',
+                  borderRadius: '0.25rem',
+                  p: '0.25rem 1rem',
+                  '& .MuiSvgIcon-root': {
+                    pr: '0.25rem',
+                    width: '3rem',
+                  },
+                  '& .MuiSelect-select:focus': {
+                    backgroundColor: neutralLight,
+                  },
+                }}
+                input={<InputBase />}
+              >
+                <MenuItem value={user.username} onClick={() => navigate(`/profile/${user.username}`)}>
+                  <Typography>{user.username}</Typography>
+                </MenuItem>
+                <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
+              </Select>
+            </FormControl>
+          ) : (
+            <Button onClick={() => navigate('/login')}>Login</Button>
+          )}
         </FlexBetween>
       ) : (
         <IconButton onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}>
@@ -104,9 +110,9 @@ const Navbar = () => {
             <IconButton onClick={() => dispatch(setMode())} sx={{ fontSize: '25px' }}>
               {theme.palette.mode === 'dark' ? <DarkMode sx={{ fontSize: '25px' }} /> : <LightMode sx={{ color: dark, fontSize: '25px' }} />}
             </IconButton>
-            <FormControl variant='standard' value='Ale Vera'>
+            <FormControl variant='standard' value={user.username}>
               <Select
-                value={'Ale Vera'}
+                value={user.username}
                 sx={{
                   backgroundColor: neutralLight,
                   width: '150px',
@@ -122,8 +128,8 @@ const Navbar = () => {
                 }}
                 input={<InputBase />}
               >
-                <MenuItem value='Ale Vera'>
-                  <Typography>Ale Vera</Typography>
+                <MenuItem value={user.username} onClick={() => navigate(`/profile/${user.username}`)}>
+                  <Typography>{user.username}</Typography>
                 </MenuItem>
                 <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
               </Select>

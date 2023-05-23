@@ -2,6 +2,7 @@ import { CalendarMonth } from '@mui/icons-material'
 import { Avatar, Box, Chip, Divider, InputBase, Item, MenuItem, Paper, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import UserAvatar from 'components/UserAvatar'
 import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import LikedSkins from './LikedSkins'
 import OwnedSkins from './OwnedSkins'
 const ProfilePage = () => {
@@ -11,6 +12,7 @@ const ProfilePage = () => {
   const gridStacked = useMediaQuery('(max-width: 1396px)')
   const [ownedSkinTab, setOwnedSkinTab] = useState(true)
   const [favoriteSkinTab, setFavoriteSkinTab] = useState(false)
+  const user = useSelector(state => state.user)
   const handleTabChange = tabName => {
     if (tabName === 'ownedTab') {
       setOwnedSkinTab(true)
@@ -22,6 +24,15 @@ const ProfilePage = () => {
       console.error('error when switching tabs')
     }
   }
+
+  const accountCreation = createdAt => {
+    const dateString = createdAt
+    const date = new Date(dateString)
+    const options = { year: 'numeric', month: 'long', day: 'numeric' }
+    const formattedDate = date.toLocaleDateString('en-US', options)
+
+    return formattedDate // Output: May 23, 2023
+  }
   return (
     <>
       <Box
@@ -31,20 +42,13 @@ const ProfilePage = () => {
         marginBottom='2rem'
       >
         <Box position='absolute' bottom={-35} left='6%' border={`5px solid ${background}`} borderRadius='4px' backgroundColor={background}>
-          <Avatar
-            variant='rounded'
-            src='https://api.dicebear.com/6.x/fun-emoji/svg?seed=averaipod&backgroundColor=059ff2,71cf62,d84be5,d9915b,f6d594,b6e3f4,c0aede,d1d4f9,fcbc34,ffd5dc,ffdfbf&backgroundType=solid,gradientLinear'
-            sx={{ width: 70, height: 70 }}
-          ></Avatar>
+          <Avatar variant='rounded' src={user.picturePath} sx={{ width: 70, height: 70 }}></Avatar>
         </Box>
       </Box>
 
       <Box width='100%' display='flex' padding={'1rem 6%'} flexWrap='wrap' gap='2rem'>
         <Box flexGrow={0.2} height='100%' display='flex' flexDirection='column' gap='1rem'>
-          <Typography variant='h2'>Alejandro Vera</Typography>
-          <Typography variant='h5' color={theme.palette.neutral.main}>
-            @randomUserName
-          </Typography>
+          <Typography variant='h2'>{user.username}</Typography>
           <Box
             display='grid'
             gridTemplateColumns='repeat(auto-fit, minmax(175px, 1fr))'
@@ -54,26 +58,26 @@ const ProfilePage = () => {
             backgroundColor={theme.palette.neutral.light}
           >
             <Box display='flex' flexDirection='column'>
-              <Typography variant='h4'>{Math.floor(Math.random() * 35)}</Typography>
+              <Typography variant='h4'>{user.ownedSkins.length}</Typography>
               <Typography variant='h6'>Owned Skins</Typography>
               <Divider />
             </Box>
             <Box display='flex' flexDirection='column'>
-              <Typography variant='h4'>{Math.floor(Math.random() * 35)}</Typography>
+              <Typography variant='h4'>{user.likedSkins.length}</Typography>
               <Typography variant='h6'>Liked Skins</Typography>
               <Divider />
             </Box>
             <Box display='flex' flexDirection='column'>
-              <Typography variant='h4'>{Math.floor(Math.random() * 35000)}</Typography>
+              <Typography variant='h4'>{user.totalValue}</Typography>
               <Typography variant='h6'>Total Value</Typography>
               {gridStacked && <Divider />}
             </Box>
             <Box display='flex' flexDirection='column'>
-              <Typography variant='h4'>{Math.floor(Math.random() * 20)}</Typography>
+              <Typography variant='h4'>{user.friends.length}</Typography>
               <Typography variant='h6'>Friends</Typography>
             </Box>
           </Box>
-          <Chip icon={<CalendarMonth />} color='primary' label='Created Dec 08, 2022' sx={{ width: 'fit-content' }} />
+          <Chip icon={<CalendarMonth />} color='primary' label={`Created ${accountCreation(user.createdAt)}`} sx={{ width: 'fit-content' }} />
         </Box>
         <Box flexGrow={0.8} height='100%' display='flex' flexDirection='column' gap='1rem'>
           <Stack direction='row'>
@@ -88,7 +92,7 @@ const ProfilePage = () => {
             >
               <Typography variant='h5'>Owned Skins</Typography>
               <Box sx={{ width: 'fit-content', backgroundColor: theme.palette.primary.main }} p='0 0.5rem' borderRadius='4px'>
-                <Typography color={theme.palette.neutral.light}>{Math.floor(Math.random() * 35)}</Typography>
+                <Typography color={theme.palette.neutral.light}>{user.ownedSkins.length}</Typography>
               </Box>
             </Stack>
             <Stack
@@ -102,7 +106,7 @@ const ProfilePage = () => {
             >
               <Typography variant='h5'>Liked Skins</Typography>
               <Box sx={{ width: 'fit-content', backgroundColor: theme.palette.primary.main }} p='0 0.5rem' borderRadius='4px'>
-                <Typography color={theme.palette.neutral.light}>{Math.floor(Math.random() * 35)}</Typography>
+                <Typography color={theme.palette.neutral.light}>{user.likedSkins.length}</Typography>
               </Box>
             </Stack>
             <Stack
