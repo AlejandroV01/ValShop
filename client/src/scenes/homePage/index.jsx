@@ -136,7 +136,7 @@ const HomePage = () => {
         {isNonMobileScreens && (
           <>
             <Divider textAlign='left' sx={{ width: '100%', margin: '1rem 0' }}>
-              <Typography variant='h4'>{firstSkins[0].bundle}</Typography>
+              <Typography variant='h4'>{firstSkins.length === 4 && firstSkins[0]['bundle']}</Typography>
             </Divider>
             <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(380px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }} width={'100%'}>
               {firstSkins.map((skin, index) => {
@@ -152,7 +152,7 @@ const HomePage = () => {
               })}
             </Box>
             <Divider textAlign='left' sx={{ width: '100%', margin: '1rem 0' }}>
-              <Typography variant='h4'>{secondSkins[0].bundle}</Typography>
+              <Typography variant='h4'>{secondSkins.length === 4 && secondSkins[0]['bundle']}</Typography>
             </Divider>
             <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(380px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }} width={'100%'}>
               {secondSkins.map((skin, index) => {

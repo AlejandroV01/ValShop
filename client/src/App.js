@@ -3,6 +3,8 @@ import { createTheme } from '@mui/material/styles'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import ExplorePage from 'scenes/explorePage'
 import HomePage from 'scenes/homePage'
 import LikePage from 'scenes/likePage'
@@ -19,6 +21,7 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <CssBaseline />
+          <ToastContainer />
           <Navbar />
           <Routes>
             <Route path='/login' element={<LoginPage />}></Route>

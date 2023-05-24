@@ -21,6 +21,7 @@ import React, { useState } from 'react'
 import Dropzone from 'react-dropzone'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import { setLogin } from 'state'
 import * as yup from 'yup'
 import { colorTokens } from '../../theme'
@@ -73,9 +74,27 @@ const Form = () => {
       body: formData,
     })
     const savedUser = await savedUserResponse.json()
+    if (savedUserResponse.status === 500) {
+      toast.error(savedUserResponse.statusText, {
+        position: 'bottom-right',
+        theme: 'colored',
+      })
+      return
+    }
+    if (savedUser.msg === 'An account with that email already exists.') {
+      toast.error('An account with that email already exists.', {
+        position: 'bottom-right',
+        theme: 'colored',
+      })
+      return
+    }
     onSubmitProps.resetForm()
     if (savedUser) {
       setIsLogin(true)
+      toast.success('Account Registered Successfully!', {
+        position: 'bottom-right',
+        theme: 'colored',
+      })
     }
   }
 
@@ -86,10 +105,28 @@ const Form = () => {
       body: JSON.stringify(values),
     })
     const loggedIn = await loggedInResponse.json()
+    if (loggedIn.msg === 'Invalid credentials.') {
+      toast.error('Invalid credentials.', {
+        position: 'bottom-right',
+        theme: 'colored',
+      })
+      return
+    }
+    if (loggedIn.msg === 'User does not exist.') {
+      toast.error('User does not exist.', {
+        position: 'bottom-right',
+        theme: 'colored',
+      })
+      return
+    }
     onSubmitProps.resetForm()
     console.log(loggedIn)
     if (loggedIn) {
       dispatch(setLogin({ user: loggedIn.user, token: loggedIn.token }))
+      toast.success('Successfully Logged In!', {
+        position: 'bottom-right',
+        theme: 'colored',
+      })
       navigate('/')
     }
   }
