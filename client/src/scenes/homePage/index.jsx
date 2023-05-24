@@ -8,7 +8,7 @@ const HomePage = () => {
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)')
   const navigate = useNavigate()
   const skins = useSelector(state => state.skins)
-  console.log(skins.slice(0, 5))
+
   const PEU = skins.filter(skin => {
     const rarity = skin.rarity
     return rarity === 'Premium' || rarity === 'Exclusive' || rarity === 'Ultra'
@@ -78,6 +78,7 @@ const HomePage = () => {
     }
     setSecondSkins(selectedSkins)
   }
+  const isAuth = Boolean(useSelector(state => state.token))
 
   useEffect(() => {
     getExploreSkins()
@@ -85,7 +86,7 @@ const HomePage = () => {
     getSecondSkins(firstBundle)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [skins])
-  console.log(user._id)
+
   return (
     <Stack padding='1rem 6%' width={'100%'}>
       <Stack direction={'column'} alignItems='center'>
@@ -150,7 +151,7 @@ const HomePage = () => {
                     name={skin.bundle + ' ' + skin.weapon}
                     price={skin.price}
                     picture={skin.img_url}
-                    userId={user._id}
+                    userId={isAuth && user._id}
                     skinId={skin.id}
                   ></SkinContainer>
                 )

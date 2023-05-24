@@ -8,7 +8,7 @@ const initialState = {
   skins: [
     {
       id: 0,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/10/Luxe_Ghost.png/revision/latest?cb=20210707185727',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/10/Luxe_Ghost.png',
       rarity: 'Select',
       bundle: 'Luxe',
       weapon: 'Ghost',
@@ -16,7 +16,7 @@ const initialState = {
     },
     {
       id: 1,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a4/Luxe_Spectre.png/revision/latest?cb=20210707202048',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a4/Luxe_Spectre.png',
       rarity: 'Select',
       bundle: 'Luxe',
       weapon: 'Spectre',
@@ -24,7 +24,7 @@ const initialState = {
     },
     {
       id: 2,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/48/Luxe_Judge.png/revision/latest?cb=20210707202111',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/48/Luxe_Judge.png',
       rarity: 'Select',
       bundle: 'Luxe',
       weapon: 'Judge',
@@ -32,7 +32,7 @@ const initialState = {
     },
     {
       id: 3,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e3/Luxe_Vandal.png/revision/latest?cb=20210707202151',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e3/Luxe_Vandal.png',
       rarity: 'Select',
       bundle: 'Luxe',
       weapon: 'Vandal',
@@ -40,7 +40,7 @@ const initialState = {
     },
     {
       id: 4,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/be/Luxe_Operator.png/revision/latest?cb=20210707201159',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/be/Luxe_Operator.png',
       rarity: 'Select',
       bundle: 'Luxe',
       weapon: 'Operator',
@@ -48,7 +48,7 @@ const initialState = {
     },
     {
       id: 5,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/79/Luxe_Knife.png/revision/latest?cb=20210707185728',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/79/Luxe_Knife.png',
       rarity: 'Select',
       bundle: 'Luxe',
       weapon: 'Knife',
@@ -56,7 +56,7 @@ const initialState = {
     },
     {
       id: 6,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/ea/Aristocrat_Sheriff.png/revision/latest?cb=20210707202412',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/ea/Aristocrat_Sheriff.png',
       rarity: 'Deluxe',
       bundle: 'Aristocrat',
       weapon: 'Sheriff',
@@ -64,7 +64,7 @@ const initialState = {
     },
     {
       id: 7,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/bf/Aristocrat_Stinger.png/revision/latest?cb=20210707202424',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/bf/Aristocrat_Stinger.png',
       rarity: 'Deluxe',
       bundle: 'Aristocrat',
       weapon: 'Stinger',
@@ -72,7 +72,7 @@ const initialState = {
     },
     {
       id: 8,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4b/Aristocrat_Bulldog.png/revision/latest?cb=20210707202437',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4b/Aristocrat_Bulldog.png',
       rarity: 'Deluxe',
       bundle: 'Aristocrat',
       weapon: 'Bulldog',
@@ -80,7 +80,7 @@ const initialState = {
     },
     {
       id: 9,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d4/Aristocrat_Vandal.png/revision/latest?cb=20210707202447',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d4/Aristocrat_Vandal.png',
       rarity: 'Deluxe',
       bundle: 'Aristocrat',
       weapon: 'Vandal',
@@ -88,7 +88,7 @@ const initialState = {
     },
     {
       id: 10,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8c/Aristocrat_Ares.png/revision/latest?cb=20210707202459',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8c/Aristocrat_Ares.png',
       rarity: 'Deluxe',
       bundle: 'Aristocrat',
       weapon: 'Ares',
@@ -96,7 +96,7 @@ const initialState = {
     },
     {
       id: 11,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Galleria_Classic.png/revision/latest?cb=20200701232133',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Galleria_Classic.png',
       rarity: 'Select',
       bundle: 'Galleria',
       weapon: 'Classic',
@@ -104,7 +104,7 @@ const initialState = {
     },
     {
       id: 12,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/37/Galleria_Bucky.png/revision/latest?cb=20210707202659',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/37/Galleria_Bucky.png',
       rarity: 'Select',
       bundle: 'Galleria',
       weapon: 'Bucky',
@@ -112,7 +112,7 @@ const initialState = {
     },
     {
       id: 13,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/60/Galleria_Guardian.png/revision/latest?cb=20210707202728',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/60/Galleria_Guardian.png',
       rarity: 'Select',
       bundle: 'Galleria',
       weapon: 'Guardian',
@@ -120,7 +120,7 @@ const initialState = {
     },
     {
       id: 14,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ac/Galleria_Phantom.png/revision/latest?cb=20210707202756',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ac/Galleria_Phantom.png',
       rarity: 'Select',
       bundle: 'Galleria',
       weapon: 'Phantom',
@@ -128,7 +128,7 @@ const initialState = {
     },
     {
       id: 15,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/78/Galleria_Marshal.png/revision/latest?cb=20210707202809',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/78/Galleria_Marshal.png',
       rarity: 'Select',
       bundle: 'Galleria',
       weapon: 'Marshal',
@@ -136,7 +136,7 @@ const initialState = {
     },
     {
       id: 16,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3b/Rush_Frenzy.png/revision/latest?cb=20210707202952',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3b/Rush_Frenzy.png',
       rarity: 'Select',
       bundle: 'Rush',
       weapon: 'Frenzy',
@@ -144,7 +144,7 @@ const initialState = {
     },
     {
       id: 17,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/15/Rush_Judge.png/revision/latest?cb=20210707203029',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/15/Rush_Judge.png',
       rarity: 'Select',
       bundle: 'Rush',
       weapon: 'Judge',
@@ -152,7 +152,7 @@ const initialState = {
     },
     {
       id: 18,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a7/Rush_Bulldog.png/revision/latest?cb=20210707203127',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a7/Rush_Bulldog.png',
       rarity: 'Select',
       bundle: 'Rush',
       weapon: 'Bulldog',
@@ -160,7 +160,7 @@ const initialState = {
     },
     {
       id: 19,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/14/Rush_Phantom.png/revision/latest?cb=20210707203237',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/14/Rush_Phantom.png',
       rarity: 'Select',
       bundle: 'Rush',
       weapon: 'Phantom',
@@ -168,7 +168,7 @@ const initialState = {
     },
     {
       id: 20,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/75/Rush_Ares.png/revision/latest?cb=20210707191424',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/75/Rush_Ares.png',
       rarity: 'Select',
       bundle: 'Rush',
       weapon: 'Ares',
@@ -176,7 +176,7 @@ const initialState = {
     },
     {
       id: 21,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/19/Sakura_Classic.png/revision/latest?cb=20210707203326',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/19/Sakura_Classic.png',
       rarity: 'Deluxe',
       bundle: 'Sakura',
       weapon: 'Classic',
@@ -184,7 +184,7 @@ const initialState = {
     },
     {
       id: 22,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/Sakura_Sheriff.png/revision/latest?cb=20210707203342',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/Sakura_Sheriff.png',
       rarity: 'Deluxe',
       bundle: 'Sakura',
       weapon: 'Sheriff',
@@ -192,7 +192,7 @@ const initialState = {
     },
     {
       id: 23,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f7/Sakura_Stinger.png/revision/latest?cb=20210707203403',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f7/Sakura_Stinger.png',
       rarity: 'Deluxe',
       bundle: 'Sakura',
       weapon: 'Stinger',
@@ -200,7 +200,7 @@ const initialState = {
     },
     {
       id: 24,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5f/Sakura_Vandal.png/revision/latest?cb=20210707203414',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5f/Sakura_Vandal.png',
       rarity: 'Deluxe',
       bundle: 'Sakura',
       weapon: 'Vandal',
@@ -208,7 +208,7 @@ const initialState = {
     },
     {
       id: 25,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a1/Sakura_Ares.png/revision/latest?cb=20210707203430',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a1/Sakura_Ares.png',
       rarity: 'Deluxe',
       bundle: 'Sakura',
       weapon: 'Ares',
@@ -216,7 +216,7 @@ const initialState = {
     },
     {
       id: 26,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6a/Convex_Sheriff.png/revision/latest?cb=20210707203451',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6a/Convex_Sheriff.png',
       rarity: 'Select',
       bundle: 'Convex',
       weapon: 'Sheriff',
@@ -224,7 +224,7 @@ const initialState = {
     },
     {
       id: 27,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/05/Convex_Spectre.png/revision/latest?cb=20210707203514',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/05/Convex_Spectre.png',
       rarity: 'Select',
       bundle: 'Convex',
       weapon: 'Spectre',
@@ -232,7 +232,7 @@ const initialState = {
     },
     {
       id: 28,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/28/Convex_Judge.png/revision/latest?cb=20210707203527',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/28/Convex_Judge.png',
       rarity: 'Select',
       bundle: 'Convex',
       weapon: 'Judge',
@@ -240,7 +240,7 @@ const initialState = {
     },
     {
       id: 29,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b3/Convex_Bulldog.png/revision/latest?cb=20210707203537',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b3/Convex_Bulldog.png',
       rarity: 'Select',
       bundle: 'Convex',
       weapon: 'Bulldog',
@@ -248,7 +248,7 @@ const initialState = {
     },
     {
       id: 30,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d4/Convex_Operator.png/revision/latest?cb=20210707203550',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d4/Convex_Operator.png',
       rarity: 'Select',
       bundle: 'Convex',
       weapon: 'Operator',
@@ -256,7 +256,7 @@ const initialState = {
     },
     {
       id: 31,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/92/Avalanche_Classic.png/revision/latest?cb=20200408115239',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/92/Avalanche_Classic.png',
       rarity: 'Deluxe',
       bundle: 'Avalanche',
       weapon: 'Classic',
@@ -264,7 +264,7 @@ const initialState = {
     },
     {
       id: 32,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f5/Avalanche_Spectre.png/revision/latest?cb=20200408121140',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f5/Avalanche_Spectre.png',
       rarity: 'Deluxe',
       bundle: 'Avalanche',
       weapon: 'Spectre',
@@ -272,7 +272,7 @@ const initialState = {
     },
     {
       id: 33,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9e/Avalanche_Phantom.png/revision/latest?cb=20200408121025',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9e/Avalanche_Phantom.png',
       rarity: 'Deluxe',
       bundle: 'Avalanche',
       weapon: 'Phantom',
@@ -280,7 +280,7 @@ const initialState = {
     },
     {
       id: 34,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b2/Avalanche_Vandal.png/revision/latest?cb=20200408121231',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b2/Avalanche_Vandal.png',
       rarity: 'Deluxe',
       bundle: 'Avalanche',
       weapon: 'Vandal',
@@ -288,7 +288,7 @@ const initialState = {
     },
     {
       id: 35,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f0/Avalanche_Marshal.png/revision/latest?cb=20200408120940',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f0/Avalanche_Marshal.png',
       rarity: 'Deluxe',
       bundle: 'Avalanche',
       weapon: 'Marshal',
@@ -296,7 +296,7 @@ const initialState = {
     },
     {
       id: 36,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cc/Prime_Classic.png/revision/latest?cb=20210707141714',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cc/Prime_Classic.png',
       rarity: 'Premium',
       bundle: 'Prime',
       weapon: 'Classic',
@@ -304,7 +304,7 @@ const initialState = {
     },
     {
       id: 37,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ce/Prime_Spectre.png/revision/latest?cb=20210707141713',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ce/Prime_Spectre.png',
       rarity: 'Premium',
       bundle: 'Prime',
       weapon: 'Spectre',
@@ -312,7 +312,7 @@ const initialState = {
     },
     {
       id: 38,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Prime_Guardian.png/revision/latest?cb=20210707141712',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Prime_Guardian.png',
       rarity: 'Premium',
       bundle: 'Prime',
       weapon: 'Guardian',
@@ -320,7 +320,7 @@ const initialState = {
     },
     {
       id: 39,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/aa/Prime_Vandal.png/revision/latest?cb=20210707141713',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/aa/Prime_Vandal.png',
       rarity: 'Premium',
       bundle: 'Prime',
       weapon: 'Vandal',
@@ -328,7 +328,7 @@ const initialState = {
     },
     {
       id: 40,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/15/Prime_Axe.png/revision/latest?cb=20210707185804',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/15/Prime_Axe.png',
       rarity: 'Premium',
       bundle: 'Prime',
       weapon: 'Axe',
@@ -336,7 +336,7 @@ const initialState = {
     },
     {
       id: 41,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/24/Sovereign_Ghost.png/revision/latest?cb=20210708101259',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/24/Sovereign_Ghost.png',
       rarity: 'Premium',
       bundle: 'Sovereign',
       weapon: 'Ghost',
@@ -344,7 +344,7 @@ const initialState = {
     },
     {
       id: 42,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9e/Sovereign_Stinger.png/revision/latest?cb=20210708101330',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9e/Sovereign_Stinger.png',
       rarity: 'Premium',
       bundle: 'Sovereign',
       weapon: 'Stinger',
@@ -352,7 +352,7 @@ const initialState = {
     },
     {
       id: 43,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b3/Sovereign_Guardian.png/revision/latest?cb=20210708101356',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b3/Sovereign_Guardian.png',
       rarity: 'Premium',
       bundle: 'Sovereign',
       weapon: 'Guardian',
@@ -360,7 +360,7 @@ const initialState = {
     },
     {
       id: 44,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/91/Sovereign_Marshal.png/revision/latest?cb=20210708101440',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/91/Sovereign_Marshal.png',
       rarity: 'Premium',
       bundle: 'Sovereign',
       weapon: 'Marshal',
@@ -368,7 +368,7 @@ const initialState = {
     },
     {
       id: 45,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cb/Sovereign_Sword.png/revision/latest?cb=20200911031827',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cb/Sovereign_Sword.png',
       rarity: 'Premium',
       bundle: 'Sovereign',
       weapon: 'Sword',
@@ -376,7 +376,7 @@ const initialState = {
     },
     {
       id: 46,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ce/Prism_Ghost.png/revision/latest?cb=20200623202609',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ce/Prism_Ghost.png',
       rarity: 'Deluxe',
       bundle: 'Prism',
       weapon: 'Ghost',
@@ -384,7 +384,7 @@ const initialState = {
     },
     {
       id: 47,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/28/Prism_Spectre.png/revision/latest?cb=20200623202620',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/28/Prism_Spectre.png',
       rarity: 'Deluxe',
       bundle: 'Prism',
       weapon: 'Spectre',
@@ -392,7 +392,7 @@ const initialState = {
     },
     {
       id: 48,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d4/Prism_Phantom.png/revision/latest?cb=20200623202631',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d4/Prism_Phantom.png',
       rarity: 'Deluxe',
       bundle: 'Prism',
       weapon: 'Phantom',
@@ -400,7 +400,7 @@ const initialState = {
     },
     {
       id: 49,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a6/Prism_Operator.png/revision/latest?cb=20200623202641',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a6/Prism_Operator.png',
       rarity: 'Deluxe',
       bundle: 'Prism',
       weapon: 'Operator',
@@ -408,7 +408,7 @@ const initialState = {
     },
     {
       id: 50,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/dd/Prism_Ares.png/revision/latest?cb=20200623202540',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/dd/Prism_Ares.png',
       rarity: 'Deluxe',
       bundle: 'Prism',
       weapon: 'Ares',
@@ -416,7 +416,7 @@ const initialState = {
     },
     {
       id: 51,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3f/Prism_Knife.png/revision/latest?cb=20210707191428',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3f/Prism_Knife.png',
       rarity: 'Deluxe',
       bundle: 'Prism',
       weapon: 'Knife',
@@ -424,7 +424,7 @@ const initialState = {
     },
     {
       id: 52,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c4/Elderflame_Frenzy.png/revision/latest?cb=20210707203656',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c4/Elderflame_Frenzy.png',
       rarity: 'Ultra',
       bundle: 'Elderflame',
       weapon: 'Frenzy',
@@ -432,7 +432,7 @@ const initialState = {
     },
     {
       id: 53,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/Elderflame_Judge.png/revision/latest?cb=20210707203713',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/Elderflame_Judge.png',
       rarity: 'Ultra',
       bundle: 'Elderflame',
       weapon: 'Judge',
@@ -440,7 +440,7 @@ const initialState = {
     },
     {
       id: 54,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d2/Elderflame_Vandal.png/revision/latest?cb=20210707203727',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d2/Elderflame_Vandal.png',
       rarity: 'Ultra',
       bundle: 'Elderflame',
       weapon: 'Vandal',
@@ -448,7 +448,7 @@ const initialState = {
     },
     {
       id: 55,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/ed/Elderflame_Operator.png/revision/latest?cb=20210707203739',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/ed/Elderflame_Operator.png',
       rarity: 'Ultra',
       bundle: 'Elderflame',
       weapon: 'Operator',
@@ -456,7 +456,7 @@ const initialState = {
     },
     {
       id: 56,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a9/Elderflame_Dagger.png/revision/latest?cb=20210707185625',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a9/Elderflame_Dagger.png',
       rarity: 'Ultra',
       bundle: 'Elderflame',
       weapon: 'Dagger',
@@ -464,7 +464,7 @@ const initialState = {
     },
     {
       id: 57,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b7/Oni_Shorty.png/revision/latest?cb=20210708101734',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b7/Oni_Shorty.png',
       rarity: 'Premium',
       bundle: 'Oni',
       weapon: 'Shorty',
@@ -472,7 +472,7 @@ const initialState = {
     },
     {
       id: 58,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e8/Oni_Bucky.png/revision/latest?cb=20210708101817',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e8/Oni_Bucky.png',
       rarity: 'Premium',
       bundle: 'Oni',
       weapon: 'Bucky',
@@ -480,7 +480,7 @@ const initialState = {
     },
     {
       id: 59,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/22/Oni_Guardian.png/revision/latest?cb=20210708101852',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/22/Oni_Guardian.png',
       rarity: 'Premium',
       bundle: 'Oni',
       weapon: 'Guardian',
@@ -488,7 +488,7 @@ const initialState = {
     },
     {
       id: 60,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/65/Oni_Phantom.png/revision/latest?cb=20200911011334',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/65/Oni_Phantom.png',
       rarity: 'Premium',
       bundle: 'Oni',
       weapon: 'Phantom',
@@ -496,7 +496,7 @@ const initialState = {
     },
     {
       id: 61,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/83/Oni_Claw.png/revision/latest?cb=20210707185747',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/83/Oni_Claw.png',
       rarity: 'Premium',
       bundle: 'Oni',
       weapon: 'Claw',
@@ -504,7 +504,7 @@ const initialState = {
     },
     {
       id: 62,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cd/Glitchpop_Frenzy.png/revision/latest?cb=20210708102002',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cd/Glitchpop_Frenzy.png',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
       weapon: 'Frenzy',
@@ -512,7 +512,7 @@ const initialState = {
     },
     {
       id: 63,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Glitchpop_Judge.png/revision/latest?cb=20210708102023',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Glitchpop_Judge.png',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
       weapon: 'Judge',
@@ -520,7 +520,7 @@ const initialState = {
     },
     {
       id: 64,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/74/Glitchpop_Bulldog.png/revision/latest?cb=20210708102012',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/74/Glitchpop_Bulldog.png',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
       weapon: 'Bulldog',
@@ -528,7 +528,7 @@ const initialState = {
     },
     {
       id: 65,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5f/Glitchpop_Odin.png/revision/latest?cb=20210708102036',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5f/Glitchpop_Odin.png',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
       weapon: 'Odin',
@@ -536,7 +536,7 @@ const initialState = {
     },
     {
       id: 66,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/55/Glitchpop_Dagger.png/revision/latest?cb=20210707185641',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/55/Glitchpop_Dagger.png',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
       weapon: 'Dagger',
@@ -544,7 +544,7 @@ const initialState = {
     },
     {
       id: 67,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/23/Nebula_Sheriff.png/revision/latest?cb=20210707185745',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/23/Nebula_Sheriff.png',
       rarity: 'Premium',
       bundle: 'Nebula',
       weapon: 'Sheriff',
@@ -552,7 +552,7 @@ const initialState = {
     },
     {
       id: 68,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f0/Nebula_Guardian.png/revision/latest?cb=20210708102155',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f0/Nebula_Guardian.png',
       rarity: 'Premium',
       bundle: 'Nebula',
       weapon: 'Guardian',
@@ -560,7 +560,7 @@ const initialState = {
     },
     {
       id: 69,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b1/Nebula_Phantom.png/revision/latest?cb=20210708102144',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b1/Nebula_Phantom.png',
       rarity: 'Premium',
       bundle: 'Nebula',
       weapon: 'Phantom',
@@ -568,7 +568,7 @@ const initialState = {
     },
     {
       id: 70,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/16/Nebula_Ares.png/revision/latest?cb=20200910144659',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/16/Nebula_Ares.png',
       rarity: 'Premium',
       bundle: 'Nebula',
       weapon: 'Ares',
@@ -576,7 +576,7 @@ const initialState = {
     },
     {
       id: 71,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/89/Nebula_Knife.png/revision/latest?cb=20210708102235',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/89/Nebula_Knife.png',
       rarity: 'Premium',
       bundle: 'Nebula',
       weapon: 'Knife',
@@ -584,7 +584,7 @@ const initialState = {
     },
     {
       id: 72,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/52/Spline_Classic.png/revision/latest?cb=20210708102407',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/52/Spline_Classic.png',
       rarity: 'Premium',
       bundle: 'Spline',
       weapon: 'Classic',
@@ -592,7 +592,7 @@ const initialState = {
     },
     {
       id: 73,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Spline_Spectre.png/revision/latest?cb=20210707191423',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Spline_Spectre.png',
       rarity: 'Premium',
       bundle: 'Spline',
       weapon: 'Spectre',
@@ -600,7 +600,7 @@ const initialState = {
     },
     {
       id: 74,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4f/Spline_Phantom.png/revision/latest?cb=20210708102354',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4f/Spline_Phantom.png',
       rarity: 'Premium',
       bundle: 'Spline',
       weapon: 'Phantom',
@@ -608,7 +608,7 @@ const initialState = {
     },
     {
       id: 75,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Spline_Operator.png/revision/latest?cb=20210708102339',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Spline_Operator.png',
       rarity: 'Premium',
       bundle: 'Spline',
       weapon: 'Operator',
@@ -616,7 +616,7 @@ const initialState = {
     },
     {
       id: 76,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b8/Spline_Dagger.png/revision/latest?cb=20210707191428',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b8/Spline_Dagger.png',
       rarity: 'Premium',
       bundle: 'Spline',
       weapon: 'Dagger',
@@ -624,7 +624,7 @@ const initialState = {
     },
     {
       id: 77,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6f/Ego_Ghost.png/revision/latest?cb=20210707185619',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6f/Ego_Ghost.png',
       rarity: 'Premium',
       bundle: 'Ego',
       weapon: 'Ghost',
@@ -632,7 +632,7 @@ const initialState = {
     },
     {
       id: 78,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/43/Ego_Stinger.png/revision/latest?cb=20210707185623',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/43/Ego_Stinger.png',
       rarity: 'Premium',
       bundle: 'Ego',
       weapon: 'Stinger',
@@ -640,7 +640,7 @@ const initialState = {
     },
     {
       id: 79,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/54/Ego_Guardian.png/revision/latest?cb=20210707185620',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/54/Ego_Guardian.png',
       rarity: 'Premium',
       bundle: 'Ego',
       weapon: 'Guardian',
@@ -648,7 +648,7 @@ const initialState = {
     },
     {
       id: 80,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/91/Ego_Vandal.png/revision/latest?cb=20210707185625',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/91/Ego_Vandal.png',
       rarity: 'Premium',
       bundle: 'Ego',
       weapon: 'Vandal',
@@ -656,7 +656,7 @@ const initialState = {
     },
     {
       id: 81,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6e/Ego_Knife.png/revision/latest?cb=20210707185622',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6e/Ego_Knife.png',
       rarity: 'Premium',
       bundle: 'Ego',
       weapon: 'Knife',
@@ -664,7 +664,7 @@ const initialState = {
     },
     {
       id: 82,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/84/Smite_Classic.png/revision/latest?cb=20210708102637',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/84/Smite_Classic.png',
       rarity: 'Select',
       bundle: 'Smite',
       weapon: 'Classic',
@@ -672,7 +672,7 @@ const initialState = {
     },
     {
       id: 83,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9b/Smite_Judge.png/revision/latest?cb=20200916171804',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9b/Smite_Judge.png',
       rarity: 'Select',
       bundle: 'Smite',
       weapon: 'Judge',
@@ -680,7 +680,7 @@ const initialState = {
     },
     {
       id: 84,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/18/Smite_Phantom.png/revision/latest?cb=20200916171825',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/18/Smite_Phantom.png',
       rarity: 'Select',
       bundle: 'Smite',
       weapon: 'Phantom',
@@ -688,7 +688,7 @@ const initialState = {
     },
     {
       id: 85,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/22/Smite_Odin.png/revision/latest?cb=20200916171843',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/22/Smite_Odin.png',
       rarity: 'Select',
       bundle: 'Smite',
       weapon: 'Odin',
@@ -696,7 +696,7 @@ const initialState = {
     },
     {
       id: 86,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1f/Smite_Knife.png/revision/latest?cb=20200916171858',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1f/Smite_Knife.png',
       rarity: 'Select',
       bundle: 'Smite',
       weapon: 'Knife',
@@ -704,8 +704,7 @@ const initialState = {
     },
     {
       id: 87,
-      img_url:
-        'https://static.wikia.nocookie.net/valorant/images/f/f8/Gravitational_Uranium_Neuroblaster_Classic.png/revision/latest?cb=20210707185653',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Gravitational_Uranium_Neuroblaster_Classic.png',
       rarity: 'Premium',
       bundle: 'Gravitational Uranium Neuroblaster',
       weapon: 'Classic',
@@ -713,8 +712,7 @@ const initialState = {
     },
     {
       id: 88,
-      img_url:
-        'https://static.wikia.nocookie.net/valorant/images/7/72/Gravitational_Uranium_Neuroblaster_Spectre.png/revision/latest?cb=20210707185656',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/72/Gravitational_Uranium_Neuroblaster_Spectre.png',
       rarity: 'Premium',
       bundle: 'Gravitational Uranium Neuroblaster',
       weapon: 'Spectre',
@@ -722,8 +720,7 @@ const initialState = {
     },
     {
       id: 89,
-      img_url:
-        'https://static.wikia.nocookie.net/valorant/images/a/ae/Gravitational_Uranium_Neuroblaster_Bucky.png/revision/latest?cb=20210707185651',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ae/Gravitational_Uranium_Neuroblaster_Bucky.png',
       rarity: 'Premium',
       bundle: 'Gravitational Uranium Neuroblaster',
       weapon: 'Bucky',
@@ -731,8 +728,7 @@ const initialState = {
     },
     {
       id: 90,
-      img_url:
-        'https://static.wikia.nocookie.net/valorant/images/a/a1/Gravitational_Uranium_Neuroblaster_Operator.png/revision/latest?cb=20210707185654',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a1/Gravitational_Uranium_Neuroblaster_Operator.png',
       rarity: 'Premium',
       bundle: 'Gravitational Uranium Neuroblaster',
       weapon: 'Operator',
@@ -740,8 +736,7 @@ const initialState = {
     },
     {
       id: 91,
-      img_url:
-        'https://static.wikia.nocookie.net/valorant/images/1/15/Gravitational_Uranium_Neuroblaster_Baton.png/revision/latest?cb=20210707185650',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/15/Gravitational_Uranium_Neuroblaster_Baton.png',
       rarity: 'Premium',
       bundle: 'Gravitational Uranium Neuroblaster',
       weapon: 'Baton',
@@ -749,7 +744,7 @@ const initialState = {
     },
     {
       id: 92,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9f/Singularity_Sheriff.png/revision/latest?cb=20201010151704',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9f/Singularity_Sheriff.png',
       rarity: 'Exclusive',
       bundle: 'Singularity',
       weapon: 'Sheriff',
@@ -757,7 +752,7 @@ const initialState = {
     },
     {
       id: 93,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7e/Singularity_Spectre.png/revision/latest?cb=20201010151720',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7e/Singularity_Spectre.png',
       rarity: 'Exclusive',
       bundle: 'Singularity',
       weapon: 'Spectre',
@@ -765,7 +760,7 @@ const initialState = {
     },
     {
       id: 94,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/Singularity_Phantom.png/revision/latest?cb=20201010151730',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/Singularity_Phantom.png',
       rarity: 'Exclusive',
       bundle: 'Singularity',
       weapon: 'Phantom',
@@ -773,7 +768,7 @@ const initialState = {
     },
     {
       id: 95,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d5/Singularity_Ares.png/revision/latest?cb=20201010151740',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d5/Singularity_Ares.png',
       rarity: 'Exclusive',
       bundle: 'Singularity',
       weapon: 'Ares',
@@ -781,7 +776,7 @@ const initialState = {
     },
     {
       id: 96,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/10/Singularity_Knife.png/revision/latest?cb=20210707191411',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/10/Singularity_Knife.png',
       rarity: 'Exclusive',
       bundle: 'Singularity',
       weapon: 'Knife',
@@ -789,7 +784,7 @@ const initialState = {
     },
     {
       id: 97,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fd/Reaver_Sheriff.png/revision/latest?cb=20210708103455',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fd/Reaver_Sheriff.png',
       rarity: 'Premium',
       bundle: 'Reaver',
       weapon: 'Sheriff',
@@ -797,7 +792,7 @@ const initialState = {
     },
     {
       id: 98,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cc/Reaver_Guardian.png/revision/latest?cb=20201027170547',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cc/Reaver_Guardian.png',
       rarity: 'Premium',
       bundle: 'Reaver',
       weapon: 'Guardian',
@@ -805,7 +800,7 @@ const initialState = {
     },
     {
       id: 99,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/27/Reaver_Vandal.png/revision/latest?cb=20210708103519',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/27/Reaver_Vandal.png',
       rarity: 'Premium',
       bundle: 'Reaver',
       weapon: 'Vandal',
@@ -813,7 +808,7 @@ const initialState = {
     },
     {
       id: 100,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/Reaver_Operator.png/revision/latest?cb=20201027170727',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/Reaver_Operator.png',
       rarity: 'Premium',
       bundle: 'Reaver',
       weapon: 'Operator',
@@ -821,7 +816,7 @@ const initialState = {
     },
     {
       id: 101,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/71/Reaver_Knife.png/revision/latest?cb=20210708103539',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/71/Reaver_Knife.png',
       rarity: 'Premium',
       bundle: 'Reaver',
       weapon: 'Knife',
@@ -829,7 +824,7 @@ const initialState = {
     },
     {
       id: 102,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Ion_Sheriff.png/revision/latest?cb=20210712140421',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Ion_Sheriff.png',
       rarity: 'Premium',
       bundle: 'Ion',
       weapon: 'Sheriff',
@@ -837,7 +832,7 @@ const initialState = {
     },
     {
       id: 103,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/09/Ion_Bucky.png/revision/latest?cb=20201112142243',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/09/Ion_Bucky.png',
       rarity: 'Premium',
       bundle: 'Ion',
       weapon: 'Bucky',
@@ -845,7 +840,7 @@ const initialState = {
     },
     {
       id: 104,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/49/Ion_Phantom.png/revision/latest?cb=20201112142324',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/49/Ion_Phantom.png',
       rarity: 'Premium',
       bundle: 'Ion',
       weapon: 'Phantom',
@@ -853,7 +848,7 @@ const initialState = {
     },
     {
       id: 105,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b8/Ion_Operator.png/revision/latest?cb=20201112142312',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b8/Ion_Operator.png',
       rarity: 'Premium',
       bundle: 'Ion',
       weapon: 'Operator',
@@ -861,7 +856,7 @@ const initialState = {
     },
     {
       id: 106,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6f/Ion_Energy_Sword.png/revision/latest?cb=20210708103635',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6f/Ion_Energy_Sword.png',
       rarity: 'Premium',
       bundle: 'Ion',
       weapon: 'Energy Sword',
@@ -869,7 +864,7 @@ const initialState = {
     },
     {
       id: 107,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9a/Wasteland_Shorty.png/revision/latest?cb=20201027171104',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9a/Wasteland_Shorty.png',
       rarity: 'Deluxe',
       bundle: 'Wasteland',
       weapon: 'Shorty',
@@ -877,7 +872,7 @@ const initialState = {
     },
     {
       id: 108,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d5/Wasteland_Sheriff.png/revision/latest?cb=20210708103806',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d5/Wasteland_Sheriff.png',
       rarity: 'Deluxe',
       bundle: 'Wasteland',
       weapon: 'Sheriff',
@@ -885,7 +880,7 @@ const initialState = {
     },
     {
       id: 109,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fe/Wasteland_Spectre.png/revision/latest?cb=20201027171118',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fe/Wasteland_Spectre.png',
       rarity: 'Deluxe',
       bundle: 'Wasteland',
       weapon: 'Spectre',
@@ -893,7 +888,7 @@ const initialState = {
     },
     {
       id: 110,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ad/Wasteland_Vandal.png/revision/latest?cb=20201027171129',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ad/Wasteland_Vandal.png',
       rarity: 'Deluxe',
       bundle: 'Wasteland',
       weapon: 'Vandal',
@@ -901,7 +896,7 @@ const initialState = {
     },
     {
       id: 111,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cf/Wasteland_Marshal.png/revision/latest?cb=20201027171046',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cf/Wasteland_Marshal.png',
       rarity: 'Deluxe',
       bundle: 'Wasteland',
       weapon: 'Marshal',
@@ -909,7 +904,7 @@ const initialState = {
     },
     {
       id: 112,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5f/Sensation_Frenzy.png/revision/latest?cb=20210708103937',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5f/Sensation_Frenzy.png',
       rarity: 'Select',
       bundle: 'Sensation',
       weapon: 'Frenzy',
@@ -917,7 +912,7 @@ const initialState = {
     },
     {
       id: 113,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Sensation_Stinger.png/revision/latest?cb=20201112150323',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Sensation_Stinger.png',
       rarity: 'Select',
       bundle: 'Sensation',
       weapon: 'Stinger',
@@ -925,7 +920,7 @@ const initialState = {
     },
     {
       id: 114,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/68/Sensation_Judge.png/revision/latest?cb=20201112150255',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/68/Sensation_Judge.png',
       rarity: 'Select',
       bundle: 'Sensation',
       weapon: 'Judge',
@@ -933,7 +928,7 @@ const initialState = {
     },
     {
       id: 115,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/05/Sensation_Vandal.png/revision/latest?cb=20201112150337',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/05/Sensation_Vandal.png',
       rarity: 'Select',
       bundle: 'Sensation',
       weapon: 'Vandal',
@@ -941,7 +936,7 @@ const initialState = {
     },
     {
       id: 116,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/31/Sensation_Odin.png/revision/latest?cb=20201112150309',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/31/Sensation_Odin.png',
       rarity: 'Select',
       bundle: 'Sensation',
       weapon: 'Odin',
@@ -949,7 +944,7 @@ const initialState = {
     },
     {
       id: 117,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fe/Winterwunderland_Ghost.png/revision/latest?cb=20210708104120',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fe/Winterwunderland_Ghost.png',
       rarity: 'Deluxe',
       bundle: 'Winterwunderland',
       weapon: 'Ghost',
@@ -957,7 +952,7 @@ const initialState = {
     },
     {
       id: 118,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3b/Winterwunderland_Phantom.png/revision/latest?cb=20210708104056',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3b/Winterwunderland_Phantom.png',
       rarity: 'Deluxe',
       bundle: 'Winterwunderland',
       weapon: 'Phantom',
@@ -965,7 +960,7 @@ const initialState = {
     },
     {
       id: 119,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f2/Winterwunderland_Vandal.png/revision/latest?cb=20210708104203',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f2/Winterwunderland_Vandal.png',
       rarity: 'Deluxe',
       bundle: 'Winterwunderland',
       weapon: 'Vandal',
@@ -973,7 +968,7 @@ const initialState = {
     },
     {
       id: 120,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/60/Winterwunderland_Marshal.png/revision/latest?cb=20210708104142',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/60/Winterwunderland_Marshal.png',
       rarity: 'Deluxe',
       bundle: 'Winterwunderland',
       weapon: 'Marshal',
@@ -981,7 +976,7 @@ const initialState = {
     },
     {
       id: 121,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/04/Winterwunderland_Candy_Cane.png/revision/latest?cb=20210707191425',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/04/Winterwunderland_Candy_Cane.png',
       rarity: 'Deluxe',
       bundle: 'Winterwunderland',
       weapon: 'Candy Cane',
@@ -989,7 +984,7 @@ const initialState = {
     },
     {
       id: 122,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b4/BlastX_Frenzy.png/revision/latest?cb=20210708104353',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b4/BlastX_Frenzy.png',
       rarity: 'Exclusive',
       bundle: 'BlastX',
       weapon: 'Frenzy',
@@ -997,7 +992,7 @@ const initialState = {
     },
     {
       id: 123,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/BlastX_Spectre.png/revision/latest?cb=20210708104407',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/BlastX_Spectre.png',
       rarity: 'Exclusive',
       bundle: 'BlastX',
       weapon: 'Spectre',
@@ -1005,7 +1000,7 @@ const initialState = {
     },
     {
       id: 124,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b1/BlastX_Phantom.png/revision/latest?cb=20210708104423',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b1/BlastX_Phantom.png',
       rarity: 'Exclusive',
       bundle: 'BlastX',
       weapon: 'Phantom',
@@ -1013,7 +1008,7 @@ const initialState = {
     },
     {
       id: 125,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/13/BlastX_Odin.png/revision/latest?cb=20201210133413',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/13/BlastX_Odin.png',
       rarity: 'Exclusive',
       bundle: 'BlastX',
       weapon: 'Odin',
@@ -1021,7 +1016,7 @@ const initialState = {
     },
     {
       id: 126,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2d/BlastX_Polymer_Knifetech_Coated_Knife.png/revision/latest?cb=20210707185605',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2d/BlastX_Polymer_Knifetech_Coated_Knife.png',
       rarity: 'Exclusive',
       bundle: 'BlastX',
       weapon: 'Polymer Knifetech Coated Knife',
@@ -1029,7 +1024,7 @@ const initialState = {
     },
     {
       id: 127,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/01/Prism_II_Shorty.png/revision/latest?cb=20230425140015',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/01/Prism_II_Shorty.png',
       rarity: 'Select',
       bundle: 'Prism II',
       weapon: 'Shorty',
@@ -1037,7 +1032,7 @@ const initialState = {
     },
     {
       id: 128,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f9/Prism_II_Sheriff.png/revision/latest?cb=20210708104800',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f9/Prism_II_Sheriff.png',
       rarity: 'Select',
       bundle: 'Prism II',
       weapon: 'Sheriff',
@@ -1045,7 +1040,7 @@ const initialState = {
     },
     {
       id: 129,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7d/Prism_II_Stinger.png/revision/latest?cb=20210708104833',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7d/Prism_II_Stinger.png',
       rarity: 'Select',
       bundle: 'Prism II',
       weapon: 'Stinger',
@@ -1053,7 +1048,7 @@ const initialState = {
     },
     {
       id: 130,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Prism_II_Bucky.png/revision/latest?cb=20210708104815',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Prism_II_Bucky.png',
       rarity: 'Select',
       bundle: 'Prism II',
       weapon: 'Bucky',
@@ -1061,7 +1056,7 @@ const initialState = {
     },
     {
       id: 131,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8e/Prism_II_Vandal.png/revision/latest?cb=20210708104847',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8e/Prism_II_Vandal.png',
       rarity: 'Select',
       bundle: 'Prism II',
       weapon: 'Vandal',
@@ -1069,7 +1064,7 @@ const initialState = {
     },
     {
       id: 132,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/dc/Horizon_Frenzy.png/revision/latest?cb=20210708104931',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/dc/Horizon_Frenzy.png',
       rarity: 'Deluxe',
       bundle: 'Horizon',
       weapon: 'Frenzy',
@@ -1077,7 +1072,7 @@ const initialState = {
     },
     {
       id: 133,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/82/Horizon_Spectre.png/revision/latest?cb=20210708104951',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/82/Horizon_Spectre.png',
       rarity: 'Deluxe',
       bundle: 'Horizon',
       weapon: 'Spectre',
@@ -1085,7 +1080,7 @@ const initialState = {
     },
     {
       id: 134,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Horizon_Bucky.png/revision/latest?cb=20210708104940',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Horizon_Bucky.png',
       rarity: 'Deluxe',
       bundle: 'Horizon',
       weapon: 'Bucky',
@@ -1093,7 +1088,7 @@ const initialState = {
     },
     {
       id: 135,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a7/Horizon_Bulldog.png/revision/latest?cb=20210708105002',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a7/Horizon_Bulldog.png',
       rarity: 'Deluxe',
       bundle: 'Horizon',
       weapon: 'Bulldog',
@@ -1101,7 +1096,7 @@ const initialState = {
     },
     {
       id: 136,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8a/Horizon_Vandal.png/revision/latest?cb=20210708105011',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8a/Horizon_Vandal.png',
       rarity: 'Deluxe',
       bundle: 'Horizon',
       weapon: 'Vandal',
@@ -1109,7 +1104,7 @@ const initialState = {
     },
     {
       id: 137,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/65/Glitchpop_Classic.png/revision/latest?cb=20210708105113',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/65/Glitchpop_Classic.png',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
       weapon: 'Classic',
@@ -1117,7 +1112,7 @@ const initialState = {
     },
     {
       id: 138,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/74/Glitchpop_Phantom.png/revision/latest?cb=20210708105123',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/74/Glitchpop_Phantom.png',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
       weapon: 'Phantom',
@@ -1125,7 +1120,7 @@ const initialState = {
     },
     {
       id: 139,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ab/Glitchpop_Vandal.png/revision/latest?cb=20210708105142',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ab/Glitchpop_Vandal.png',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
       weapon: 'Vandal',
@@ -1133,7 +1128,7 @@ const initialState = {
     },
     {
       id: 140,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e4/Glitchpop_Operator.png/revision/latest?cb=20210708105151',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e4/Glitchpop_Operator.png',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
       weapon: 'Operator',
@@ -1141,7 +1136,7 @@ const initialState = {
     },
     {
       id: 141,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/01/Glitchpop_Axe.png/revision/latest?cb=20210708105045',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/01/Glitchpop_Axe.png',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
       weapon: 'Axe',
@@ -1149,7 +1144,7 @@ const initialState = {
     },
     {
       id: 142,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1b/Celestial_Frenzy.png/revision/latest?cb=20210310001652',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1b/Celestial_Frenzy.png',
       rarity: 'Premium',
       bundle: 'Celestial',
       weapon: 'Frenzy',
@@ -1157,7 +1152,7 @@ const initialState = {
     },
     {
       id: 143,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/00/Celestial_Judge.png/revision/latest?cb=20210310001735',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/00/Celestial_Judge.png',
       rarity: 'Premium',
       bundle: 'Celestial',
       weapon: 'Judge',
@@ -1165,7 +1160,7 @@ const initialState = {
     },
     {
       id: 144,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6e/Celestial_Phantom.png/revision/latest?cb=20210310001841',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6e/Celestial_Phantom.png',
       rarity: 'Premium',
       bundle: 'Celestial',
       weapon: 'Phantom',
@@ -1173,7 +1168,7 @@ const initialState = {
     },
     {
       id: 145,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/03/Celestial_Ares.png/revision/latest?cb=20210310001814',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/03/Celestial_Ares.png',
       rarity: 'Premium',
       bundle: 'Celestial',
       weapon: 'Ares',
@@ -1181,7 +1176,7 @@ const initialState = {
     },
     {
       id: 146,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c0/Celestial_Fan.png/revision/latest?cb=20210708105253',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c0/Celestial_Fan.png',
       rarity: 'Premium',
       bundle: 'Celestial',
       weapon: 'Fan',
@@ -1189,7 +1184,7 @@ const initialState = {
     },
     {
       id: 147,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/da/VALORANT_Go%21_Vol._1_Ghost.png/revision/latest?cb=20210708105415',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/da/VALORANT_Go%21_Vol._1_Ghost.png',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 1',
       weapon: 'Ghost',
@@ -1197,7 +1192,7 @@ const initialState = {
     },
     {
       id: 148,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d8/VALORANT_Go%21_Vol._1_Spectre.png/revision/latest?cb=20210708105439',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d8/VALORANT_Go%21_Vol._1_Spectre.png',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 1',
       weapon: 'Spectre',
@@ -1205,7 +1200,7 @@ const initialState = {
     },
     {
       id: 149,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b7/VALORANT_Go%21_Vol._1_Guardian.png/revision/latest?cb=20210708105502',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b7/VALORANT_Go%21_Vol._1_Guardian.png',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 1',
       weapon: 'Guardian',
@@ -1213,7 +1208,7 @@ const initialState = {
     },
     {
       id: 150,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/07/VALORANT_Go%21_Vol._1_Phantom.png/revision/latest?cb=20210708105521',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/07/VALORANT_Go%21_Vol._1_Phantom.png',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 1',
       weapon: 'Phantom',
@@ -1221,7 +1216,7 @@ const initialState = {
     },
     {
       id: 151,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/77/VALORANT_Go%21_Vol._1_Knife.png/revision/latest?cb=20210708105355',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/77/VALORANT_Go%21_Vol._1_Knife.png',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 1',
       weapon: 'Knife',
@@ -1229,7 +1224,7 @@ const initialState = {
     },
     {
       id: 152,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a4/Prime_2.0_Frenzy.png/revision/latest?cb=20210707191254',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a4/Prime_2.0_Frenzy.png',
       rarity: 'Premium',
       bundle: 'Prime//2.0',
       weapon: 'Frenzy',
@@ -1237,7 +1232,7 @@ const initialState = {
     },
     {
       id: 153,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/18/Prime_2.0_Bucky.png/revision/latest?cb=20210707191252',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/18/Prime_2.0_Bucky.png',
       rarity: 'Premium',
       bundle: 'Prime//2.0',
       weapon: 'Bucky',
@@ -1245,7 +1240,7 @@ const initialState = {
     },
     {
       id: 154,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Prime_2.0_Phantom.png/revision/latest?cb=20210707191257',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Prime_2.0_Phantom.png',
       rarity: 'Premium',
       bundle: 'Prime//2.0',
       weapon: 'Phantom',
@@ -1253,7 +1248,7 @@ const initialState = {
     },
     {
       id: 155,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/de/Prime_2.0_Odin.png/revision/latest?cb=20210707191256',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/de/Prime_2.0_Odin.png',
       rarity: 'Premium',
       bundle: 'Prime//2.0',
       weapon: 'Odin',
@@ -1261,7 +1256,7 @@ const initialState = {
     },
     {
       id: 156,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cf/Prime_2.0_Karambit.png/revision/latest?cb=20210707191255',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cf/Prime_2.0_Karambit.png',
       rarity: 'Premium',
       bundle: 'Prime//2.0',
       weapon: 'Karambit',
@@ -1269,7 +1264,7 @@ const initialState = {
     },
     {
       id: 157,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b9/Infantry_Ghost.png/revision/latest?cb=20210708105646',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b9/Infantry_Ghost.png',
       rarity: 'Select',
       bundle: 'Infantry',
       weapon: 'Ghost',
@@ -1277,7 +1272,7 @@ const initialState = {
     },
     {
       id: 158,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7f/Infantry_Spectre.png/revision/latest?cb=20210708105709',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7f/Infantry_Spectre.png',
       rarity: 'Select',
       bundle: 'Infantry',
       weapon: 'Spectre',
@@ -1285,7 +1280,7 @@ const initialState = {
     },
     {
       id: 159,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1b/Infantry_Guardian.png/revision/latest?cb=20210708105735',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1b/Infantry_Guardian.png',
       rarity: 'Select',
       bundle: 'Infantry',
       weapon: 'Guardian',
@@ -1293,7 +1288,7 @@ const initialState = {
     },
     {
       id: 160,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7d/Infantry_Operator.png/revision/latest?cb=20210708105816',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7d/Infantry_Operator.png',
       rarity: 'Select',
       bundle: 'Infantry',
       weapon: 'Operator',
@@ -1301,7 +1296,7 @@ const initialState = {
     },
     {
       id: 161,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/56/Infantry_Ares.png/revision/latest?cb=20210708105756',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/56/Infantry_Ares.png',
       rarity: 'Select',
       bundle: 'Infantry',
       weapon: 'Ares',
@@ -1309,7 +1304,7 @@ const initialState = {
     },
     {
       id: 162,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/92/Magepunk_Ghost.png/revision/latest?cb=20210708121456',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/92/Magepunk_Ghost.png',
       rarity: 'Premium',
       bundle: 'Magepunk',
       weapon: 'Ghost',
@@ -1317,7 +1312,7 @@ const initialState = {
     },
     {
       id: 163,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8b/Magepunk_Spectre.png/revision/latest?cb=20210708121552',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8b/Magepunk_Spectre.png',
       rarity: 'Premium',
       bundle: 'Magepunk',
       weapon: 'Spectre',
@@ -1325,7 +1320,7 @@ const initialState = {
     },
     {
       id: 164,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e4/Magepunk_Bucky.png/revision/latest?cb=20210708121613',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e4/Magepunk_Bucky.png',
       rarity: 'Premium',
       bundle: 'Magepunk',
       weapon: 'Bucky',
@@ -1333,7 +1328,7 @@ const initialState = {
     },
     {
       id: 165,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5a/Magepunk_Marshal.png/revision/latest?cb=20210708121637',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5a/Magepunk_Marshal.png',
       rarity: 'Premium',
       bundle: 'Magepunk',
       weapon: 'Marshal',
@@ -1341,7 +1336,7 @@ const initialState = {
     },
     {
       id: 166,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/34/Magepunk_Electroblade.png/revision/latest?cb=20210708121531',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/34/Magepunk_Electroblade.png',
       rarity: 'Premium',
       bundle: 'Magepunk',
       weapon: 'Electroblade',
@@ -1349,7 +1344,7 @@ const initialState = {
     },
     {
       id: 167,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9f/Silvanus_Sheriff.png/revision/latest?cb=20210708121711',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9f/Silvanus_Sheriff.png',
       rarity: 'Deluxe',
       bundle: 'Silvanus',
       weapon: 'Sheriff',
@@ -1357,7 +1352,7 @@ const initialState = {
     },
     {
       id: 168,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/11/Silvanus_Stinger.png/revision/latest?cb=20210708121739',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/11/Silvanus_Stinger.png',
       rarity: 'Deluxe',
       bundle: 'Silvanus',
       weapon: 'Stinger',
@@ -1365,7 +1360,7 @@ const initialState = {
     },
     {
       id: 169,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/70/Silvanus_Phantom.png/revision/latest?cb=20210708121802',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/70/Silvanus_Phantom.png',
       rarity: 'Deluxe',
       bundle: 'Silvanus',
       weapon: 'Phantom',
@@ -1373,7 +1368,7 @@ const initialState = {
     },
     {
       id: 170,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/ff/Silvanus_Vandal.png/revision/latest?cb=20210708121822',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/ff/Silvanus_Vandal.png',
       rarity: 'Deluxe',
       bundle: 'Silvanus',
       weapon: 'Vandal',
@@ -1381,7 +1376,7 @@ const initialState = {
     },
     {
       id: 171,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/73/Silvanus_Operator.png/revision/latest?cb=20210708121848',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/73/Silvanus_Operator.png',
       rarity: 'Deluxe',
       bundle: 'Silvanus',
       weapon: 'Operator',
@@ -1389,7 +1384,7 @@ const initialState = {
     },
     {
       id: 172,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/89/Forsaken_Classic.png/revision/latest?cb=20210708122017',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/89/Forsaken_Classic.png',
       rarity: 'Premium',
       bundle: 'Forsaken',
       weapon: 'Classic',
@@ -1397,7 +1392,7 @@ const initialState = {
     },
     {
       id: 173,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/02/Forsaken_Spectre.png/revision/latest?cb=20210708122041',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/02/Forsaken_Spectre.png',
       rarity: 'Premium',
       bundle: 'Forsaken',
       weapon: 'Spectre',
@@ -1405,7 +1400,7 @@ const initialState = {
     },
     {
       id: 174,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/68/Forsaken_Vandal.png/revision/latest?cb=20210708122104',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/68/Forsaken_Vandal.png',
       rarity: 'Premium',
       bundle: 'Forsaken',
       weapon: 'Vandal',
@@ -1413,7 +1408,7 @@ const initialState = {
     },
     {
       id: 175,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d4/Forsaken_Operator.png/revision/latest?cb=20210708121929',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d4/Forsaken_Operator.png',
       rarity: 'Premium',
       bundle: 'Forsaken',
       weapon: 'Operator',
@@ -1421,7 +1416,7 @@ const initialState = {
     },
     {
       id: 176,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4c/Forsaken_Ritual_Blade.png/revision/latest?cb=20210708121951',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4c/Forsaken_Ritual_Blade.png',
       rarity: 'Premium',
       bundle: 'Forsaken',
       weapon: 'Ritual Blade',
@@ -1429,7 +1424,7 @@ const initialState = {
     },
     {
       id: 177,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/49/Minima_Sheriff.png/revision/latest?cb=20210708122330',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/49/Minima_Sheriff.png',
       rarity: 'Deluxe',
       bundle: 'Minima',
       weapon: 'Sheriff',
@@ -1437,7 +1432,7 @@ const initialState = {
     },
     {
       id: 178,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f6/Minima_Spectre.png/revision/latest?cb=20210708122405',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f6/Minima_Spectre.png',
       rarity: 'Deluxe',
       bundle: 'Minima',
       weapon: 'Spectre',
@@ -1445,7 +1440,7 @@ const initialState = {
     },
     {
       id: 179,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/89/Minima_Phantom.png/revision/latest?cb=20210708122423',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/89/Minima_Phantom.png',
       rarity: 'Deluxe',
       bundle: 'Minima',
       weapon: 'Phantom',
@@ -1453,7 +1448,7 @@ const initialState = {
     },
     {
       id: 180,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cf/Minima_Operator.png/revision/latest?cb=20210708122442',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cf/Minima_Operator.png',
       rarity: 'Deluxe',
       bundle: 'Minima',
       weapon: 'Operator',
@@ -1461,7 +1456,7 @@ const initialState = {
     },
     {
       id: 181,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cb/Minima_Ares.png/revision/latest?cb=20210708122501',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cb/Minima_Ares.png',
       rarity: 'Deluxe',
       bundle: 'Minima',
       weapon: 'Ares',
@@ -1469,7 +1464,7 @@ const initialState = {
     },
     {
       id: 182,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f9/Tethered_Realms_Ghost.png/revision/latest?cb=20210708122541',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f9/Tethered_Realms_Ghost.png',
       rarity: 'Premium',
       bundle: 'Tethered Realms',
       weapon: 'Ghost',
@@ -1477,7 +1472,7 @@ const initialState = {
     },
     {
       id: 183,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d7/Tethered_Realms_Guardian.png/revision/latest?cb=20210708122608',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d7/Tethered_Realms_Guardian.png',
       rarity: 'Premium',
       bundle: 'Tethered Realms',
       weapon: 'Guardian',
@@ -1485,7 +1480,7 @@ const initialState = {
     },
     {
       id: 184,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/Tethered_Realms_Vandal.png/revision/latest?cb=20210708122627',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/Tethered_Realms_Vandal.png',
       rarity: 'Premium',
       bundle: 'Tethered Realms',
       weapon: 'Vandal',
@@ -1493,7 +1488,7 @@ const initialState = {
     },
     {
       id: 185,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b8/Tethered_Realms_Operator.png/revision/latest?cb=20210708122648',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b8/Tethered_Realms_Operator.png',
       rarity: 'Premium',
       bundle: 'Tethered Realms',
       weapon: 'Operator',
@@ -1501,7 +1496,7 @@ const initialState = {
     },
     {
       id: 186,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f0/Tethered_Realms_Prosperity.png/revision/latest?cb=20210708122713',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f0/Tethered_Realms_Prosperity.png',
       rarity: 'Premium',
       bundle: 'Tethered Realms',
       weapon: 'Prosperity',
@@ -1509,7 +1504,7 @@ const initialState = {
     },
     {
       id: 187,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c8/Origin_Frenzy.png/revision/latest?cb=20210708122818',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c8/Origin_Frenzy.png',
       rarity: 'Premium',
       bundle: 'Origin',
       weapon: 'Frenzy',
@@ -1517,7 +1512,7 @@ const initialState = {
     },
     {
       id: 188,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2e/Origin_Bucky.png/revision/latest?cb=20210708122847',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2e/Origin_Bucky.png',
       rarity: 'Premium',
       bundle: 'Origin',
       weapon: 'Bucky',
@@ -1525,7 +1520,7 @@ const initialState = {
     },
     {
       id: 189,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5b/Origin_Vandal.png/revision/latest?cb=20210708122917',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5b/Origin_Vandal.png',
       rarity: 'Premium',
       bundle: 'Origin',
       weapon: 'Vandal',
@@ -1533,7 +1528,7 @@ const initialState = {
     },
     {
       id: 190,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/da/Origin_Operator.png/revision/latest?cb=20210708122941',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/da/Origin_Operator.png',
       rarity: 'Premium',
       bundle: 'Origin',
       weapon: 'Operator',
@@ -1541,7 +1536,7 @@ const initialState = {
     },
     {
       id: 191,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/98/Origin_Crescent_Blade.png/revision/latest?cb=20210707185755',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/98/Origin_Crescent_Blade.png',
       rarity: 'Premium',
       bundle: 'Origin',
       weapon: 'Crescent Blade',
@@ -1549,7 +1544,7 @@ const initialState = {
     },
     {
       id: 192,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6b/Ruination_Ghost.png/revision/latest?cb=20210707184809',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6b/Ruination_Ghost.png',
       rarity: 'Exclusive',
       bundle: 'Ruination',
       weapon: 'Ghost',
@@ -1557,7 +1552,7 @@ const initialState = {
     },
     {
       id: 193,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/Ruination_Spectre.png/revision/latest?cb=20210707184931',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/Ruination_Spectre.png',
       rarity: 'Exclusive',
       bundle: 'Ruination',
       weapon: 'Spectre',
@@ -1565,7 +1560,7 @@ const initialState = {
     },
     {
       id: 194,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3f/Ruination_Guardian.png/revision/latest?cb=20210707184826',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3f/Ruination_Guardian.png',
       rarity: 'Exclusive',
       bundle: 'Ruination',
       weapon: 'Guardian',
@@ -1573,7 +1568,7 @@ const initialState = {
     },
     {
       id: 195,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7c/Ruination_Phantom.png/revision/latest?cb=20210707184913',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7c/Ruination_Phantom.png',
       rarity: 'Exclusive',
       bundle: 'Ruination',
       weapon: 'Phantom',
@@ -1581,8 +1576,7 @@ const initialState = {
     },
     {
       id: 196,
-      img_url:
-        'https://static.wikia.nocookie.net/valorant/images/b/bb/Ruination_Broken_Blade_Of_The_Ruined_King.png/revision/latest?cb=20210712114145',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/bb/Ruination_Broken_Blade_Of_The_Ruined_King.png',
       rarity: 'Exclusive',
       bundle: 'Ruination',
       weapon: 'Broken Blade Of The Ruined King',
@@ -1590,7 +1584,7 @@ const initialState = {
     },
     {
       id: 197,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3d/Sentinels_Of_Light_Sheriff.png/revision/latest?cb=20210720175659',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3d/Sentinels_Of_Light_Sheriff.png',
       rarity: 'Exclusive',
       bundle: 'Sentinels of Light',
       weapon: 'Sheriff',
@@ -1598,7 +1592,7 @@ const initialState = {
     },
     {
       id: 198,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/69/Sentinels_Of_Light_Vandal.png/revision/latest?cb=20210720175714',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/69/Sentinels_Of_Light_Vandal.png',
       rarity: 'Exclusive',
       bundle: 'Sentinels of Light',
       weapon: 'Vandal',
@@ -1606,7 +1600,7 @@ const initialState = {
     },
     {
       id: 199,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/ba/Sentinels_Of_Light_Operator.png/revision/latest?cb=20210720175643',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/ba/Sentinels_Of_Light_Operator.png',
       rarity: 'Exclusive',
       bundle: 'Sentinels of Light',
       weapon: 'Operator',
@@ -1614,7 +1608,7 @@ const initialState = {
     },
     {
       id: 200,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/da/Sentinels_Of_Light_Ares.png/revision/latest?cb=20210720175610',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/da/Sentinels_Of_Light_Ares.png',
       rarity: 'Exclusive',
       bundle: 'Sentinels of Light',
       weapon: 'Ares',
@@ -1622,8 +1616,7 @@ const initialState = {
     },
     {
       id: 201,
-      img_url:
-        'https://static.wikia.nocookie.net/valorant/images/9/93/Sentinels_Of_Light_Relic_Of_The_Sentinel.png/revision/latest?cb=20210720175627',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/93/Sentinels_Of_Light_Relic_Of_The_Sentinel.png',
       rarity: 'Exclusive',
       bundle: 'Sentinels of Light',
       weapon: 'Relic of the Sentinel',
@@ -1631,7 +1624,7 @@ const initialState = {
     },
     {
       id: 202,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/Recon_Ghost.png/revision/latest?cb=20210824165144',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/Recon_Ghost.png',
       rarity: 'Premium',
       bundle: 'Recon',
       weapon: 'Ghost',
@@ -1639,7 +1632,7 @@ const initialState = {
     },
     {
       id: 203,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/18/Recon_Spectre.png/revision/latest?cb=20210824165144',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/18/Recon_Spectre.png',
       rarity: 'Premium',
       bundle: 'Recon',
       weapon: 'Spectre',
@@ -1647,7 +1640,7 @@ const initialState = {
     },
     {
       id: 204,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6e/Recon_Guardian.png/revision/latest?cb=20210824165145',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6e/Recon_Guardian.png',
       rarity: 'Premium',
       bundle: 'Recon',
       weapon: 'Guardian',
@@ -1655,7 +1648,7 @@ const initialState = {
     },
     {
       id: 205,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b3/Recon_Phantom.png/revision/latest?cb=20210824165144',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b3/Recon_Phantom.png',
       rarity: 'Premium',
       bundle: 'Recon',
       weapon: 'Phantom',
@@ -1663,7 +1656,7 @@ const initialState = {
     },
     {
       id: 206,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/aa/Recon_Balisong.png/revision/latest?cb=20210824165142',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/aa/Recon_Balisong.png',
       rarity: 'Premium',
       bundle: 'Recon',
       weapon: 'Balisong',
@@ -1671,7 +1664,7 @@ const initialState = {
     },
     {
       id: 207,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/df/SPECTRUM_Classic.png/revision/latest?cb=20210908214458',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/df/SPECTRUM_Classic.png',
       rarity: 'Exclusive',
       bundle: 'Spectrum',
       weapon: 'Classic',
@@ -1679,7 +1672,7 @@ const initialState = {
     },
     {
       id: 208,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0d/SPECTRUM_Bulldog.png/revision/latest?cb=20210908214451',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0d/SPECTRUM_Bulldog.png',
       rarity: 'Exclusive',
       bundle: 'Spectrum',
       weapon: 'Bulldog',
@@ -1687,7 +1680,7 @@ const initialState = {
     },
     {
       id: 209,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f5/SPECTRUM_Guardian.png/revision/latest?cb=20210908214456',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f5/SPECTRUM_Guardian.png',
       rarity: 'Exclusive',
       bundle: 'Spectrum',
       weapon: 'Guardian',
@@ -1695,7 +1688,7 @@ const initialState = {
     },
     {
       id: 210,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f4/SPECTRUM_Phantom.png/revision/latest?cb=20210908214445',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f4/SPECTRUM_Phantom.png',
       rarity: 'Exclusive',
       bundle: 'Spectrum',
       weapon: 'Phantom',
@@ -1703,7 +1696,7 @@ const initialState = {
     },
     {
       id: 211,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/SPECTRUM_Waveform.png/revision/latest?cb=20210908214448',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/SPECTRUM_Waveform.png',
       rarity: 'Exclusive',
       bundle: 'Spectrum',
       weapon: 'Waveform',
@@ -1711,7 +1704,7 @@ const initialState = {
     },
     {
       id: 212,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/33/VALORANT_Go%21_Vol._2_Classic.png/revision/latest?cb=20210921174840',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/33/VALORANT_Go%21_Vol._2_Classic.png',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 2',
       weapon: 'Classic',
@@ -1719,7 +1712,7 @@ const initialState = {
     },
     {
       id: 213,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5b/VALORANT_Go%21_Vol._2_Vandal.png/revision/latest?cb=20210921174824',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5b/VALORANT_Go%21_Vol._2_Vandal.png',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 2',
       weapon: 'Vandal',
@@ -1727,7 +1720,7 @@ const initialState = {
     },
     {
       id: 214,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/90/VALORANT_Go%21_Vol._2_Operator.png/revision/latest?cb=20210921174830',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/90/VALORANT_Go%21_Vol._2_Operator.png',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 2',
       weapon: 'Operator',
@@ -1735,7 +1728,7 @@ const initialState = {
     },
     {
       id: 215,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/87/VALORANT_Go%21_Vol._2_Ares.png/revision/latest?cb=20210921174844',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/87/VALORANT_Go%21_Vol._2_Ares.png',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 2',
       weapon: 'Ares',
@@ -1743,7 +1736,7 @@ const initialState = {
     },
     {
       id: 216,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1e/Yoru%27s_Stylish_Butterfly_Comb.png/revision/latest?cb=20210921174835',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1e/Yoru%27s_Stylish_Butterfly_Comb.png',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 2',
       weapon: "Yoru's Stylish Butterfly Comb",
@@ -1751,7 +1744,7 @@ const initialState = {
     },
     {
       id: 217,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/98/RGX_11z_Pro_Frenzy.png/revision/latest?cb=20211005172517',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/98/RGX_11z_Pro_Frenzy.png',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
       weapon: 'Frenzy',
@@ -1759,7 +1752,7 @@ const initialState = {
     },
     {
       id: 218,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/29/RGX_11z_Pro_Stinger.png/revision/latest?cb=20211005172557',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/29/RGX_11z_Pro_Stinger.png',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
       weapon: 'Stinger',
@@ -1767,7 +1760,7 @@ const initialState = {
     },
     {
       id: 219,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/55/RGX_11z_Pro_Guardian.png/revision/latest?cb=20211005172538',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/55/RGX_11z_Pro_Guardian.png',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
       weapon: 'Guardian',
@@ -1775,7 +1768,7 @@ const initialState = {
     },
     {
       id: 220,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/41/RGX_11z_Pro_Vandal.png/revision/latest?cb=20211005172619',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/41/RGX_11z_Pro_Vandal.png',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
       weapon: 'Vandal',
@@ -1783,7 +1776,7 @@ const initialState = {
     },
     {
       id: 221,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/15/RGX_11z_Pro_Blade.png/revision/latest?cb=20211005172436',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/15/RGX_11z_Pro_Blade.png',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
       weapon: 'Blade',
@@ -1791,7 +1784,7 @@ const initialState = {
     },
     {
       id: 222,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Nunca_Olvidados_Frenzy.png/revision/latest?cb=20211019175756',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Nunca_Olvidados_Frenzy.png',
       rarity: 'Deluxe',
       bundle: 'Nunca Olvidados',
       weapon: 'Frenzy',
@@ -1799,7 +1792,7 @@ const initialState = {
     },
     {
       id: 223,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0f/Nunca_Olvidados_Bulldog.png/revision/latest?cb=20211019175809',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0f/Nunca_Olvidados_Bulldog.png',
       rarity: 'Deluxe',
       bundle: 'Nunca Olvidados',
       weapon: 'Bulldog',
@@ -1807,7 +1800,7 @@ const initialState = {
     },
     {
       id: 224,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/17/Nunca_Olvidados_Vandal.png/revision/latest?cb=20211019175713',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/17/Nunca_Olvidados_Vandal.png',
       rarity: 'Deluxe',
       bundle: 'Nunca Olvidados',
       weapon: 'Vandal',
@@ -1815,7 +1808,7 @@ const initialState = {
     },
     {
       id: 225,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/Nunca_Olvidados_Ares.png/revision/latest?cb=20211019175820',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/Nunca_Olvidados_Ares.png',
       rarity: 'Deluxe',
       bundle: 'Nunca Olvidados',
       weapon: 'Ares',
@@ -1823,7 +1816,7 @@ const initialState = {
     },
     {
       id: 226,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4c/Nunca_Olvidados_Catrina.png/revision/latest?cb=20211019175838',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4c/Nunca_Olvidados_Catrina.png',
       rarity: 'Deluxe',
       bundle: 'Nunca Olvidados',
       weapon: 'Catrina',
@@ -1831,7 +1824,7 @@ const initialState = {
     },
     {
       id: 227,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/75/Radiant_Crisis_001_Classic.png/revision/latest?cb=20211102175411',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/75/Radiant_Crisis_001_Classic.png',
       rarity: 'Premium',
       bundle: 'Radiant Crisis 001',
       weapon: 'Classic',
@@ -1839,7 +1832,7 @@ const initialState = {
     },
     {
       id: 228,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ac/Radiant_Crisis_001_Spectre.png/revision/latest?cb=20211102175420',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ac/Radiant_Crisis_001_Spectre.png',
       rarity: 'Premium',
       bundle: 'Radiant Crisis 001',
       weapon: 'Spectre',
@@ -1847,7 +1840,7 @@ const initialState = {
     },
     {
       id: 229,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Radiant_Crisis_001_Bucky.png/revision/latest?cb=20211102175407',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Radiant_Crisis_001_Bucky.png',
       rarity: 'Premium',
       bundle: 'Radiant Crisis 001',
       weapon: 'Bucky',
@@ -1855,7 +1848,7 @@ const initialState = {
     },
     {
       id: 230,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/00/Radiant_Crisis_001_Phantom.png/revision/latest?cb=20211102175415',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/00/Radiant_Crisis_001_Phantom.png',
       rarity: 'Premium',
       bundle: 'Radiant Crisis 001',
       weapon: 'Phantom',
@@ -1863,7 +1856,7 @@ const initialState = {
     },
     {
       id: 231,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3f/Radiant_Crisis_001_Baseball_Bat.png/revision/latest?cb=20211102175403',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3f/Radiant_Crisis_001_Baseball_Bat.png',
       rarity: 'Premium',
       bundle: 'Radiant Crisis 001',
       weapon: 'Baseball Bat',
@@ -1871,7 +1864,7 @@ const initialState = {
     },
     {
       id: 232,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2f/Magepunk_Sheriff.png/revision/latest?cb=20211119105628',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2f/Magepunk_Sheriff.png',
       rarity: 'Premium',
       bundle: 'Magepunk',
       weapon: 'Sheriff',
@@ -1879,7 +1872,7 @@ const initialState = {
     },
     {
       id: 233,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a6/Magepunk_Guardian.png/revision/latest?cb=20211119110014',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a6/Magepunk_Guardian.png',
       rarity: 'Premium',
       bundle: 'Magepunk',
       weapon: 'Guardian',
@@ -1887,7 +1880,7 @@ const initialState = {
     },
     {
       id: 234,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Magepunk_Operator.png/revision/latest?cb=20211119105827',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Magepunk_Operator.png',
       rarity: 'Premium',
       bundle: 'Magepunk',
       weapon: 'Operator',
@@ -1895,7 +1888,7 @@ const initialState = {
     },
     {
       id: 235,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/31/Magepunk_Ares.png/revision/latest?cb=20211119110057',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/31/Magepunk_Ares.png',
       rarity: 'Premium',
       bundle: 'Magepunk',
       weapon: 'Ares',
@@ -1903,7 +1896,7 @@ const initialState = {
     },
     {
       id: 236,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/98/Magepunk_Shock_Gauntlet.png/revision/latest?cb=20211119105506',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/98/Magepunk_Shock_Gauntlet.png',
       rarity: 'Premium',
       bundle: 'Magepunk',
       weapon: 'Shock Gauntlet',
@@ -1911,7 +1904,7 @@ const initialState = {
     },
     {
       id: 237,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/ee/Snowfall_Classic.png/revision/latest?cb=20211207184332',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/ee/Snowfall_Classic.png',
       rarity: 'Deluxe',
       bundle: 'Snowfall',
       weapon: 'Classic',
@@ -1919,7 +1912,7 @@ const initialState = {
     },
     {
       id: 238,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/76/Snowfall_Judge.png/revision/latest?cb=20211207184337',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/76/Snowfall_Judge.png',
       rarity: 'Deluxe',
       bundle: 'Snowfall',
       weapon: 'Judge',
@@ -1927,7 +1920,7 @@ const initialState = {
     },
     {
       id: 239,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/78/Snowfall_Phantom.png/revision/latest?cb=20211207184341',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/78/Snowfall_Phantom.png',
       rarity: 'Deluxe',
       bundle: 'Snowfall',
       weapon: 'Phantom',
@@ -1935,7 +1928,7 @@ const initialState = {
     },
     {
       id: 240,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/25/Snowfall_Ares.png/revision/latest?cb=20211207184326',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/25/Snowfall_Ares.png',
       rarity: 'Deluxe',
       bundle: 'Snowfall',
       weapon: 'Ares',
@@ -1943,7 +1936,7 @@ const initialState = {
     },
     {
       id: 241,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Snowfall_Wand.png/revision/latest?cb=20230523161507',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Snowfall_Wand.png',
       rarity: 'Deluxe',
       bundle: 'Snowfall',
       weapon: 'Wand',
@@ -1951,7 +1944,7 @@ const initialState = {
     },
     {
       id: 242,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Protocol_781-A_Sheriff.png/revision/latest?cb=20220113063244',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Protocol_781-A_Sheriff.png',
       rarity: 'Ultra',
       bundle: 'Protocol 781-A',
       weapon: 'Sheriff',
@@ -1959,7 +1952,7 @@ const initialState = {
     },
     {
       id: 243,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e9/Protocol_781-A_Spectre.png/revision/latest?cb=20220113063244',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e9/Protocol_781-A_Spectre.png',
       rarity: 'Ultra',
       bundle: 'Protocol 781-A',
       weapon: 'Spectre',
@@ -1967,7 +1960,7 @@ const initialState = {
     },
     {
       id: 244,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e2/Protocol_781-A_Bulldog.png/revision/latest?cb=20220113063243',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e2/Protocol_781-A_Bulldog.png',
       rarity: 'Ultra',
       bundle: 'Protocol 781-A',
       weapon: 'Bulldog',
@@ -1975,7 +1968,7 @@ const initialState = {
     },
     {
       id: 245,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ce/Protocol_781-A_Phantom.png/revision/latest?cb=20220113063243',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ce/Protocol_781-A_Phantom.png',
       rarity: 'Ultra',
       bundle: 'Protocol 781-A',
       weapon: 'Phantom',
@@ -1983,8 +1976,7 @@ const initialState = {
     },
     {
       id: 246,
-      img_url:
-        'https://static.wikia.nocookie.net/valorant/images/8/8a/Protocol_781-A_Personal_Administrative_Melee_Unit.png/revision/latest?cb=20220113063243',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8a/Protocol_781-A_Personal_Administrative_Melee_Unit.png',
       rarity: 'Ultra',
       bundle: 'Protocol 781-A',
       weapon: 'Personal Administrative Melee Unit',
@@ -1992,7 +1984,7 @@ const initialState = {
     },
     {
       id: 247,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4c/Tigris_Shorty.png/revision/latest?cb=20220201214711',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4c/Tigris_Shorty.png',
       rarity: 'Deluxe',
       bundle: 'Tigris',
       weapon: 'Shorty',
@@ -2000,7 +1992,7 @@ const initialState = {
     },
     {
       id: 248,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/68/Tigris_Spectre.png/revision/latest?cb=20220201214714',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/68/Tigris_Spectre.png',
       rarity: 'Deluxe',
       bundle: 'Tigris',
       weapon: 'Spectre',
@@ -2008,7 +2000,7 @@ const initialState = {
     },
     {
       id: 249,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/79/Tigris_Phantom.png/revision/latest?cb=20220201214707',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/79/Tigris_Phantom.png',
       rarity: 'Deluxe',
       bundle: 'Tigris',
       weapon: 'Phantom',
@@ -2016,7 +2008,7 @@ const initialState = {
     },
     {
       id: 250,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b5/Tigris_Operator.png/revision/latest?cb=20220201214703',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b5/Tigris_Operator.png',
       rarity: 'Deluxe',
       bundle: 'Tigris',
       weapon: 'Operator',
@@ -2024,7 +2016,7 @@ const initialState = {
     },
     {
       id: 251,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fd/Tigris_Hu_Else.png/revision/latest?cb=20220201214658',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fd/Tigris_Hu_Else.png',
       rarity: 'Deluxe',
       bundle: 'Tigris',
       weapon: 'Hu Else',
@@ -2032,7 +2024,7 @@ const initialState = {
     },
     {
       id: 252,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8a/Undercity_Classic.png/revision/latest?cb=20220217141353',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8a/Undercity_Classic.png',
       rarity: 'Premium',
       bundle: 'Undercity',
       weapon: 'Classic',
@@ -2040,7 +2032,7 @@ const initialState = {
     },
     {
       id: 253,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/37/Undercity_Judge.png/revision/latest?cb=20220217141303',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/37/Undercity_Judge.png',
       rarity: 'Premium',
       bundle: 'Undercity',
       weapon: 'Judge',
@@ -2048,7 +2040,7 @@ const initialState = {
     },
     {
       id: 254,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/27/Undercity_Bulldog.png/revision/latest?cb=20220217141413',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/27/Undercity_Bulldog.png',
       rarity: 'Premium',
       bundle: 'Undercity',
       weapon: 'Bulldog',
@@ -2056,7 +2048,7 @@ const initialState = {
     },
     {
       id: 255,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d7/Undercity_Phantom.png/revision/latest?cb=20220217141237',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d7/Undercity_Phantom.png',
       rarity: 'Premium',
       bundle: 'Undercity',
       weapon: 'Phantom',
@@ -2064,7 +2056,7 @@ const initialState = {
     },
     {
       id: 256,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/15/Undercity_Hack.png/revision/latest?cb=20220217141344',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/15/Undercity_Hack.png',
       rarity: 'Premium',
       bundle: 'Undercity',
       weapon: 'Hack',
@@ -2072,7 +2064,7 @@ const initialState = {
     },
     {
       id: 257,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/46/Gaia%27s_Vengeance_Ghost.png/revision/latest?cb=20220302170019',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/46/Gaia%27s_Vengeance_Ghost.png',
       rarity: 'Premium',
       bundle: "Gaia's Vengeance",
       weapon: 'Ghost',
@@ -2080,7 +2072,7 @@ const initialState = {
     },
     {
       id: 258,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/19/Gaia%27s_Vengeance_Guardian.png/revision/latest?cb=20220302170019',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/19/Gaia%27s_Vengeance_Guardian.png',
       rarity: 'Premium',
       bundle: "Gaia's Vengeance",
       weapon: 'Guardian',
@@ -2088,7 +2080,7 @@ const initialState = {
     },
     {
       id: 259,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0c/Gaia%27s_Vengeance_Vandal.png/revision/latest?cb=20220302170020',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0c/Gaia%27s_Vengeance_Vandal.png',
       rarity: 'Premium',
       bundle: "Gaia's Vengeance",
       weapon: 'Vandal',
@@ -2096,7 +2088,7 @@ const initialState = {
     },
     {
       id: 260,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c0/Gaia%27s_Vengeance_Marshal.png/revision/latest?cb=20220302170019',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c0/Gaia%27s_Vengeance_Marshal.png',
       rarity: 'Premium',
       bundle: "Gaia's Vengeance",
       weapon: 'Marshal',
@@ -2104,7 +2096,7 @@ const initialState = {
     },
     {
       id: 261,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/56/Gaia%27s_Wrath.png/revision/latest?cb=20220302170020',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/56/Gaia%27s_Wrath.png',
       rarity: 'Premium',
       bundle: "Gaia's Vengeance",
       weapon: "Gaia's Wrath",
@@ -2112,7 +2104,7 @@ const initialState = {
     },
     {
       id: 262,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/62/Team_Ace_Frenzy.png/revision/latest?cb=20220302170021',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/62/Team_Ace_Frenzy.png',
       rarity: 'Deluxe',
       bundle: 'Team Ace',
       weapon: 'Frenzy',
@@ -2120,7 +2112,7 @@ const initialState = {
     },
     {
       id: 263,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/88/Team_Ace_Judge.png/revision/latest?cb=20220302170021',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/88/Team_Ace_Judge.png',
       rarity: 'Deluxe',
       bundle: 'Team Ace',
       weapon: 'Judge',
@@ -2128,7 +2120,7 @@ const initialState = {
     },
     {
       id: 264,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/88/Team_Ace_Phantom.png/revision/latest?cb=20220302170021',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/88/Team_Ace_Phantom.png',
       rarity: 'Deluxe',
       bundle: 'Team Ace',
       weapon: 'Phantom',
@@ -2136,7 +2128,7 @@ const initialState = {
     },
     {
       id: 265,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Team_Ace_Vandal.png/revision/latest?cb=20220302170021',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Team_Ace_Vandal.png',
       rarity: 'Deluxe',
       bundle: 'Team Ace',
       weapon: 'Vandal',
@@ -2144,7 +2136,7 @@ const initialState = {
     },
     {
       id: 266,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ab/Team_Ace_Operator.png/revision/latest?cb=20220302170021',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ab/Team_Ace_Operator.png',
       rarity: 'Deluxe',
       bundle: 'Team Ace',
       weapon: 'Operator',
@@ -2152,7 +2144,7 @@ const initialState = {
     },
     {
       id: 267,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/72/Endeavour_Ghost.png/revision/latest?cb=20220323151705',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/72/Endeavour_Ghost.png',
       rarity: 'Select',
       bundle: 'Endeavour',
       weapon: 'Ghost',
@@ -2160,7 +2152,7 @@ const initialState = {
     },
     {
       id: 268,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Endeavour_Bulldog.png/revision/latest?cb=20220323151642',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Endeavour_Bulldog.png',
       rarity: 'Select',
       bundle: 'Endeavour',
       weapon: 'Bulldog',
@@ -2168,7 +2160,7 @@ const initialState = {
     },
     {
       id: 269,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2a/Endeavour_Vandal.png/revision/latest?cb=20220323151611',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2a/Endeavour_Vandal.png',
       rarity: 'Select',
       bundle: 'Endeavour',
       weapon: 'Vandal',
@@ -2176,7 +2168,7 @@ const initialState = {
     },
     {
       id: 270,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/45/Endeavour_Operator.png/revision/latest?cb=20220323151653',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/45/Endeavour_Operator.png',
       rarity: 'Select',
       bundle: 'Endeavour',
       weapon: 'Operator',
@@ -2184,7 +2176,7 @@ const initialState = {
     },
     {
       id: 271,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/54/Endeavour_Ares.png/revision/latest?cb=20220323151720',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/54/Endeavour_Ares.png',
       rarity: 'Select',
       bundle: 'Endeavour',
       weapon: 'Ares',
@@ -2192,7 +2184,7 @@ const initialState = {
     },
     {
       id: 272,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d5/Doodle_Buds_Shorty.png/revision/latest?cb=20230425140004',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d5/Doodle_Buds_Shorty.png',
       rarity: 'Premium',
       bundle: 'Doodle Buds',
       weapon: 'Shorty',
@@ -2200,7 +2192,7 @@ const initialState = {
     },
     {
       id: 273,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ca/Doodle_Buds_Stinger.png/revision/latest?cb=20220415131722',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ca/Doodle_Buds_Stinger.png',
       rarity: 'Premium',
       bundle: 'Doodle Buds',
       weapon: 'Stinger',
@@ -2208,7 +2200,7 @@ const initialState = {
     },
     {
       id: 274,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/59/Doodle_Buds_Phantom.png/revision/latest?cb=20220415131700',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/59/Doodle_Buds_Phantom.png',
       rarity: 'Premium',
       bundle: 'Doodle Buds',
       weapon: 'Phantom',
@@ -2216,7 +2208,7 @@ const initialState = {
     },
     {
       id: 275,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Doodle_Buds_Marshal.png/revision/latest?cb=20220415131423',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Doodle_Buds_Marshal.png',
       rarity: 'Premium',
       bundle: 'Doodle Buds',
       weapon: 'Marshal',
@@ -2224,7 +2216,7 @@ const initialState = {
     },
     {
       id: 276,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/be/Doodle_Buds_Ares.png/revision/latest?cb=20220415131311',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/be/Doodle_Buds_Ares.png',
       rarity: 'Premium',
       bundle: 'Doodle Buds',
       weapon: 'Ares',
@@ -2232,7 +2224,7 @@ const initialState = {
     },
     {
       id: 277,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/87/RGX_11z_Pro_Classic.png/revision/latest?cb=20220427142733',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/87/RGX_11z_Pro_Classic.png',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
       weapon: 'Classic',
@@ -2240,7 +2232,7 @@ const initialState = {
     },
     {
       id: 278,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7b/RGX_11z_Pro_Spectre.png/revision/latest?cb=20220427142747',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7b/RGX_11z_Pro_Spectre.png',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
       weapon: 'Spectre',
@@ -2248,7 +2240,7 @@ const initialState = {
     },
     {
       id: 279,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/bb/RGX_11z_Pro_Phantom.png/revision/latest?cb=20220427142744',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/bb/RGX_11z_Pro_Phantom.png',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
       weapon: 'Phantom',
@@ -2256,7 +2248,7 @@ const initialState = {
     },
     {
       id: 280,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4c/RGX_11z_Pro_Operator.png/revision/latest?cb=20220427142740',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4c/RGX_11z_Pro_Operator.png',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
       weapon: 'Operator',
@@ -2264,7 +2256,7 @@ const initialState = {
     },
     {
       id: 281,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/da/RGX_11z_Pro_Firefly.png/revision/latest?cb=20220427142737',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/da/RGX_11z_Pro_Firefly.png',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
       weapon: 'Firefly',
@@ -2272,7 +2264,7 @@ const initialState = {
     },
     {
       id: 282,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d0/Titanmail_Frenzy.png/revision/latest?cb=20220510155559',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d0/Titanmail_Frenzy.png',
       rarity: 'Deluxe',
       bundle: 'Titanmail',
       weapon: 'Frenzy',
@@ -2280,7 +2272,7 @@ const initialState = {
     },
     {
       id: 283,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/46/Titanmail_Bucky.png/revision/latest?cb=20220510155558',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/46/Titanmail_Bucky.png',
       rarity: 'Deluxe',
       bundle: 'Titanmail',
       weapon: 'Bucky',
@@ -2288,7 +2280,7 @@ const initialState = {
     },
     {
       id: 284,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/09/Titanmail_Vandal.png/revision/latest?cb=20220510155601',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/09/Titanmail_Vandal.png',
       rarity: 'Deluxe',
       bundle: 'Titanmail',
       weapon: 'Vandal',
@@ -2296,7 +2288,7 @@ const initialState = {
     },
     {
       id: 285,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/93/Titanmail_Ares.png/revision/latest?cb=20220510155557',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/93/Titanmail_Ares.png',
       rarity: 'Deluxe',
       bundle: 'Titanmail',
       weapon: 'Ares',
@@ -2304,7 +2296,7 @@ const initialState = {
     },
     {
       id: 286,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/60/Titanmail_Mace.png/revision/latest?cb=20220510155600',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/60/Titanmail_Mace.png',
       rarity: 'Deluxe',
       bundle: 'Titanmail',
       weapon: 'Mace',
@@ -2312,7 +2304,7 @@ const initialState = {
     },
     {
       id: 287,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/48/Neptune_Shorty.png/revision/latest?cb=20220524173532',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/48/Neptune_Shorty.png',
       rarity: 'Premium',
       bundle: 'Neptune',
       weapon: 'Shorty',
@@ -2320,7 +2312,7 @@ const initialState = {
     },
     {
       id: 288,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4e/Neptune_Spectre.png/revision/latest?cb=20220524173534',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4e/Neptune_Spectre.png',
       rarity: 'Premium',
       bundle: 'Neptune',
       weapon: 'Spectre',
@@ -2328,7 +2320,7 @@ const initialState = {
     },
     {
       id: 289,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a5/Neptune_Guardian.png/revision/latest?cb=20220524173530',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a5/Neptune_Guardian.png',
       rarity: 'Premium',
       bundle: 'Neptune',
       weapon: 'Guardian',
@@ -2336,7 +2328,7 @@ const initialState = {
     },
     {
       id: 290,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fe/Neptune_Vandal.png/revision/latest?cb=20220524173536',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fe/Neptune_Vandal.png',
       rarity: 'Premium',
       bundle: 'Neptune',
       weapon: 'Vandal',
@@ -2344,7 +2336,7 @@ const initialState = {
     },
     {
       id: 291,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/90/Neptune_Anchor.png/revision/latest?cb=20220524173527',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/90/Neptune_Anchor.png',
       rarity: 'Premium',
       bundle: 'Neptune',
       weapon: 'Anchor',
@@ -2352,7 +2344,7 @@ const initialState = {
     },
     {
       id: 292,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/17/Xenohunter_Frenzy.png/revision/latest?cb=20220607160039',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/17/Xenohunter_Frenzy.png',
       rarity: 'Premium',
       bundle: 'Xenohunter',
       weapon: 'Frenzy',
@@ -2360,7 +2352,7 @@ const initialState = {
     },
     {
       id: 293,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Xenohunter_Bucky.png/revision/latest?cb=20220607160040',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Xenohunter_Bucky.png',
       rarity: 'Premium',
       bundle: 'Xenohunter',
       weapon: 'Bucky',
@@ -2368,7 +2360,7 @@ const initialState = {
     },
     {
       id: 294,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0a/Xenohunter_Phantom.png/revision/latest?cb=20220607160043',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0a/Xenohunter_Phantom.png',
       rarity: 'Premium',
       bundle: 'Xenohunter',
       weapon: 'Phantom',
@@ -2376,7 +2368,7 @@ const initialState = {
     },
     {
       id: 295,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/70/Xenohunter_Odin.png/revision/latest?cb=20220607160044',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/70/Xenohunter_Odin.png',
       rarity: 'Premium',
       bundle: 'Xenohunter',
       weapon: 'Odin',
@@ -2384,7 +2376,7 @@ const initialState = {
     },
     {
       id: 296,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d0/Xenohunter_Knife.png/revision/latest?cb=20220607160041',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d0/Xenohunter_Knife.png',
       rarity: 'Premium',
       bundle: 'Xenohunter',
       weapon: 'Knife',
@@ -2392,7 +2384,7 @@ const initialState = {
     },
     {
       id: 297,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/78/Prelude_to_Chaos_Shorty.png/revision/latest?cb=20220622133017',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/78/Prelude_to_Chaos_Shorty.png',
       rarity: 'Exclusive',
       bundle: 'Prelude to Chaos',
       weapon: 'Shorty',
@@ -2400,7 +2392,7 @@ const initialState = {
     },
     {
       id: 298,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/88/Prelude_to_Chaos_Stinger.png/revision/latest?cb=20220622133021',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/88/Prelude_to_Chaos_Stinger.png',
       rarity: 'Exclusive',
       bundle: 'Prelude to Chaos',
       weapon: 'Stinger',
@@ -2408,7 +2400,7 @@ const initialState = {
     },
     {
       id: 299,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a8/Prelude_to_Chaos_Vandal.png/revision/latest?cb=20220622133025',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a8/Prelude_to_Chaos_Vandal.png',
       rarity: 'Exclusive',
       bundle: 'Prelude to Chaos',
       weapon: 'Vandal',
@@ -2416,7 +2408,7 @@ const initialState = {
     },
     {
       id: 300,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/48/Prelude_to_Chaos_Operator.png/revision/latest?cb=20220622133013',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/48/Prelude_to_Chaos_Operator.png',
       rarity: 'Exclusive',
       bundle: 'Prelude to Chaos',
       weapon: 'Operator',
@@ -2424,7 +2416,7 @@ const initialState = {
     },
     {
       id: 301,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4b/Blade_of_Chaos.png/revision/latest?cb=20220622133010',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4b/Blade_of_Chaos.png',
       rarity: 'Exclusive',
       bundle: 'Prelude to Chaos',
       weapon: 'Blade of Chaos',
@@ -2432,7 +2424,7 @@ const initialState = {
     },
     {
       id: 302,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Sarmad_Frenzy.png/revision/latest?cb=20220712164224',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Sarmad_Frenzy.png',
       rarity: 'Deluxe',
       bundle: 'Sarmad',
       weapon: 'Frenzy',
@@ -2440,7 +2432,7 @@ const initialState = {
     },
     {
       id: 303,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b0/Sarmad_Spectre.png/revision/latest?cb=20220712164226',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b0/Sarmad_Spectre.png',
       rarity: 'Deluxe',
       bundle: 'Sarmad',
       weapon: 'Spectre',
@@ -2448,7 +2440,7 @@ const initialState = {
     },
     {
       id: 304,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fa/Sarmad_Phantom.png/revision/latest?cb=20220712164225',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fa/Sarmad_Phantom.png',
       rarity: 'Deluxe',
       bundle: 'Sarmad',
       weapon: 'Phantom',
@@ -2456,7 +2448,7 @@ const initialState = {
     },
     {
       id: 305,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/70/Sarmad_Vandal.png/revision/latest?cb=20220712164227',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/70/Sarmad_Vandal.png',
       rarity: 'Deluxe',
       bundle: 'Sarmad',
       weapon: 'Vandal',
@@ -2464,7 +2456,7 @@ const initialState = {
     },
     {
       id: 306,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d3/Blade_of_Serket.png/revision/latest?cb=20220712164222',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d3/Blade_of_Serket.png',
       rarity: 'Deluxe',
       bundle: 'Sarmad',
       weapon: 'Blade of Serket',
@@ -2472,7 +2464,7 @@ const initialState = {
     },
     {
       id: 307,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/94/Reaver%2C_EP_5_Ghost.png/revision/latest?cb=20220809131733',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/94/Reaver%2C_EP_5_Ghost.png',
       rarity: 'Premium',
       bundle: 'Reaver, EP 5',
       weapon: 'Ghost',
@@ -2480,7 +2472,7 @@ const initialState = {
     },
     {
       id: 308,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1e/Reaver%2C_EP_5_Spectre.png/revision/latest?cb=20220809131747',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1e/Reaver%2C_EP_5_Spectre.png',
       rarity: 'Premium',
       bundle: 'Reaver, EP 5',
       weapon: 'Spectre',
@@ -2488,7 +2480,7 @@ const initialState = {
     },
     {
       id: 309,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7a/Reaver%2C_EP_5_Phantom.png/revision/latest?cb=20220809131744',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7a/Reaver%2C_EP_5_Phantom.png',
       rarity: 'Premium',
       bundle: 'Reaver, EP 5',
       weapon: 'Phantom',
@@ -2496,7 +2488,7 @@ const initialState = {
     },
     {
       id: 310,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5c/Reaver%2C_EP_5_Odin.png/revision/latest?cb=20220809131740',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5c/Reaver%2C_EP_5_Odin.png',
       rarity: 'Premium',
       bundle: 'Reaver, EP 5',
       weapon: 'Odin',
@@ -2504,7 +2496,7 @@ const initialState = {
     },
     {
       id: 311,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0d/Reaver%2C_EP_5_Karambit.png/revision/latest?cb=20220809131737',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0d/Reaver%2C_EP_5_Karambit.png',
       rarity: 'Premium',
       bundle: 'Reaver, EP 5',
       weapon: 'Karambit',
@@ -2512,7 +2504,7 @@ const initialState = {
     },
     {
       id: 312,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/95/Kohaku_%26_Matsuba_Classic.png/revision/latest?cb=20220907171539',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/95/Kohaku_%26_Matsuba_Classic.png',
       rarity: 'Deluxe',
       bundle: 'Kohaku & Matsuba',
       weapon: 'Classic',
@@ -2520,7 +2512,7 @@ const initialState = {
     },
     {
       id: 313,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/77/Kohaku_%26_Matsuba_Judge.png/revision/latest?cb=20220907171541',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/77/Kohaku_%26_Matsuba_Judge.png',
       rarity: 'Deluxe',
       bundle: 'Kohaku & Matsuba',
       weapon: 'Judge',
@@ -2528,7 +2520,7 @@ const initialState = {
     },
     {
       id: 314,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2c/Kohaku_%26_Matsuba_Phantom.png/revision/latest?cb=20220907171545',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2c/Kohaku_%26_Matsuba_Phantom.png',
       rarity: 'Deluxe',
       bundle: 'Kohaku & Matsuba',
       weapon: 'Phantom',
@@ -2536,7 +2528,7 @@ const initialState = {
     },
     {
       id: 315,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3b/Kohaku_%26_Matsuba_Operator.png/revision/latest?cb=20220907171543',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3b/Kohaku_%26_Matsuba_Operator.png',
       rarity: 'Deluxe',
       bundle: 'Kohaku & Matsuba',
       weapon: 'Operator',
@@ -2544,7 +2536,7 @@ const initialState = {
     },
     {
       id: 316,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/81/Equilibrium.png/revision/latest?cb=20220907171537',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/81/Equilibrium.png',
       rarity: 'Deluxe',
       bundle: 'Kohaku & Matsuba',
       weapon: 'Equilibrium',
@@ -2552,7 +2544,7 @@ const initialState = {
     },
     {
       id: 317,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/69/ChronoVoid_Sheriff.png/revision/latest?cb=20220920131634',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/69/ChronoVoid_Sheriff.png',
       rarity: 'Exclusive',
       bundle: 'ChronoVoid',
       weapon: 'Sheriff',
@@ -2560,7 +2552,7 @@ const initialState = {
     },
     {
       id: 318,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ae/ChronoVoid_Judge.png/revision/latest?cb=20220920131626',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ae/ChronoVoid_Judge.png',
       rarity: 'Exclusive',
       bundle: 'ChronoVoid',
       weapon: 'Judge',
@@ -2568,7 +2560,7 @@ const initialState = {
     },
     {
       id: 319,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ca/ChronoVoid_Phantom.png/revision/latest?cb=20220920131630',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ca/ChronoVoid_Phantom.png',
       rarity: 'Exclusive',
       bundle: 'ChronoVoid',
       weapon: 'Phantom',
@@ -2576,7 +2568,7 @@ const initialState = {
     },
     {
       id: 320,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/93/ChronoVoid_Vandal.png/revision/latest?cb=20220920131637',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/93/ChronoVoid_Vandal.png',
       rarity: 'Exclusive',
       bundle: 'ChronoVoid',
       weapon: 'Vandal',
@@ -2584,7 +2576,7 @@ const initialState = {
     },
     {
       id: 321,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0d/Terminus_A_Quo.png/revision/latest?cb=20220920131642',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0d/Terminus_A_Quo.png',
       rarity: 'Exclusive',
       bundle: 'ChronoVoid',
       weapon: 'Terminus A Quo',
@@ -2592,7 +2584,7 @@ const initialState = {
     },
     {
       id: 322,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/42/Crimsonbeast_Sheriff.png/revision/latest?cb=20221004165139',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/42/Crimsonbeast_Sheriff.png',
       rarity: 'Premium',
       bundle: 'Crimsonbeast',
       weapon: 'Sheriff',
@@ -2600,7 +2592,7 @@ const initialState = {
     },
     {
       id: 323,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/79/Crimsonbeast_Judge.png/revision/latest?cb=20221004165137',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/79/Crimsonbeast_Judge.png',
       rarity: 'Premium',
       bundle: 'Crimsonbeast',
       weapon: 'Judge',
@@ -2608,7 +2600,7 @@ const initialState = {
     },
     {
       id: 324,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cf/Crimsonbeast_Vandal.png/revision/latest?cb=20221004165140',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cf/Crimsonbeast_Vandal.png',
       rarity: 'Premium',
       bundle: 'Crimsonbeast',
       weapon: 'Vandal',
@@ -2616,7 +2608,7 @@ const initialState = {
     },
     {
       id: 325,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5c/Crimsonbeast_Marshal.png/revision/latest?cb=20221004165138',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5c/Crimsonbeast_Marshal.png',
       rarity: 'Premium',
       bundle: 'Crimsonbeast',
       weapon: 'Marshal',
@@ -2624,7 +2616,7 @@ const initialState = {
     },
     {
       id: 326,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/42/Crimsonbeast_Hammer.png/revision/latest?cb=20221004165136',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/42/Crimsonbeast_Hammer.png',
       rarity: 'Premium',
       bundle: 'Crimsonbeast',
       weapon: 'Hammer',
@@ -2632,7 +2624,7 @@ const initialState = {
     },
     {
       id: 327,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9f/Ion_Frenzy.png/revision/latest?cb=20221018133136',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9f/Ion_Frenzy.png',
       rarity: 'Premium',
       bundle: 'Ion',
       weapon: 'Frenzy',
@@ -2640,7 +2632,7 @@ const initialState = {
     },
     {
       id: 328,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4b/Ion_Spectre.png/revision/latest?cb=20221018133201',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4b/Ion_Spectre.png',
       rarity: 'Premium',
       bundle: 'Ion',
       weapon: 'Spectre',
@@ -2648,7 +2640,7 @@ const initialState = {
     },
     {
       id: 329,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e8/Ion_Vandal.png/revision/latest?cb=20221018133212',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e8/Ion_Vandal.png',
       rarity: 'Premium',
       bundle: 'Ion',
       weapon: 'Vandal',
@@ -2656,7 +2648,7 @@ const initialState = {
     },
     {
       id: 330,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c3/Ion_Ares.png/revision/latest?cb=20221018133123',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c3/Ion_Ares.png',
       rarity: 'Premium',
       bundle: 'Ion',
       weapon: 'Ares',
@@ -2664,7 +2656,7 @@ const initialState = {
     },
     {
       id: 331,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a6/Ion_Karambit.png/revision/latest?cb=20221018133149',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a6/Ion_Karambit.png',
       rarity: 'Premium',
       bundle: 'Ion',
       weapon: 'Karambit',
@@ -2672,7 +2664,7 @@ const initialState = {
     },
     {
       id: 332,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d7/Soulstrife_Ghost.png/revision/latest?cb=20221101155513',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d7/Soulstrife_Ghost.png',
       rarity: 'Premium',
       bundle: 'Soulstrife',
       weapon: 'Ghost',
@@ -2680,7 +2672,7 @@ const initialState = {
     },
     {
       id: 333,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9a/Soulstrife_Spectre.png/revision/latest?cb=20221101155517',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9a/Soulstrife_Spectre.png',
       rarity: 'Premium',
       bundle: 'Soulstrife',
       weapon: 'Spectre',
@@ -2688,7 +2680,7 @@ const initialState = {
     },
     {
       id: 334,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/ba/Soulstrife_Guardian.png/revision/latest?cb=20221101155514',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/ba/Soulstrife_Guardian.png',
       rarity: 'Premium',
       bundle: 'Soulstrife',
       weapon: 'Guardian',
@@ -2696,7 +2688,7 @@ const initialState = {
     },
     {
       id: 335,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/99/Soulstrife_Phantom.png/revision/latest?cb=20221101155515',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/99/Soulstrife_Phantom.png',
       rarity: 'Premium',
       bundle: 'Soulstrife',
       weapon: 'Phantom',
@@ -2704,7 +2696,7 @@ const initialState = {
     },
     {
       id: 336,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/00/Soulstrife_Scythe.png/revision/latest?cb=20221101155516',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/00/Soulstrife_Scythe.png',
       rarity: 'Premium',
       bundle: 'Soulstrife',
       weapon: 'Scythe',
@@ -2712,7 +2704,7 @@ const initialState = {
     },
     {
       id: 337,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/ec/Abyssal_Sheriff.png/revision/latest?cb=20221115170802',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/ec/Abyssal_Sheriff.png',
       rarity: 'Deluxe',
       bundle: 'Abyssal',
       weapon: 'Sheriff',
@@ -2720,7 +2712,7 @@ const initialState = {
     },
     {
       id: 338,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/61/Abyssal_Spectre.png/revision/latest?cb=20221115170803',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/61/Abyssal_Spectre.png',
       rarity: 'Deluxe',
       bundle: 'Abyssal',
       weapon: 'Spectre',
@@ -2728,7 +2720,7 @@ const initialState = {
     },
     {
       id: 339,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a3/Abyssal_Guardian.png/revision/latest?cb=20221115170800',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a3/Abyssal_Guardian.png',
       rarity: 'Deluxe',
       bundle: 'Abyssal',
       weapon: 'Guardian',
@@ -2736,7 +2728,7 @@ const initialState = {
     },
     {
       id: 340,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/95/Abyssal_Phantom.png/revision/latest?cb=20221115170801',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/95/Abyssal_Phantom.png',
       rarity: 'Deluxe',
       bundle: 'Abyssal',
       weapon: 'Phantom',
@@ -2744,7 +2736,7 @@ const initialState = {
     },
     {
       id: 341,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/87/Caeruleus.png/revision/latest?cb=20221115170804',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/87/Caeruleus.png',
       rarity: 'Deluxe',
       bundle: 'Abyssal',
       weapon: 'Caeruleus',
@@ -2752,7 +2744,7 @@ const initialState = {
     },
     {
       id: 342,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c9/Cryostasis_Classic.png/revision/latest?cb=20221206165303',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c9/Cryostasis_Classic.png',
       rarity: 'Premium',
       bundle: 'Cryostasis',
       weapon: 'Classic',
@@ -2760,7 +2752,7 @@ const initialState = {
     },
     {
       id: 343,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/59/Cryostasis_Bulldog.png/revision/latest?cb=20221206165302',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/59/Cryostasis_Bulldog.png',
       rarity: 'Premium',
       bundle: 'Cryostasis',
       weapon: 'Bulldog',
@@ -2768,7 +2760,7 @@ const initialState = {
     },
     {
       id: 344,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/01/Cryostasis_Vandal.png/revision/latest?cb=20221206165306',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/01/Cryostasis_Vandal.png',
       rarity: 'Premium',
       bundle: 'Cryostasis',
       weapon: 'Vandal',
@@ -2776,7 +2768,7 @@ const initialState = {
     },
     {
       id: 345,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3e/Cryostasis_Operator.png/revision/latest?cb=20221206165305',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3e/Cryostasis_Operator.png',
       rarity: 'Premium',
       bundle: 'Cryostasis',
       weapon: 'Operator',
@@ -2784,7 +2776,7 @@ const initialState = {
     },
     {
       id: 346,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f3/Cryostasis_Impact_Drill.png/revision/latest?cb=20221206165304',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f3/Cryostasis_Impact_Drill.png',
       rarity: 'Premium',
       bundle: 'Cryostasis',
       weapon: 'Impact Drill',
@@ -2792,7 +2784,7 @@ const initialState = {
     },
     {
       id: 347,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e4/Araxys_Shorty.png/revision/latest?cb=20230110150822',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e4/Araxys_Shorty.png',
       rarity: 'Exclusive',
       bundle: 'Araxys',
       weapon: 'Shorty',
@@ -2800,7 +2792,7 @@ const initialState = {
     },
     {
       id: 348,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/24/Araxys_Bulldog.png/revision/latest?cb=20230110150814',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/2/24/Araxys_Bulldog.png',
       rarity: 'Exclusive',
       bundle: 'Araxys',
       weapon: 'Bulldog',
@@ -2808,7 +2800,7 @@ const initialState = {
     },
     {
       id: 349,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Araxys_Vandal.png/revision/latest?cb=20230110150827',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Araxys_Vandal.png',
       rarity: 'Exclusive',
       bundle: 'Araxys',
       weapon: 'Vandal',
@@ -2816,7 +2808,7 @@ const initialState = {
     },
     {
       id: 350,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fe/Araxys_Operator.png/revision/latest?cb=20230110150818',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fe/Araxys_Operator.png',
       rarity: 'Exclusive',
       bundle: 'Araxys',
       weapon: 'Operator',
@@ -2824,7 +2816,7 @@ const initialState = {
     },
     {
       id: 351,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/07/Araxys_Bio_Harvester.png/revision/latest?cb=20230110150809',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/07/Araxys_Bio_Harvester.png',
       rarity: 'Exclusive',
       bundle: 'Araxys',
       weapon: 'Bio Harvester',
@@ -2832,7 +2824,7 @@ const initialState = {
     },
     {
       id: 352,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5d/Luna_Ghost.png/revision/latest?cb=20230118182530',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5d/Luna_Ghost.png',
       rarity: 'Deluxe',
       bundle: 'Luna',
       weapon: 'Ghost',
@@ -2840,7 +2832,7 @@ const initialState = {
     },
     {
       id: 353,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/65/Luna_Spectre.png/revision/latest?cb=20230118182534',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/65/Luna_Spectre.png',
       rarity: 'Deluxe',
       bundle: 'Luna',
       weapon: 'Spectre',
@@ -2848,7 +2840,7 @@ const initialState = {
     },
     {
       id: 354,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/06/Luna_Vandal.png/revision/latest?cb=20230118182535',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/06/Luna_Vandal.png',
       rarity: 'Deluxe',
       bundle: 'Luna',
       weapon: 'Vandal',
@@ -2856,7 +2848,7 @@ const initialState = {
     },
     {
       id: 355,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6e/Luna_Marshal.png/revision/latest?cb=20230118182533',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6e/Luna_Marshal.png',
       rarity: 'Deluxe',
       bundle: 'Luna',
       weapon: 'Marshal',
@@ -2864,7 +2856,7 @@ const initialState = {
     },
     {
       id: 356,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a5/Luna%27s_Descent.png/revision/latest?cb=20230118182529',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a5/Luna%27s_Descent.png',
       rarity: 'Deluxe',
       bundle: 'Luna',
       weapon: "Luna's Descent",
@@ -2872,7 +2864,7 @@ const initialState = {
     },
     {
       id: 357,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c5/Reverie_Classic.png/revision/latest?cb=20230214163046',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c5/Reverie_Classic.png',
       rarity: 'Select',
       bundle: 'Reverie',
       weapon: 'Classic',
@@ -2880,7 +2872,7 @@ const initialState = {
     },
     {
       id: 358,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6b/Reverie_Guardian.png/revision/latest?cb=20230214163046',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6b/Reverie_Guardian.png',
       rarity: 'Select',
       bundle: 'Reverie',
       weapon: 'Guardian',
@@ -2888,7 +2880,7 @@ const initialState = {
     },
     {
       id: 359,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c2/Reverie_Phantom.png/revision/latest?cb=20230214163048',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c2/Reverie_Phantom.png',
       rarity: 'Select',
       bundle: 'Reverie',
       weapon: 'Phantom',
@@ -2896,7 +2888,7 @@ const initialState = {
     },
     {
       id: 360,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/19/Reverie_Marshal.png/revision/latest?cb=20230214163047',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/1/19/Reverie_Marshal.png',
       rarity: 'Select',
       bundle: 'Reverie',
       weapon: 'Marshal',
@@ -2904,7 +2896,7 @@ const initialState = {
     },
     {
       id: 361,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/57/Reverie_Sword.png/revision/latest?cb=20230214163044',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/57/Reverie_Sword.png',
       rarity: 'Select',
       bundle: 'Reverie',
       weapon: 'Sword',
@@ -2912,7 +2904,7 @@ const initialState = {
     },
     {
       id: 362,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a8/Oni_Frenzy.png/revision/latest?cb=20230307165624',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a8/Oni_Frenzy.png',
       rarity: 'Premium',
       bundle: 'Oni',
       weapon: 'Frenzy',
@@ -2920,7 +2912,7 @@ const initialState = {
     },
     {
       id: 363,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0b/Oni_Bulldog.png/revision/latest?cb=20230307165619',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0b/Oni_Bulldog.png',
       rarity: 'Premium',
       bundle: 'Oni',
       weapon: 'Bulldog',
@@ -2928,7 +2920,7 @@ const initialState = {
     },
     {
       id: 364,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3b/Oni_Vandal.png/revision/latest?cb=20230307165629',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3b/Oni_Vandal.png',
       rarity: 'Premium',
       bundle: 'Oni',
       weapon: 'Vandal',
@@ -2936,7 +2928,7 @@ const initialState = {
     },
     {
       id: 365,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/69/Oni_Ares.png/revision/latest?cb=20230307165614',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/69/Oni_Ares.png',
       rarity: 'Premium',
       bundle: 'Oni',
       weapon: 'Ares',
@@ -2944,7 +2936,7 @@ const initialState = {
     },
     {
       id: 366,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d6/Onimaru_Kunitsuna.png/revision/latest?cb=20230307165634',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d6/Onimaru_Kunitsuna.png',
       rarity: 'Premium',
       bundle: 'Oni',
       weapon: 'Onimaru Kunitsuna',
@@ -2952,7 +2944,7 @@ const initialState = {
     },
     {
       id: 367,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/eb/Altitude_Sheriff.png/revision/latest?cb=20230328154319',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/eb/Altitude_Sheriff.png',
       rarity: 'Deluxe',
       bundle: 'Altitude',
       weapon: 'Sheriff',
@@ -2960,7 +2952,7 @@ const initialState = {
     },
     {
       id: 368,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/db/Altitude_Bucky.png/revision/latest?cb=20230328154316',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/d/db/Altitude_Bucky.png',
       rarity: 'Deluxe',
       bundle: 'Altitude',
       weapon: 'Bucky',
@@ -2968,7 +2960,7 @@ const initialState = {
     },
     {
       id: 369,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/84/Altitude_Vandal.png/revision/latest?cb=20230328154315',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/8/84/Altitude_Vandal.png',
       rarity: 'Deluxe',
       bundle: 'Altitude',
       weapon: 'Vandal',
@@ -2976,7 +2968,7 @@ const initialState = {
     },
     {
       id: 370,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fc/Altitude_Odin.png/revision/latest?cb=20230328154318',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fc/Altitude_Odin.png',
       rarity: 'Deluxe',
       bundle: 'Altitude',
       weapon: 'Odin',
@@ -2984,7 +2976,7 @@ const initialState = {
     },
     {
       id: 371,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/78/Altitude_Knuckle_Knife.png/revision/latest?cb=20230328154317',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/7/78/Altitude_Knuckle_Knife.png',
       rarity: 'Deluxe',
       bundle: 'Altitude',
       weapon: 'Knuckle Knife',
@@ -2992,7 +2984,7 @@ const initialState = {
     },
     {
       id: 372,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e8/Black.Market_Classic.png/revision/latest?cb=20230411161450',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e8/Black.Market_Classic.png',
       rarity: 'Premium',
       bundle: 'Black.Market',
       weapon: 'Classic',
@@ -3000,7 +2992,7 @@ const initialState = {
     },
     {
       id: 373,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4b/Black.Market_Bulldog.png/revision/latest?cb=20230411161448',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4b/Black.Market_Bulldog.png',
       rarity: 'Premium',
       bundle: 'Black.Market',
       weapon: 'Bulldog',
@@ -3008,7 +3000,7 @@ const initialState = {
     },
     {
       id: 374,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/31/Black.Market_Vandal.png/revision/latest?cb=20230411161447',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/3/31/Black.Market_Vandal.png',
       rarity: 'Premium',
       bundle: 'Black.Market',
       weapon: 'Vandal',
@@ -3016,7 +3008,7 @@ const initialState = {
     },
     {
       id: 375,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Black.Market_Marshal.png/revision/latest?cb=20230411161451',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Black.Market_Marshal.png',
       rarity: 'Premium',
       bundle: 'Black.Market',
       weapon: 'Marshal',
@@ -3024,7 +3016,7 @@ const initialState = {
     },
     {
       id: 376,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5f/Black.Market_Butterfly_Knife.png/revision/latest?cb=20230411161449',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5f/Black.Market_Butterfly_Knife.png',
       rarity: 'Premium',
       bundle: 'Black.Market',
       weapon: 'Butterfly Knife',
@@ -3032,7 +3024,7 @@ const initialState = {
     },
     {
       id: 377,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/05/Radiant_Entertainment_System_Ghost.png/revision/latest?cb=20230425141049',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/0/05/Radiant_Entertainment_System_Ghost.png',
       rarity: 'Ultra',
       bundle: 'Radiant Entertainment System',
       weapon: 'Ghost',
@@ -3040,7 +3032,7 @@ const initialState = {
     },
     {
       id: 378,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6f/Radiant_Entertainment_System_Bulldog.png/revision/latest?cb=20230425141046',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6f/Radiant_Entertainment_System_Bulldog.png',
       rarity: 'Ultra',
       bundle: 'Radiant Entertainment System',
       weapon: 'Bulldog',
@@ -3048,7 +3040,7 @@ const initialState = {
     },
     {
       id: 379,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b6/Radiant_Entertainment_System_Phantom.png/revision/latest?cb=20230425141004',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b6/Radiant_Entertainment_System_Phantom.png',
       rarity: 'Ultra',
       bundle: 'Radiant Entertainment System',
       weapon: 'Phantom',
@@ -3056,7 +3048,7 @@ const initialState = {
     },
     {
       id: 380,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/53/Radiant_Entertainment_System_Operator.png/revision/latest?cb=20230425141052',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/5/53/Radiant_Entertainment_System_Operator.png',
       rarity: 'Ultra',
       bundle: 'Radiant Entertainment System',
       weapon: 'Operator',
@@ -3064,7 +3056,7 @@ const initialState = {
     },
     {
       id: 381,
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/98/Power_Fist.png/revision/latest?cb=20230425141042',
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/9/98/Power_Fist.png',
       rarity: 'Ultra',
       bundle: 'Radiant Entertainment System',
       weapon: 'Power Fist',

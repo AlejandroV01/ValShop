@@ -58,9 +58,7 @@ const Navbar = () => {
             </Badge>
           </IconButton>
           <IconButton onClick={() => navigate('/explore')}>
-            <Badge badgeContent={cart.length} color='primary'>
-              <Explore sx={{ color: dark, fontSize: '25px' }} />
-            </Badge>
+            <Explore sx={{ color: dark, fontSize: '25px' }} />
           </IconButton>
           <IconButton onClick={() => dispatch(setMode())}>
             {theme.palette.mode === 'dark' ? (
