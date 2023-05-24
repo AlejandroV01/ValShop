@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  mode: 'light',
+  mode: 'dark',
   user: null,
   token: null,
   likes: [],
+  openSignUpModal: false,
   skins: [
     {
       id: 0,
@@ -3091,8 +3092,14 @@ export const authSlice = createSlice({
     setLikes: (state, action) => {
       state.likes = action.payload.likes
     },
+    toggleSignUpModalTrue: state => {
+      state.openSignUpModal = true
+    },
+    toggleSignUpModalFalse: state => {
+      state.openSignUpModal = false
+    },
   },
 })
 
-export const { setMode, setLogin, setLogout, setLikedSkins, setLikes } = authSlice.actions
+export const { setMode, setLogin, setLogout, setLikedSkins, setLikes, toggleSignUpModalTrue, toggleSignUpModalFalse } = authSlice.actions
 export default authSlice.reducer

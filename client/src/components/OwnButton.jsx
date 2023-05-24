@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 import Form from 'scenes/loginPage/Form'
 import { setLikedSkins, toggleSignUpModal } from 'state'
-const LikeButton = ({ userId, skinId }) => {
+const OwnButton = ({ userId, skinId }) => {
   const isAuth = Boolean(useSelector(state => state.token))
   const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(true)
@@ -86,4 +86,4 @@ const LikeButton = ({ userId, skinId }) => {
   )
 }
 
-export default LikeButton
+export default OwnButton

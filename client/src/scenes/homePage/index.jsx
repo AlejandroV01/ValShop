@@ -132,7 +132,15 @@ const HomePage = () => {
         <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(380px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }} width={'100%'}>
           {exploreSkins.map((skin, index) => {
             return (
-              <SkinContainer key={index} width={300} name={skin.bundle + ' ' + skin.weapon} price={skin.price} picture={skin.img_url}></SkinContainer>
+              <SkinContainer
+                key={index}
+                width={300}
+                name={skin.bundle + ' ' + skin.weapon}
+                price={skin.price}
+                picture={skin.img_url}
+                userId={isAuth && user._id}
+                skinId={skin.id}
+              ></SkinContainer>
             )
           })}
         </Box>
@@ -143,7 +151,6 @@ const HomePage = () => {
             </Divider>
             <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(380px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }} width={'100%'}>
               {firstSkins.map((skin, index) => {
-                console.log(skin)
                 return (
                   <SkinContainer
                     key={index}
@@ -169,6 +176,8 @@ const HomePage = () => {
                     name={skin.bundle + ' ' + skin.weapon}
                     price={skin.price}
                     picture={skin.img_url}
+                    userId={isAuth && user._id}
+                    skinId={skin.id}
                   ></SkinContainer>
                 )
               })}

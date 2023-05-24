@@ -1,5 +1,5 @@
 import { Close, DarkMode, Favorite, LightMode, Menu, Search, ShoppingCart } from '@mui/icons-material'
-import { Badge, Box, FormControl, Icon, IconButton, InputBase, MenuItem, Select, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Badge, Box, FormControl, IconButton, InputBase, MenuItem, Select, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -7,6 +7,7 @@ import { toast } from 'react-toastify'
 import { setLikedSkins } from 'state'
 import useImageColor from 'use-image-color'
 import LikeButton from './LikeButton'
+import OwnButton from './OwnButton'
 const SkinContainer = ({
   name = 'Reaver Vandal',
   price = '1775',
@@ -32,9 +33,9 @@ const SkinContainer = ({
       maxWidth='380px'
       height={'230px'}
     >
-      <img src={picture} alt={name} style={{ borderRadius: '4px', width: `${width}px` }} />
+      <img src={picture} alt={name} style={{ borderRadius: '4px', width: `${width}px`, maxHeight: '120px', objectFit: 'contain' }} />
       <Box display='flex' alignItems='center' justifyContent='space-between' width='100%'>
-        <Box display='flex' flexDirection='column'>
+        <Box display='flex' flexDirection='column' overflow='hidden'>
           <Box display='flex' alignItems='center'>
             {theme.palette.mode === 'dark' ? (
               <img src='/assets/ValorantPoints.webp' alt='' width={22} color='black' />
@@ -46,11 +47,14 @@ const SkinContainer = ({
               {price}
             </Typography>
           </Box>
-          <Typography variant='h4' fontWeight='bold'>
-            {name}
+          <Typography variant='h4' fontWeight='bold' style={{ overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>
+            {name.length > 25 ? name.substring(0, 22) + '...' : name}
           </Typography>
         </Box>
-        <LikeButton userId={userId} skinId={skinId} />
+        <Stack direction={'row'}>
+          <LikeButton userId={userId} skinId={skinId} />
+          <OwnButton userId={userId} skinId={skinId} />
+        </Stack>
       </Box>
     </Box>
   )

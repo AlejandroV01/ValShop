@@ -66,9 +66,6 @@ const Form = () => {
         ? values.picturePath.name
         : `https://api.dicebear.com/6.x/fun-emoji/svg?seed=${values.email}&backgroundColor=059ff2,71cf62,d84be5,d9915b,f6d594,b6e3f4,c0aede,d1d4f9,fcbc34,ffd5dc,ffdfbf&backgroundType=solid,gradientLinear`
     )
-    for (const pair of formData.entries()) {
-      console.log(pair[0], pair[1])
-    }
     const savedUserResponse = await fetch('http://localhost:3001/auth/register', {
       method: 'POST',
       body: formData,
@@ -120,7 +117,6 @@ const Form = () => {
       return
     }
     onSubmitProps.resetForm()
-    console.log(loggedIn)
     if (loggedIn) {
       dispatch(setLogin({ user: loggedIn.user, token: loggedIn.token }))
       toast.success('Successfully Logged In!', {
