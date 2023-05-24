@@ -59,3 +59,22 @@ export const addRemoveLikedSkins = async (req, res) => {
     res.status(404).json({ message: err.message })
   }
 }
+
+export const addRemoveOwnedSkins = async (req, res) => {
+  console.log('triggered')
+  try {
+    const { id, skinId } = req.params
+    if (skinId > 381) return res.status(404).json({ message: 'That skin does not exist yet!' })
+    const user = await User.findById(id)
+    if (user.ownedSkins.includes(skinId)) {
+      user.ownedSkins = user.ownedSkins.filter(item => item !== skinId)
+    } else {
+      user.ownedSkins.push(skinId)
+    }
+    await user.save()
+    const skins = await Promise.all(user.ownedSkins)
+    res.status(200).json(skins)
+  } catch (err) {
+    res.status(404).json({ message: err.message })
+  }
+}

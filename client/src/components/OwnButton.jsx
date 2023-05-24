@@ -1,10 +1,10 @@
-import { Favorite } from '@mui/icons-material'
+import { Beenhere, Favorite } from '@mui/icons-material'
 import { Box, IconButton, Modal, Stack, Typography, useTheme } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 import Form from 'scenes/loginPage/Form'
-import { setLikedSkins, toggleSignUpModal } from 'state'
+import { setOwnedSkins, toggleSignUpModal } from 'state'
 const OwnButton = ({ userId, skinId }) => {
   const isAuth = Boolean(useSelector(state => state.token))
   const [open, setOpen] = useState(false)
@@ -22,7 +22,7 @@ const OwnButton = ({ userId, skinId }) => {
       })
       return
     }
-    const addRemoveSkinResponse = await fetch(`http://localhost:3001/users/${userId}/${skinId}/addRemoveLikedSkins`, {
+    const addRemoveSkinResponse = await fetch(`http://localhost:3001/users/${userId}/${skinId}/addRemoveOwnedSkins`, {
       method: 'PATCH',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -38,8 +38,8 @@ const OwnButton = ({ userId, skinId }) => {
     }
 
     if (addRemoveSkin) {
-      dispatch(setLikedSkins({ likedSkins: addRemoveSkin }))
-      toast.success('Successfully Liked Skin!', {
+      dispatch(setOwnedSkins({ ownedSkins: addRemoveSkin }))
+      toast.success('Successfully Owned Skin!', {
         position: 'bottom-right',
         theme: 'colored',
       })
@@ -49,22 +49,22 @@ const OwnButton = ({ userId, skinId }) => {
 
   useEffect(() => {
     if (isAuth) {
-      console.log(user.likedSkins)
-      let isALikedSkin = user.likedSkins.includes(skinId.toString())
+      console.log(user.ownedSkins)
+      let isALikedSkin = user.ownedSkins.includes(skinId.toString())
       setIsLiked(isALikedSkin)
     }
-  }, [isAuth, skinId, user.likedSkins])
+  }, [isAuth, skinId, user.ownedSkins])
   return (
     <>
       <IconButton
         sx={{
-          color: isLiked ? '#FF6363' : palette.neutral.dark,
-          backgroundColor: isLiked ? '#FFD7D7' : palette.background.alt,
-          '&:hover': { backgroundColor: '#FFB0B0' },
+          color: isLiked ? palette.primary.light : palette.neutral.dark,
+          backgroundColor: isLiked ? palette.primary.dark : palette.background.alt,
+          '&:hover': { backgroundColor: palette.primary.main },
         }}
         onClick={!isAuth ? handleOpen : () => addRemoveSkin(userId, skinId)}
       >
-        <Favorite />
+        <Beenhere />
       </IconButton>
       <Modal open={open} onClose={handleClose} aria-labelledby='modal-modal-title' aria-describedby='modal-modal-description'>
         <Box

@@ -1,5 +1,5 @@
 import express from 'express'
-import { addRemoveLikedSkins, getUser, getUserLikedSkins, getUserOwnedSkins } from '../controllers/users.js'
+import { addRemoveLikedSkins, addRemoveOwnedSkins, getUser, getUserLikedSkins, getUserOwnedSkins } from '../controllers/users.js'
 import { verifyToken } from '../middleware/auth.js'
 
 const router = express.Router()
@@ -11,5 +11,6 @@ router.get('/:id/ownedSkins', verifyToken, getUserOwnedSkins)
 
 // UPDATE
 router.patch('/:id/:skinId/addRemoveLikedSkins', verifyToken, addRemoveLikedSkins)
+router.patch('/:id/:skinId/addRemoveOwnedSkins', verifyToken, addRemoveOwnedSkins)
 
 export default router

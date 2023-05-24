@@ -48,10 +48,10 @@ const SkinContainer = ({
             </Typography>
           </Box>
           <Typography variant='h4' fontWeight='bold' style={{ overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>
-            {name.length > 25 ? name.substring(0, 22) + '...' : name}
+            {name.length > 25 ? name.substring(0, 25) + '...' : name}
           </Typography>
         </Box>
-        <Stack direction={'row'}>
+        <Stack direction={'row'} gap={'0.5rem'}>
           <LikeButton userId={userId} skinId={skinId} />
           <OwnButton userId={userId} skinId={skinId} />
         </Stack>

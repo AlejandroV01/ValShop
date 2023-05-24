@@ -134,7 +134,6 @@ const HomePage = () => {
             return (
               <SkinContainer
                 key={index}
-                width={300}
                 name={skin.bundle + ' ' + skin.weapon}
                 price={skin.price}
                 picture={skin.img_url}
@@ -154,7 +153,6 @@ const HomePage = () => {
                 return (
                   <SkinContainer
                     key={index}
-                    width={300}
                     name={skin.bundle + ' ' + skin.weapon}
                     price={skin.price}
                     picture={skin.img_url}
@@ -172,7 +170,6 @@ const HomePage = () => {
                 return (
                   <SkinContainer
                     key={index}
-                    width={300}
                     name={skin.bundle + ' ' + skin.weapon}
                     price={skin.price}
                     picture={skin.img_url}

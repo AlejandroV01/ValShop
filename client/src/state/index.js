@@ -3088,6 +3088,13 @@ export const authSlice = createSlice({
         console.error('error in setLikedSkins')
       }
     },
+    setOwnedSkins: (state, action) => {
+      if (state.user) {
+        state.user.ownedSkins = action.payload.ownedSkins
+      } else {
+        console.error('error in setOwnedSkins')
+      }
+    },
 
     setLikes: (state, action) => {
       state.likes = action.payload.likes
@@ -3101,5 +3108,6 @@ export const authSlice = createSlice({
   },
 })
 
-export const { setMode, setLogin, setLogout, setLikedSkins, setLikes, toggleSignUpModalTrue, toggleSignUpModalFalse } = authSlice.actions
+export const { setMode, setLogin, setLogout, setLikedSkins, setOwnedSkins, setLikes, toggleSignUpModalTrue, toggleSignUpModalFalse } =
+  authSlice.actions
 export default authSlice.reducer
