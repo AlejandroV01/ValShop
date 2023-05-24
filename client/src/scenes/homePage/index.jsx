@@ -1,11 +1,89 @@
 import { Badge, Box, Button, Divider, FormControl, IconButton, InputBase, MenuItem, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import SkinContainer from 'components/SkinContainer'
+import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-
 const HomePage = () => {
   const theme = useTheme()
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)')
   const navigate = useNavigate()
+  const skins = useSelector(state => state.skins)
+  const PEU = skins.filter(skin => {
+    const rarity = skin.rarity
+    return rarity === 'Premium' || rarity === 'Exclusive' || rarity === 'Ultra'
+  })
+
+  const [exploreSkins, setExploreSkins] = useState([])
+  const [firstSkins, setFirstSkins] = useState([])
+  const [secondSkins, setSecondSkins] = useState([])
+
+  const getExploreSkins = () => {
+    const selectedSkins = []
+    let randomIndexes = []
+    for (let i = 0; i < 4; i++) {
+      const randomIndex = Math.floor(Math.random() * skins.length)
+      if (!randomIndexes.includes(randomIndex)) {
+        randomIndexes.push(randomIndex)
+        selectedSkins.push(skins[randomIndex])
+      } else {
+        i--
+      }
+    }
+    setExploreSkins(selectedSkins)
+  }
+
+  const getFirstSkins = () => {
+    const selectedSkins = []
+    let randomIndexes = []
+    const baseSkin = PEU[Math.floor(Math.random() * PEU.length)]
+    const collection = PEU.filter(skin => {
+      const bundle = skin.bundle
+      return bundle === baseSkin.bundle
+    })
+
+    for (let i = 0; i < 4; i++) {
+      const randomIndex = Math.floor(Math.random() * collection.length)
+      if (!randomIndexes.includes(randomIndex)) {
+        randomIndexes.push(randomIndex)
+        selectedSkins.push(collection[randomIndex])
+      } else {
+        i--
+      }
+    }
+    setFirstSkins(selectedSkins)
+    return baseSkin.bundle
+  }
+  const getSecondSkins = firstBundle => {
+    const selectedSkins = []
+    let randomIndexes = []
+    const newPEU = PEU.filter(skin => {
+      const bundle = skin.bundle
+      return bundle !== firstBundle
+    })
+    const baseSkin = newPEU[Math.floor(Math.random() * newPEU.length)]
+    const collection = newPEU.filter(skin => {
+      const bundle = skin.bundle
+      return bundle === baseSkin.bundle
+    })
+
+    for (let i = 0; i < 4; i++) {
+      const randomIndex = Math.floor(Math.random() * collection.length)
+      if (!randomIndexes.includes(randomIndex)) {
+        randomIndexes.push(randomIndex)
+        selectedSkins.push(collection[randomIndex])
+      } else {
+        i--
+      }
+    }
+    setSecondSkins(selectedSkins)
+  }
+
+  useEffect(() => {
+    getExploreSkins()
+    let firstBundle = getFirstSkins()
+    getSecondSkins(firstBundle)
+  }, [skins])
+
   return (
     <Stack padding='1rem 6%' width={'100%'}>
       <Stack direction={'column'} alignItems='center'>
@@ -49,30 +127,45 @@ const HomePage = () => {
           </Typography>
         </Divider>
         <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(380px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }} width={'100%'}>
-          <SkinContainer picture='https://media.valorant-api.com/weaponskinchromas/04bcace1-4d82-7093-f812-a5bff8306a54/displayicon.png'></SkinContainer>
-          <SkinContainer picture='https://media.valorant-api.com/weaponskins/9d7ed392-4c4c-b1c4-7232-3cbb07b2e133/displayicon.png'></SkinContainer>
-          <SkinContainer picture='https://media.valorant-api.com/weaponskinchromas/fda6f206-4741-88fe-cc2a-3eb3233d5328/displayicon.png'></SkinContainer>
-          <SkinContainer picture='https://media.valorant-api.com/weaponskins/dbf7b813-4931-3b45-db2b-ea8d418b2b1d/displayicon.png'></SkinContainer>
+          {exploreSkins.map((skin, index) => {
+            return (
+              <SkinContainer key={index} width={300} name={skin.bundle + ' ' + skin.weapon} price={skin.price} picture={skin.img_url}></SkinContainer>
+            )
+          })}
         </Box>
         {isNonMobileScreens && (
           <>
             <Divider textAlign='left' sx={{ width: '100%', margin: '1rem 0' }}>
-              <Typography variant='h4'>REAVER</Typography>
+              <Typography variant='h4'>{firstSkins[0].bundle}</Typography>
             </Divider>
             <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(380px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }} width={'100%'}>
-              <SkinContainer></SkinContainer>
-              <SkinContainer></SkinContainer>
-              <SkinContainer></SkinContainer>
-              <SkinContainer></SkinContainer>
+              {firstSkins.map((skin, index) => {
+                return (
+                  <SkinContainer
+                    key={index}
+                    width={300}
+                    name={skin.bundle + ' ' + skin.weapon}
+                    price={skin.price}
+                    picture={skin.img_url}
+                  ></SkinContainer>
+                )
+              })}
             </Box>
             <Divider textAlign='left' sx={{ width: '100%', margin: '1rem 0' }}>
-              <Typography variant='h4'>GLITCHPOP</Typography>
+              <Typography variant='h4'>{secondSkins[0].bundle}</Typography>
             </Divider>
             <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(380px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }} width={'100%'}>
-              <SkinContainer picture='https://media.valorant-api.com/weaponskinchromas/b58f249b-4e8f-5532-6f35-a9b3b39dc15c/displayicon.png'></SkinContainer>
-              <SkinContainer picture='https://media.valorant-api.com/weaponskinchromas/b58f249b-4e8f-5532-6f35-a9b3b39dc15c/displayicon.png'></SkinContainer>
-              <SkinContainer picture='https://media.valorant-api.com/weaponskinchromas/b58f249b-4e8f-5532-6f35-a9b3b39dc15c/displayicon.png'></SkinContainer>
-              <SkinContainer picture='https://media.valorant-api.com/weaponskinchromas/b58f249b-4e8f-5532-6f35-a9b3b39dc15c/displayicon.png'></SkinContainer>
+              {secondSkins.map((skin, index) => {
+                return (
+                  <SkinContainer
+                    key={index}
+                    width={300}
+                    name={skin.bundle + ' ' + skin.weapon}
+                    price={skin.price}
+                    picture={skin.img_url}
+                  ></SkinContainer>
+                )
+              })}
             </Box>
           </>
         )}

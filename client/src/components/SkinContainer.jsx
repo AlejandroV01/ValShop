@@ -1,6 +1,6 @@
 import { Close, DarkMode, Favorite, LightMode, Menu, Search, ShoppingCart } from '@mui/icons-material'
 import { Badge, Box, FormControl, Icon, IconButton, InputBase, MenuItem, Select, Typography, useMediaQuery, useTheme } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import useImageColor from 'use-image-color'
 const SkinContainer = ({
   name = 'Reaver Vandal',
@@ -24,7 +24,7 @@ const SkinContainer = ({
       maxWidth='380px'
       height={'230px'}
     >
-      <img src={picture} alt={name} style={{ borderRadius: '4px', width: `${width}px` }} id='i' />
+      <img src={picture} alt={name} style={{ borderRadius: '4px', width: `${width}px` }} />
       <Box display='flex' alignItems='center' justifyContent='space-between' width='100%'>
         <Box display='flex' flexDirection='column'>
           <Box display='flex' alignItems='center'>

@@ -63,7 +63,11 @@ const Navbar = () => {
             </Badge>
           </IconButton>
           <IconButton onClick={() => dispatch(setMode())}>
-            {theme.palette.mode === 'dark' ? <DarkMode sx={{ fontSize: '25px' }} /> : <LightMode sx={{ color: dark, fontSize: '25px' }} />}
+            {theme.palette.mode === 'dark' ? (
+              <LightMode sx={{ color: dark, fontSize: '25px' }} />
+            ) : (
+              <DarkMode sx={{ color: dark, fontSize: '25px' }} />
+            )}
           </IconButton>
           {isAuth ? (
             <FormControl variant='standard' value={user.username}>
@@ -91,7 +95,9 @@ const Navbar = () => {
               </Select>
             </FormControl>
           ) : (
-            <Button onClick={() => navigate('/login')}>Login</Button>
+            <Button onClick={() => navigate('/login')} variant='contained'>
+              Login
+            </Button>
           )}
         </FlexBetween>
       ) : (
