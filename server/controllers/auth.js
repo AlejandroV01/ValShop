@@ -6,6 +6,8 @@ import User from '../models/User.js'
 export const register = async (req, res) => {
   try {
     const { username, email, password, picturePath } = req.body
+    const user = await User.exists({ email: email })
+    if (user) return res.status(400).json({ msg: 'An account with that email already exists.' })
 
     const newUser = new User({
       username,
@@ -27,7 +29,7 @@ export const login = async (req, res) => {
     const user = await User.findOne({ email: email })
     if (!user) return res.status(400).json({ msg: 'User does not exist.' })
 
-    const isMatch = parseInt(password) === parseInt(user.password)
+    const isMatch = password == user.password
     if (!isMatch) return res.status(400).json({ msg: 'Invalid credentials.' })
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET)

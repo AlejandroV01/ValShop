@@ -1,3 +1,4 @@
+import Skin from '../models/Skin.js'
 import User from '../models/User.js'
 
 //READ
@@ -11,7 +12,21 @@ export const getUser = async (req, res) => {
   }
 }
 
-export const getUserSkins = async (req, res) => {
+export const getUserLikedSkins = async (req, res) => {
+  try {
+    const { id } = req.params
+    const user = await User.findById(id)
+    const likedSkins = await Promise.all(user.likedSkins.map(id => User.findById(id)))
+    const formattedSkins = likedSkins.map(({ _id, displayName, displayIcon, chromas }) => {
+      return { _id, displayName, displayIcon, chromas }
+    })
+    res.status(200).json(formattedSkins)
+  } catch (err) {
+    res.status(404).json({ message: err.message })
+  }
+}
+
+export const getUserOwnedSkins = async (req, res) => {
   try {
     const { id } = req.params
     const user = await User.findById(id)
@@ -26,25 +41,20 @@ export const getUserSkins = async (req, res) => {
 }
 
 // UPDATE
-export const addRemoveSkins = async (req, res) => {
+export const addRemoveLikedSkins = async (req, res) => {
+  console.log('triggered')
   try {
     const { id, skinId } = req.params
+    if (skinId > 381) return res.status(404).json({ message: 'That skin does not exist yet!' })
     const user = await User.findById(id)
-    const skin = await User.findById(skinId)
-    if (user.skins.includes(skinId)) {
-      user.skins = user.skins.filter(id => id !== skinId)
-      skin.skins = skin.skins.filter(id => id !== id)
+    if (user.likedSkins.includes(skinId)) {
+      user.likedSkins = user.likedSkins.filter(item => item !== skinId)
     } else {
-      user.skins.push(skinId)
-      skin.skins.push(id)
+      user.likedSkins.push(skinId)
     }
     await user.save()
-    await friend.save()
-    const skins = await Promise.all(user.skins.map(id => User.findById(id)))
-    const formattedSkins = skins.map(({ _id, displayName, displayIcon, chromas }) => {
-      return { _id, displayName, displayIcon, chromas }
-    })
-    res.status(200).json(formattedSkins)
+    const skins = await Promise.all(user.likedSkins)
+    res.status(200).json(skins)
   } catch (err) {
     res.status(404).json({ message: err.message })
   }

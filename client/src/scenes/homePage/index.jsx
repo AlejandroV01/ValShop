@@ -8,11 +8,12 @@ const HomePage = () => {
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)')
   const navigate = useNavigate()
   const skins = useSelector(state => state.skins)
+  console.log(skins.slice(0, 5))
   const PEU = skins.filter(skin => {
     const rarity = skin.rarity
     return rarity === 'Premium' || rarity === 'Exclusive' || rarity === 'Ultra'
   })
-
+  const user = useSelector(state => state.user)
   const [exploreSkins, setExploreSkins] = useState([])
   const [firstSkins, setFirstSkins] = useState([])
   const [secondSkins, setSecondSkins] = useState([])
@@ -82,8 +83,9 @@ const HomePage = () => {
     getExploreSkins()
     let firstBundle = getFirstSkins()
     getSecondSkins(firstBundle)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [skins])
-
+  console.log(user._id)
   return (
     <Stack padding='1rem 6%' width={'100%'}>
       <Stack direction={'column'} alignItems='center'>
@@ -140,6 +142,7 @@ const HomePage = () => {
             </Divider>
             <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(380px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }} width={'100%'}>
               {firstSkins.map((skin, index) => {
+                console.log(skin)
                 return (
                   <SkinContainer
                     key={index}
@@ -147,6 +150,8 @@ const HomePage = () => {
                     name={skin.bundle + ' ' + skin.weapon}
                     price={skin.price}
                     picture={skin.img_url}
+                    userId={user._id}
+                    skinId={skin.id}
                   ></SkinContainer>
                 )
               })}

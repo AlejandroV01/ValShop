@@ -4,10 +4,10 @@ const initialState = {
   mode: 'light',
   user: null,
   token: null,
-  cart: ['item'],
   likes: [],
   skins: [
     {
+      id: 0,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/10/Luxe_Ghost.png/revision/latest?cb=20210707185727',
       rarity: 'Select',
       bundle: 'Luxe',
@@ -15,6 +15,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 1,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a4/Luxe_Spectre.png/revision/latest?cb=20210707202048',
       rarity: 'Select',
       bundle: 'Luxe',
@@ -22,6 +23,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 2,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/48/Luxe_Judge.png/revision/latest?cb=20210707202111',
       rarity: 'Select',
       bundle: 'Luxe',
@@ -29,6 +31,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 3,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e3/Luxe_Vandal.png/revision/latest?cb=20210707202151',
       rarity: 'Select',
       bundle: 'Luxe',
@@ -36,6 +39,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 4,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/be/Luxe_Operator.png/revision/latest?cb=20210707201159',
       rarity: 'Select',
       bundle: 'Luxe',
@@ -43,6 +47,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 5,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/79/Luxe_Knife.png/revision/latest?cb=20210707185728',
       rarity: 'Select',
       bundle: 'Luxe',
@@ -50,6 +55,7 @@ const initialState = {
       price: 1750,
     },
     {
+      id: 6,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/ea/Aristocrat_Sheriff.png/revision/latest?cb=20210707202412',
       rarity: 'Deluxe',
       bundle: 'Aristocrat',
@@ -57,6 +63,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 7,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/bf/Aristocrat_Stinger.png/revision/latest?cb=20210707202424',
       rarity: 'Deluxe',
       bundle: 'Aristocrat',
@@ -64,6 +71,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 8,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4b/Aristocrat_Bulldog.png/revision/latest?cb=20210707202437',
       rarity: 'Deluxe',
       bundle: 'Aristocrat',
@@ -71,6 +79,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 9,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d4/Aristocrat_Vandal.png/revision/latest?cb=20210707202447',
       rarity: 'Deluxe',
       bundle: 'Aristocrat',
@@ -78,6 +87,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 10,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8c/Aristocrat_Ares.png/revision/latest?cb=20210707202459',
       rarity: 'Deluxe',
       bundle: 'Aristocrat',
@@ -85,6 +95,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 11,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Galleria_Classic.png/revision/latest?cb=20200701232133',
       rarity: 'Select',
       bundle: 'Galleria',
@@ -92,6 +103,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 12,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/37/Galleria_Bucky.png/revision/latest?cb=20210707202659',
       rarity: 'Select',
       bundle: 'Galleria',
@@ -99,6 +111,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 13,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/60/Galleria_Guardian.png/revision/latest?cb=20210707202728',
       rarity: 'Select',
       bundle: 'Galleria',
@@ -106,6 +119,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 14,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ac/Galleria_Phantom.png/revision/latest?cb=20210707202756',
       rarity: 'Select',
       bundle: 'Galleria',
@@ -113,6 +127,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 15,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/78/Galleria_Marshal.png/revision/latest?cb=20210707202809',
       rarity: 'Select',
       bundle: 'Galleria',
@@ -120,6 +135,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 16,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3b/Rush_Frenzy.png/revision/latest?cb=20210707202952',
       rarity: 'Select',
       bundle: 'Rush',
@@ -127,6 +143,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 17,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/15/Rush_Judge.png/revision/latest?cb=20210707203029',
       rarity: 'Select',
       bundle: 'Rush',
@@ -134,6 +151,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 18,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a7/Rush_Bulldog.png/revision/latest?cb=20210707203127',
       rarity: 'Select',
       bundle: 'Rush',
@@ -141,6 +159,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 19,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/14/Rush_Phantom.png/revision/latest?cb=20210707203237',
       rarity: 'Select',
       bundle: 'Rush',
@@ -148,6 +167,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 20,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/75/Rush_Ares.png/revision/latest?cb=20210707191424',
       rarity: 'Select',
       bundle: 'Rush',
@@ -155,6 +175,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 21,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/19/Sakura_Classic.png/revision/latest?cb=20210707203326',
       rarity: 'Deluxe',
       bundle: 'Sakura',
@@ -162,6 +183,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 22,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/Sakura_Sheriff.png/revision/latest?cb=20210707203342',
       rarity: 'Deluxe',
       bundle: 'Sakura',
@@ -169,6 +191,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 23,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f7/Sakura_Stinger.png/revision/latest?cb=20210707203403',
       rarity: 'Deluxe',
       bundle: 'Sakura',
@@ -176,6 +199,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 24,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5f/Sakura_Vandal.png/revision/latest?cb=20210707203414',
       rarity: 'Deluxe',
       bundle: 'Sakura',
@@ -183,6 +207,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 25,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a1/Sakura_Ares.png/revision/latest?cb=20210707203430',
       rarity: 'Deluxe',
       bundle: 'Sakura',
@@ -190,6 +215,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 26,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6a/Convex_Sheriff.png/revision/latest?cb=20210707203451',
       rarity: 'Select',
       bundle: 'Convex',
@@ -197,6 +223,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 27,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/05/Convex_Spectre.png/revision/latest?cb=20210707203514',
       rarity: 'Select',
       bundle: 'Convex',
@@ -204,6 +231,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 28,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/28/Convex_Judge.png/revision/latest?cb=20210707203527',
       rarity: 'Select',
       bundle: 'Convex',
@@ -211,6 +239,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 29,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b3/Convex_Bulldog.png/revision/latest?cb=20210707203537',
       rarity: 'Select',
       bundle: 'Convex',
@@ -218,6 +247,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 30,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d4/Convex_Operator.png/revision/latest?cb=20210707203550',
       rarity: 'Select',
       bundle: 'Convex',
@@ -225,6 +255,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 31,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/92/Avalanche_Classic.png/revision/latest?cb=20200408115239',
       rarity: 'Deluxe',
       bundle: 'Avalanche',
@@ -232,6 +263,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 32,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f5/Avalanche_Spectre.png/revision/latest?cb=20200408121140',
       rarity: 'Deluxe',
       bundle: 'Avalanche',
@@ -239,6 +271,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 33,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9e/Avalanche_Phantom.png/revision/latest?cb=20200408121025',
       rarity: 'Deluxe',
       bundle: 'Avalanche',
@@ -246,6 +279,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 34,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b2/Avalanche_Vandal.png/revision/latest?cb=20200408121231',
       rarity: 'Deluxe',
       bundle: 'Avalanche',
@@ -253,6 +287,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 35,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f0/Avalanche_Marshal.png/revision/latest?cb=20200408120940',
       rarity: 'Deluxe',
       bundle: 'Avalanche',
@@ -260,6 +295,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 36,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cc/Prime_Classic.png/revision/latest?cb=20210707141714',
       rarity: 'Premium',
       bundle: 'Prime',
@@ -267,6 +303,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 37,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ce/Prime_Spectre.png/revision/latest?cb=20210707141713',
       rarity: 'Premium',
       bundle: 'Prime',
@@ -274,6 +311,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 38,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Prime_Guardian.png/revision/latest?cb=20210707141712',
       rarity: 'Premium',
       bundle: 'Prime',
@@ -281,6 +319,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 39,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/aa/Prime_Vandal.png/revision/latest?cb=20210707141713',
       rarity: 'Premium',
       bundle: 'Prime',
@@ -288,6 +327,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 40,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/15/Prime_Axe.png/revision/latest?cb=20210707185804',
       rarity: 'Premium',
       bundle: 'Prime',
@@ -295,6 +335,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 41,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/24/Sovereign_Ghost.png/revision/latest?cb=20210708101259',
       rarity: 'Premium',
       bundle: 'Sovereign',
@@ -302,6 +343,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 42,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9e/Sovereign_Stinger.png/revision/latest?cb=20210708101330',
       rarity: 'Premium',
       bundle: 'Sovereign',
@@ -309,6 +351,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 43,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b3/Sovereign_Guardian.png/revision/latest?cb=20210708101356',
       rarity: 'Premium',
       bundle: 'Sovereign',
@@ -316,6 +359,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 44,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/91/Sovereign_Marshal.png/revision/latest?cb=20210708101440',
       rarity: 'Premium',
       bundle: 'Sovereign',
@@ -323,6 +367,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 45,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cb/Sovereign_Sword.png/revision/latest?cb=20200911031827',
       rarity: 'Premium',
       bundle: 'Sovereign',
@@ -330,6 +375,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 46,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ce/Prism_Ghost.png/revision/latest?cb=20200623202609',
       rarity: 'Deluxe',
       bundle: 'Prism',
@@ -337,6 +383,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 47,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/28/Prism_Spectre.png/revision/latest?cb=20200623202620',
       rarity: 'Deluxe',
       bundle: 'Prism',
@@ -344,6 +391,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 48,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d4/Prism_Phantom.png/revision/latest?cb=20200623202631',
       rarity: 'Deluxe',
       bundle: 'Prism',
@@ -351,6 +399,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 49,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a6/Prism_Operator.png/revision/latest?cb=20200623202641',
       rarity: 'Deluxe',
       bundle: 'Prism',
@@ -358,6 +407,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 50,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/dd/Prism_Ares.png/revision/latest?cb=20200623202540',
       rarity: 'Deluxe',
       bundle: 'Prism',
@@ -365,6 +415,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 51,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3f/Prism_Knife.png/revision/latest?cb=20210707191428',
       rarity: 'Deluxe',
       bundle: 'Prism',
@@ -372,6 +423,7 @@ const initialState = {
       price: 2550,
     },
     {
+      id: 52,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c4/Elderflame_Frenzy.png/revision/latest?cb=20210707203656',
       rarity: 'Ultra',
       bundle: 'Elderflame',
@@ -379,6 +431,7 @@ const initialState = {
       price: 2475,
     },
     {
+      id: 53,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/Elderflame_Judge.png/revision/latest?cb=20210707203713',
       rarity: 'Ultra',
       bundle: 'Elderflame',
@@ -386,6 +439,7 @@ const initialState = {
       price: 2475,
     },
     {
+      id: 54,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d2/Elderflame_Vandal.png/revision/latest?cb=20210707203727',
       rarity: 'Ultra',
       bundle: 'Elderflame',
@@ -393,6 +447,7 @@ const initialState = {
       price: 2475,
     },
     {
+      id: 55,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/ed/Elderflame_Operator.png/revision/latest?cb=20210707203739',
       rarity: 'Ultra',
       bundle: 'Elderflame',
@@ -400,6 +455,7 @@ const initialState = {
       price: 2475,
     },
     {
+      id: 56,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a9/Elderflame_Dagger.png/revision/latest?cb=20210707185625',
       rarity: 'Ultra',
       bundle: 'Elderflame',
@@ -407,6 +463,7 @@ const initialState = {
       price: 4950,
     },
     {
+      id: 57,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b7/Oni_Shorty.png/revision/latest?cb=20210708101734',
       rarity: 'Premium',
       bundle: 'Oni',
@@ -414,6 +471,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 58,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e8/Oni_Bucky.png/revision/latest?cb=20210708101817',
       rarity: 'Premium',
       bundle: 'Oni',
@@ -421,6 +479,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 59,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/22/Oni_Guardian.png/revision/latest?cb=20210708101852',
       rarity: 'Premium',
       bundle: 'Oni',
@@ -428,6 +487,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 60,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/65/Oni_Phantom.png/revision/latest?cb=20200911011334',
       rarity: 'Premium',
       bundle: 'Oni',
@@ -435,6 +495,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 61,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/83/Oni_Claw.png/revision/latest?cb=20210707185747',
       rarity: 'Premium',
       bundle: 'Oni',
@@ -442,6 +503,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 62,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cd/Glitchpop_Frenzy.png/revision/latest?cb=20210708102002',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
@@ -449,6 +511,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 63,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Glitchpop_Judge.png/revision/latest?cb=20210708102023',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
@@ -456,6 +519,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 64,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/74/Glitchpop_Bulldog.png/revision/latest?cb=20210708102012',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
@@ -463,6 +527,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 65,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5f/Glitchpop_Odin.png/revision/latest?cb=20210708102036',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
@@ -470,6 +535,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 66,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/55/Glitchpop_Dagger.png/revision/latest?cb=20210707185641',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
@@ -477,6 +543,7 @@ const initialState = {
       price: 4350,
     },
     {
+      id: 67,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/23/Nebula_Sheriff.png/revision/latest?cb=20210707185745',
       rarity: 'Premium',
       bundle: 'Nebula',
@@ -484,6 +551,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 68,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f0/Nebula_Guardian.png/revision/latest?cb=20210708102155',
       rarity: 'Premium',
       bundle: 'Nebula',
@@ -491,6 +559,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 69,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b1/Nebula_Phantom.png/revision/latest?cb=20210708102144',
       rarity: 'Premium',
       bundle: 'Nebula',
@@ -498,6 +567,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 70,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/16/Nebula_Ares.png/revision/latest?cb=20200910144659',
       rarity: 'Premium',
       bundle: 'Nebula',
@@ -505,6 +575,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 71,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/89/Nebula_Knife.png/revision/latest?cb=20210708102235',
       rarity: 'Premium',
       bundle: 'Nebula',
@@ -512,6 +583,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 72,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/52/Spline_Classic.png/revision/latest?cb=20210708102407',
       rarity: 'Premium',
       bundle: 'Spline',
@@ -519,6 +591,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 73,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Spline_Spectre.png/revision/latest?cb=20210707191423',
       rarity: 'Premium',
       bundle: 'Spline',
@@ -526,6 +599,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 74,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4f/Spline_Phantom.png/revision/latest?cb=20210708102354',
       rarity: 'Premium',
       bundle: 'Spline',
@@ -533,6 +607,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 75,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Spline_Operator.png/revision/latest?cb=20210708102339',
       rarity: 'Premium',
       bundle: 'Spline',
@@ -540,6 +615,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 76,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b8/Spline_Dagger.png/revision/latest?cb=20210707191428',
       rarity: 'Premium',
       bundle: 'Spline',
@@ -547,6 +623,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 77,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6f/Ego_Ghost.png/revision/latest?cb=20210707185619',
       rarity: 'Premium',
       bundle: 'Ego',
@@ -554,6 +631,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 78,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/43/Ego_Stinger.png/revision/latest?cb=20210707185623',
       rarity: 'Premium',
       bundle: 'Ego',
@@ -561,6 +639,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 79,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/54/Ego_Guardian.png/revision/latest?cb=20210707185620',
       rarity: 'Premium',
       bundle: 'Ego',
@@ -568,6 +647,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 80,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/91/Ego_Vandal.png/revision/latest?cb=20210707185625',
       rarity: 'Premium',
       bundle: 'Ego',
@@ -575,6 +655,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 81,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6e/Ego_Knife.png/revision/latest?cb=20210707185622',
       rarity: 'Premium',
       bundle: 'Ego',
@@ -582,6 +663,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 82,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/84/Smite_Classic.png/revision/latest?cb=20210708102637',
       rarity: 'Select',
       bundle: 'Smite',
@@ -589,6 +671,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 83,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9b/Smite_Judge.png/revision/latest?cb=20200916171804',
       rarity: 'Select',
       bundle: 'Smite',
@@ -596,6 +679,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 84,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/18/Smite_Phantom.png/revision/latest?cb=20200916171825',
       rarity: 'Select',
       bundle: 'Smite',
@@ -603,6 +687,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 85,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/22/Smite_Odin.png/revision/latest?cb=20200916171843',
       rarity: 'Select',
       bundle: 'Smite',
@@ -610,6 +695,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 86,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1f/Smite_Knife.png/revision/latest?cb=20200916171858',
       rarity: 'Select',
       bundle: 'Smite',
@@ -617,6 +703,7 @@ const initialState = {
       price: 1750,
     },
     {
+      id: 87,
       img_url:
         'https://static.wikia.nocookie.net/valorant/images/f/f8/Gravitational_Uranium_Neuroblaster_Classic.png/revision/latest?cb=20210707185653',
       rarity: 'Premium',
@@ -625,6 +712,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 88,
       img_url:
         'https://static.wikia.nocookie.net/valorant/images/7/72/Gravitational_Uranium_Neuroblaster_Spectre.png/revision/latest?cb=20210707185656',
       rarity: 'Premium',
@@ -633,6 +721,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 89,
       img_url:
         'https://static.wikia.nocookie.net/valorant/images/a/ae/Gravitational_Uranium_Neuroblaster_Bucky.png/revision/latest?cb=20210707185651',
       rarity: 'Premium',
@@ -641,6 +730,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 90,
       img_url:
         'https://static.wikia.nocookie.net/valorant/images/a/a1/Gravitational_Uranium_Neuroblaster_Operator.png/revision/latest?cb=20210707185654',
       rarity: 'Premium',
@@ -649,6 +739,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 91,
       img_url:
         'https://static.wikia.nocookie.net/valorant/images/1/15/Gravitational_Uranium_Neuroblaster_Baton.png/revision/latest?cb=20210707185650',
       rarity: 'Premium',
@@ -657,6 +748,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 92,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9f/Singularity_Sheriff.png/revision/latest?cb=20201010151704',
       rarity: 'Exclusive',
       bundle: 'Singularity',
@@ -664,6 +756,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 93,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7e/Singularity_Spectre.png/revision/latest?cb=20201010151720',
       rarity: 'Exclusive',
       bundle: 'Singularity',
@@ -671,6 +764,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 94,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/Singularity_Phantom.png/revision/latest?cb=20201010151730',
       rarity: 'Exclusive',
       bundle: 'Singularity',
@@ -678,6 +772,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 95,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d5/Singularity_Ares.png/revision/latest?cb=20201010151740',
       rarity: 'Exclusive',
       bundle: 'Singularity',
@@ -685,6 +780,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 96,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/10/Singularity_Knife.png/revision/latest?cb=20210707191411',
       rarity: 'Exclusive',
       bundle: 'Singularity',
@@ -692,6 +788,7 @@ const initialState = {
       price: 4350,
     },
     {
+      id: 97,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fd/Reaver_Sheriff.png/revision/latest?cb=20210708103455',
       rarity: 'Premium',
       bundle: 'Reaver',
@@ -699,6 +796,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 98,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cc/Reaver_Guardian.png/revision/latest?cb=20201027170547',
       rarity: 'Premium',
       bundle: 'Reaver',
@@ -706,6 +804,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 99,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/27/Reaver_Vandal.png/revision/latest?cb=20210708103519',
       rarity: 'Premium',
       bundle: 'Reaver',
@@ -713,6 +812,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 100,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/Reaver_Operator.png/revision/latest?cb=20201027170727',
       rarity: 'Premium',
       bundle: 'Reaver',
@@ -720,6 +820,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 101,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/71/Reaver_Knife.png/revision/latest?cb=20210708103539',
       rarity: 'Premium',
       bundle: 'Reaver',
@@ -727,6 +828,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 102,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Ion_Sheriff.png/revision/latest?cb=20210712140421',
       rarity: 'Premium',
       bundle: 'Ion',
@@ -734,6 +836,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 103,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/09/Ion_Bucky.png/revision/latest?cb=20201112142243',
       rarity: 'Premium',
       bundle: 'Ion',
@@ -741,6 +844,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 104,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/49/Ion_Phantom.png/revision/latest?cb=20201112142324',
       rarity: 'Premium',
       bundle: 'Ion',
@@ -748,6 +852,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 105,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b8/Ion_Operator.png/revision/latest?cb=20201112142312',
       rarity: 'Premium',
       bundle: 'Ion',
@@ -755,6 +860,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 106,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6f/Ion_Energy_Sword.png/revision/latest?cb=20210708103635',
       rarity: 'Premium',
       bundle: 'Ion',
@@ -762,6 +868,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 107,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9a/Wasteland_Shorty.png/revision/latest?cb=20201027171104',
       rarity: 'Deluxe',
       bundle: 'Wasteland',
@@ -769,6 +876,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 108,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d5/Wasteland_Sheriff.png/revision/latest?cb=20210708103806',
       rarity: 'Deluxe',
       bundle: 'Wasteland',
@@ -776,6 +884,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 109,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fe/Wasteland_Spectre.png/revision/latest?cb=20201027171118',
       rarity: 'Deluxe',
       bundle: 'Wasteland',
@@ -783,6 +892,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 110,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ad/Wasteland_Vandal.png/revision/latest?cb=20201027171129',
       rarity: 'Deluxe',
       bundle: 'Wasteland',
@@ -790,6 +900,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 111,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cf/Wasteland_Marshal.png/revision/latest?cb=20201027171046',
       rarity: 'Deluxe',
       bundle: 'Wasteland',
@@ -797,6 +908,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 112,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5f/Sensation_Frenzy.png/revision/latest?cb=20210708103937',
       rarity: 'Select',
       bundle: 'Sensation',
@@ -804,6 +916,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 113,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Sensation_Stinger.png/revision/latest?cb=20201112150323',
       rarity: 'Select',
       bundle: 'Sensation',
@@ -811,6 +924,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 114,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/68/Sensation_Judge.png/revision/latest?cb=20201112150255',
       rarity: 'Select',
       bundle: 'Sensation',
@@ -818,6 +932,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 115,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/05/Sensation_Vandal.png/revision/latest?cb=20201112150337',
       rarity: 'Select',
       bundle: 'Sensation',
@@ -825,6 +940,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 116,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/31/Sensation_Odin.png/revision/latest?cb=20201112150309',
       rarity: 'Select',
       bundle: 'Sensation',
@@ -832,6 +948,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 117,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fe/Winterwunderland_Ghost.png/revision/latest?cb=20210708104120',
       rarity: 'Deluxe',
       bundle: 'Winterwunderland',
@@ -839,6 +956,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 118,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3b/Winterwunderland_Phantom.png/revision/latest?cb=20210708104056',
       rarity: 'Deluxe',
       bundle: 'Winterwunderland',
@@ -846,6 +964,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 119,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f2/Winterwunderland_Vandal.png/revision/latest?cb=20210708104203',
       rarity: 'Deluxe',
       bundle: 'Winterwunderland',
@@ -853,6 +972,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 120,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/60/Winterwunderland_Marshal.png/revision/latest?cb=20210708104142',
       rarity: 'Deluxe',
       bundle: 'Winterwunderland',
@@ -860,6 +980,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 121,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/04/Winterwunderland_Candy_Cane.png/revision/latest?cb=20210707191425',
       rarity: 'Deluxe',
       bundle: 'Winterwunderland',
@@ -867,6 +988,7 @@ const initialState = {
       price: 2550,
     },
     {
+      id: 122,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b4/BlastX_Frenzy.png/revision/latest?cb=20210708104353',
       rarity: 'Exclusive',
       bundle: 'BlastX',
@@ -874,6 +996,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 123,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/BlastX_Spectre.png/revision/latest?cb=20210708104407',
       rarity: 'Exclusive',
       bundle: 'BlastX',
@@ -881,6 +1004,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 124,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b1/BlastX_Phantom.png/revision/latest?cb=20210708104423',
       rarity: 'Exclusive',
       bundle: 'BlastX',
@@ -888,6 +1012,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 125,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/13/BlastX_Odin.png/revision/latest?cb=20201210133413',
       rarity: 'Exclusive',
       bundle: 'BlastX',
@@ -895,6 +1020,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 126,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2d/BlastX_Polymer_Knifetech_Coated_Knife.png/revision/latest?cb=20210707185605',
       rarity: 'Exclusive',
       bundle: 'BlastX',
@@ -902,6 +1028,7 @@ const initialState = {
       price: 4350,
     },
     {
+      id: 127,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/01/Prism_II_Shorty.png/revision/latest?cb=20230425140015',
       rarity: 'Select',
       bundle: 'Prism II',
@@ -909,6 +1036,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 128,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f9/Prism_II_Sheriff.png/revision/latest?cb=20210708104800',
       rarity: 'Select',
       bundle: 'Prism II',
@@ -916,6 +1044,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 129,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7d/Prism_II_Stinger.png/revision/latest?cb=20210708104833',
       rarity: 'Select',
       bundle: 'Prism II',
@@ -923,6 +1052,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 130,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Prism_II_Bucky.png/revision/latest?cb=20210708104815',
       rarity: 'Select',
       bundle: 'Prism II',
@@ -930,6 +1060,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 131,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8e/Prism_II_Vandal.png/revision/latest?cb=20210708104847',
       rarity: 'Select',
       bundle: 'Prism II',
@@ -937,6 +1068,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 132,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/dc/Horizon_Frenzy.png/revision/latest?cb=20210708104931',
       rarity: 'Deluxe',
       bundle: 'Horizon',
@@ -944,6 +1076,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 133,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/82/Horizon_Spectre.png/revision/latest?cb=20210708104951',
       rarity: 'Deluxe',
       bundle: 'Horizon',
@@ -951,6 +1084,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 134,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Horizon_Bucky.png/revision/latest?cb=20210708104940',
       rarity: 'Deluxe',
       bundle: 'Horizon',
@@ -958,6 +1092,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 135,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a7/Horizon_Bulldog.png/revision/latest?cb=20210708105002',
       rarity: 'Deluxe',
       bundle: 'Horizon',
@@ -965,6 +1100,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 136,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8a/Horizon_Vandal.png/revision/latest?cb=20210708105011',
       rarity: 'Deluxe',
       bundle: 'Horizon',
@@ -972,6 +1108,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 137,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/65/Glitchpop_Classic.png/revision/latest?cb=20210708105113',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
@@ -979,6 +1116,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 138,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/74/Glitchpop_Phantom.png/revision/latest?cb=20210708105123',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
@@ -986,6 +1124,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 139,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ab/Glitchpop_Vandal.png/revision/latest?cb=20210708105142',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
@@ -993,6 +1132,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 140,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e4/Glitchpop_Operator.png/revision/latest?cb=20210708105151',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
@@ -1000,6 +1140,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 141,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/01/Glitchpop_Axe.png/revision/latest?cb=20210708105045',
       rarity: 'Exclusive',
       bundle: 'Glitchpop',
@@ -1007,6 +1148,7 @@ const initialState = {
       price: 4350,
     },
     {
+      id: 142,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1b/Celestial_Frenzy.png/revision/latest?cb=20210310001652',
       rarity: 'Premium',
       bundle: 'Celestial',
@@ -1014,6 +1156,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 143,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/00/Celestial_Judge.png/revision/latest?cb=20210310001735',
       rarity: 'Premium',
       bundle: 'Celestial',
@@ -1021,6 +1164,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 144,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6e/Celestial_Phantom.png/revision/latest?cb=20210310001841',
       rarity: 'Premium',
       bundle: 'Celestial',
@@ -1028,6 +1172,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 145,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/03/Celestial_Ares.png/revision/latest?cb=20210310001814',
       rarity: 'Premium',
       bundle: 'Celestial',
@@ -1035,6 +1180,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 146,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c0/Celestial_Fan.png/revision/latest?cb=20210708105253',
       rarity: 'Premium',
       bundle: 'Celestial',
@@ -1042,6 +1188,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 147,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/da/VALORANT_Go%21_Vol._1_Ghost.png/revision/latest?cb=20210708105415',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 1',
@@ -1049,6 +1196,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 148,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d8/VALORANT_Go%21_Vol._1_Spectre.png/revision/latest?cb=20210708105439',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 1',
@@ -1056,6 +1204,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 149,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b7/VALORANT_Go%21_Vol._1_Guardian.png/revision/latest?cb=20210708105502',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 1',
@@ -1063,6 +1212,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 150,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/07/VALORANT_Go%21_Vol._1_Phantom.png/revision/latest?cb=20210708105521',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 1',
@@ -1070,6 +1220,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 151,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/77/VALORANT_Go%21_Vol._1_Knife.png/revision/latest?cb=20210708105355',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 1',
@@ -1077,6 +1228,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 152,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a4/Prime_2.0_Frenzy.png/revision/latest?cb=20210707191254',
       rarity: 'Premium',
       bundle: 'Prime//2.0',
@@ -1084,6 +1236,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 153,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/18/Prime_2.0_Bucky.png/revision/latest?cb=20210707191252',
       rarity: 'Premium',
       bundle: 'Prime//2.0',
@@ -1091,6 +1244,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 154,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Prime_2.0_Phantom.png/revision/latest?cb=20210707191257',
       rarity: 'Premium',
       bundle: 'Prime//2.0',
@@ -1098,6 +1252,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 155,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/de/Prime_2.0_Odin.png/revision/latest?cb=20210707191256',
       rarity: 'Premium',
       bundle: 'Prime//2.0',
@@ -1105,6 +1260,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 156,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cf/Prime_2.0_Karambit.png/revision/latest?cb=20210707191255',
       rarity: 'Premium',
       bundle: 'Prime//2.0',
@@ -1112,6 +1268,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 157,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b9/Infantry_Ghost.png/revision/latest?cb=20210708105646',
       rarity: 'Select',
       bundle: 'Infantry',
@@ -1119,6 +1276,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 158,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7f/Infantry_Spectre.png/revision/latest?cb=20210708105709',
       rarity: 'Select',
       bundle: 'Infantry',
@@ -1126,6 +1284,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 159,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1b/Infantry_Guardian.png/revision/latest?cb=20210708105735',
       rarity: 'Select',
       bundle: 'Infantry',
@@ -1133,6 +1292,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 160,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7d/Infantry_Operator.png/revision/latest?cb=20210708105816',
       rarity: 'Select',
       bundle: 'Infantry',
@@ -1140,6 +1300,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 161,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/56/Infantry_Ares.png/revision/latest?cb=20210708105756',
       rarity: 'Select',
       bundle: 'Infantry',
@@ -1147,6 +1308,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 162,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/92/Magepunk_Ghost.png/revision/latest?cb=20210708121456',
       rarity: 'Premium',
       bundle: 'Magepunk',
@@ -1154,6 +1316,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 163,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8b/Magepunk_Spectre.png/revision/latest?cb=20210708121552',
       rarity: 'Premium',
       bundle: 'Magepunk',
@@ -1161,6 +1324,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 164,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e4/Magepunk_Bucky.png/revision/latest?cb=20210708121613',
       rarity: 'Premium',
       bundle: 'Magepunk',
@@ -1168,6 +1332,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 165,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5a/Magepunk_Marshal.png/revision/latest?cb=20210708121637',
       rarity: 'Premium',
       bundle: 'Magepunk',
@@ -1175,6 +1340,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 166,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/34/Magepunk_Electroblade.png/revision/latest?cb=20210708121531',
       rarity: 'Premium',
       bundle: 'Magepunk',
@@ -1182,6 +1348,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 167,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9f/Silvanus_Sheriff.png/revision/latest?cb=20210708121711',
       rarity: 'Deluxe',
       bundle: 'Silvanus',
@@ -1189,6 +1356,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 168,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/11/Silvanus_Stinger.png/revision/latest?cb=20210708121739',
       rarity: 'Deluxe',
       bundle: 'Silvanus',
@@ -1196,6 +1364,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 169,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/70/Silvanus_Phantom.png/revision/latest?cb=20210708121802',
       rarity: 'Deluxe',
       bundle: 'Silvanus',
@@ -1203,6 +1372,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 170,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/ff/Silvanus_Vandal.png/revision/latest?cb=20210708121822',
       rarity: 'Deluxe',
       bundle: 'Silvanus',
@@ -1210,6 +1380,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 171,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/73/Silvanus_Operator.png/revision/latest?cb=20210708121848',
       rarity: 'Deluxe',
       bundle: 'Silvanus',
@@ -1217,6 +1388,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 172,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/89/Forsaken_Classic.png/revision/latest?cb=20210708122017',
       rarity: 'Premium',
       bundle: 'Forsaken',
@@ -1224,6 +1396,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 173,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/02/Forsaken_Spectre.png/revision/latest?cb=20210708122041',
       rarity: 'Premium',
       bundle: 'Forsaken',
@@ -1231,6 +1404,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 174,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/68/Forsaken_Vandal.png/revision/latest?cb=20210708122104',
       rarity: 'Premium',
       bundle: 'Forsaken',
@@ -1238,6 +1412,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 175,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d4/Forsaken_Operator.png/revision/latest?cb=20210708121929',
       rarity: 'Premium',
       bundle: 'Forsaken',
@@ -1245,6 +1420,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 176,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4c/Forsaken_Ritual_Blade.png/revision/latest?cb=20210708121951',
       rarity: 'Premium',
       bundle: 'Forsaken',
@@ -1252,6 +1428,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 177,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/49/Minima_Sheriff.png/revision/latest?cb=20210708122330',
       rarity: 'Deluxe',
       bundle: 'Minima',
@@ -1259,6 +1436,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 178,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f6/Minima_Spectre.png/revision/latest?cb=20210708122405',
       rarity: 'Deluxe',
       bundle: 'Minima',
@@ -1266,6 +1444,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 179,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/89/Minima_Phantom.png/revision/latest?cb=20210708122423',
       rarity: 'Deluxe',
       bundle: 'Minima',
@@ -1273,6 +1452,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 180,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cf/Minima_Operator.png/revision/latest?cb=20210708122442',
       rarity: 'Deluxe',
       bundle: 'Minima',
@@ -1280,6 +1460,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 181,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cb/Minima_Ares.png/revision/latest?cb=20210708122501',
       rarity: 'Deluxe',
       bundle: 'Minima',
@@ -1287,6 +1468,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 182,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f9/Tethered_Realms_Ghost.png/revision/latest?cb=20210708122541',
       rarity: 'Premium',
       bundle: 'Tethered Realms',
@@ -1294,6 +1476,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 183,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d7/Tethered_Realms_Guardian.png/revision/latest?cb=20210708122608',
       rarity: 'Premium',
       bundle: 'Tethered Realms',
@@ -1301,6 +1484,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 184,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/Tethered_Realms_Vandal.png/revision/latest?cb=20210708122627',
       rarity: 'Premium',
       bundle: 'Tethered Realms',
@@ -1308,6 +1492,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 185,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b8/Tethered_Realms_Operator.png/revision/latest?cb=20210708122648',
       rarity: 'Premium',
       bundle: 'Tethered Realms',
@@ -1315,6 +1500,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 186,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f0/Tethered_Realms_Prosperity.png/revision/latest?cb=20210708122713',
       rarity: 'Premium',
       bundle: 'Tethered Realms',
@@ -1322,6 +1508,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 187,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c8/Origin_Frenzy.png/revision/latest?cb=20210708122818',
       rarity: 'Premium',
       bundle: 'Origin',
@@ -1329,6 +1516,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 188,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2e/Origin_Bucky.png/revision/latest?cb=20210708122847',
       rarity: 'Premium',
       bundle: 'Origin',
@@ -1336,6 +1524,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 189,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5b/Origin_Vandal.png/revision/latest?cb=20210708122917',
       rarity: 'Premium',
       bundle: 'Origin',
@@ -1343,6 +1532,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 190,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/da/Origin_Operator.png/revision/latest?cb=20210708122941',
       rarity: 'Premium',
       bundle: 'Origin',
@@ -1350,6 +1540,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 191,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/98/Origin_Crescent_Blade.png/revision/latest?cb=20210707185755',
       rarity: 'Premium',
       bundle: 'Origin',
@@ -1357,6 +1548,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 192,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6b/Ruination_Ghost.png/revision/latest?cb=20210707184809',
       rarity: 'Exclusive',
       bundle: 'Ruination',
@@ -1364,6 +1556,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 193,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/Ruination_Spectre.png/revision/latest?cb=20210707184931',
       rarity: 'Exclusive',
       bundle: 'Ruination',
@@ -1371,6 +1564,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 194,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3f/Ruination_Guardian.png/revision/latest?cb=20210707184826',
       rarity: 'Exclusive',
       bundle: 'Ruination',
@@ -1378,6 +1572,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 195,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7c/Ruination_Phantom.png/revision/latest?cb=20210707184913',
       rarity: 'Exclusive',
       bundle: 'Ruination',
@@ -1385,6 +1580,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 196,
       img_url:
         'https://static.wikia.nocookie.net/valorant/images/b/bb/Ruination_Broken_Blade_Of_The_Ruined_King.png/revision/latest?cb=20210712114145',
       rarity: 'Exclusive',
@@ -1393,6 +1589,7 @@ const initialState = {
       price: 4350,
     },
     {
+      id: 197,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3d/Sentinels_Of_Light_Sheriff.png/revision/latest?cb=20210720175659',
       rarity: 'Exclusive',
       bundle: 'Sentinels of Light',
@@ -1400,6 +1597,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 198,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/69/Sentinels_Of_Light_Vandal.png/revision/latest?cb=20210720175714',
       rarity: 'Exclusive',
       bundle: 'Sentinels of Light',
@@ -1407,6 +1605,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 199,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/ba/Sentinels_Of_Light_Operator.png/revision/latest?cb=20210720175643',
       rarity: 'Exclusive',
       bundle: 'Sentinels of Light',
@@ -1414,6 +1613,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 200,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/da/Sentinels_Of_Light_Ares.png/revision/latest?cb=20210720175610',
       rarity: 'Exclusive',
       bundle: 'Sentinels of Light',
@@ -1421,6 +1621,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 201,
       img_url:
         'https://static.wikia.nocookie.net/valorant/images/9/93/Sentinels_Of_Light_Relic_Of_The_Sentinel.png/revision/latest?cb=20210720175627',
       rarity: 'Exclusive',
@@ -1429,6 +1630,7 @@ const initialState = {
       price: 4350,
     },
     {
+      id: 202,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/Recon_Ghost.png/revision/latest?cb=20210824165144',
       rarity: 'Premium',
       bundle: 'Recon',
@@ -1436,6 +1638,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 203,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/18/Recon_Spectre.png/revision/latest?cb=20210824165144',
       rarity: 'Premium',
       bundle: 'Recon',
@@ -1443,6 +1646,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 204,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6e/Recon_Guardian.png/revision/latest?cb=20210824165145',
       rarity: 'Premium',
       bundle: 'Recon',
@@ -1450,6 +1654,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 205,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b3/Recon_Phantom.png/revision/latest?cb=20210824165144',
       rarity: 'Premium',
       bundle: 'Recon',
@@ -1457,6 +1662,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 206,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/aa/Recon_Balisong.png/revision/latest?cb=20210824165142',
       rarity: 'Premium',
       bundle: 'Recon',
@@ -1464,6 +1670,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 207,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/df/SPECTRUM_Classic.png/revision/latest?cb=20210908214458',
       rarity: 'Exclusive',
       bundle: 'Spectrum',
@@ -1471,6 +1678,7 @@ const initialState = {
       price: 2675,
     },
     {
+      id: 208,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0d/SPECTRUM_Bulldog.png/revision/latest?cb=20210908214451',
       rarity: 'Exclusive',
       bundle: 'Spectrum',
@@ -1478,6 +1686,7 @@ const initialState = {
       price: 2675,
     },
     {
+      id: 209,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f5/SPECTRUM_Guardian.png/revision/latest?cb=20210908214456',
       rarity: 'Exclusive',
       bundle: 'Spectrum',
@@ -1485,6 +1694,7 @@ const initialState = {
       price: 2675,
     },
     {
+      id: 210,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f4/SPECTRUM_Phantom.png/revision/latest?cb=20210908214445',
       rarity: 'Exclusive',
       bundle: 'Spectrum',
@@ -1492,6 +1702,7 @@ const initialState = {
       price: 2675,
     },
     {
+      id: 211,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e7/SPECTRUM_Waveform.png/revision/latest?cb=20210908214448',
       rarity: 'Exclusive',
       bundle: 'Spectrum',
@@ -1499,6 +1710,7 @@ const initialState = {
       price: 5350,
     },
     {
+      id: 212,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/33/VALORANT_Go%21_Vol._2_Classic.png/revision/latest?cb=20210921174840',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 2',
@@ -1506,6 +1718,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 213,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5b/VALORANT_Go%21_Vol._2_Vandal.png/revision/latest?cb=20210921174824',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 2',
@@ -1513,6 +1726,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 214,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/90/VALORANT_Go%21_Vol._2_Operator.png/revision/latest?cb=20210921174830',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 2',
@@ -1520,6 +1734,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 215,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/87/VALORANT_Go%21_Vol._2_Ares.png/revision/latest?cb=20210921174844',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 2',
@@ -1527,6 +1742,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 216,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1e/Yoru%27s_Stylish_Butterfly_Comb.png/revision/latest?cb=20210921174835',
       rarity: 'Premium',
       bundle: 'VALORANT Go! Vol. 2',
@@ -1534,6 +1750,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 217,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/98/RGX_11z_Pro_Frenzy.png/revision/latest?cb=20211005172517',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
@@ -1541,6 +1758,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 218,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/29/RGX_11z_Pro_Stinger.png/revision/latest?cb=20211005172557',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
@@ -1548,6 +1766,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 219,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/55/RGX_11z_Pro_Guardian.png/revision/latest?cb=20211005172538',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
@@ -1555,6 +1774,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 220,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/41/RGX_11z_Pro_Vandal.png/revision/latest?cb=20211005172619',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
@@ -1562,6 +1782,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 221,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/15/RGX_11z_Pro_Blade.png/revision/latest?cb=20211005172436',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
@@ -1569,6 +1790,7 @@ const initialState = {
       price: 4350,
     },
     {
+      id: 222,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Nunca_Olvidados_Frenzy.png/revision/latest?cb=20211019175756',
       rarity: 'Deluxe',
       bundle: 'Nunca Olvidados',
@@ -1576,6 +1798,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 223,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0f/Nunca_Olvidados_Bulldog.png/revision/latest?cb=20211019175809',
       rarity: 'Deluxe',
       bundle: 'Nunca Olvidados',
@@ -1583,6 +1806,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 224,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/17/Nunca_Olvidados_Vandal.png/revision/latest?cb=20211019175713',
       rarity: 'Deluxe',
       bundle: 'Nunca Olvidados',
@@ -1590,6 +1814,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 225,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c6/Nunca_Olvidados_Ares.png/revision/latest?cb=20211019175820',
       rarity: 'Deluxe',
       bundle: 'Nunca Olvidados',
@@ -1597,6 +1822,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 226,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4c/Nunca_Olvidados_Catrina.png/revision/latest?cb=20211019175838',
       rarity: 'Deluxe',
       bundle: 'Nunca Olvidados',
@@ -1604,6 +1830,7 @@ const initialState = {
       price: 2550,
     },
     {
+      id: 227,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/75/Radiant_Crisis_001_Classic.png/revision/latest?cb=20211102175411',
       rarity: 'Premium',
       bundle: 'Radiant Crisis 001',
@@ -1611,6 +1838,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 228,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ac/Radiant_Crisis_001_Spectre.png/revision/latest?cb=20211102175420',
       rarity: 'Premium',
       bundle: 'Radiant Crisis 001',
@@ -1618,6 +1846,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 229,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Radiant_Crisis_001_Bucky.png/revision/latest?cb=20211102175407',
       rarity: 'Premium',
       bundle: 'Radiant Crisis 001',
@@ -1625,6 +1854,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 230,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/00/Radiant_Crisis_001_Phantom.png/revision/latest?cb=20211102175415',
       rarity: 'Premium',
       bundle: 'Radiant Crisis 001',
@@ -1632,6 +1862,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 231,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3f/Radiant_Crisis_001_Baseball_Bat.png/revision/latest?cb=20211102175403',
       rarity: 'Premium',
       bundle: 'Radiant Crisis 001',
@@ -1639,6 +1870,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 232,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2f/Magepunk_Sheriff.png/revision/latest?cb=20211119105628',
       rarity: 'Premium',
       bundle: 'Magepunk',
@@ -1646,6 +1878,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 233,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a6/Magepunk_Guardian.png/revision/latest?cb=20211119110014',
       rarity: 'Premium',
       bundle: 'Magepunk',
@@ -1653,6 +1886,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 234,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Magepunk_Operator.png/revision/latest?cb=20211119105827',
       rarity: 'Premium',
       bundle: 'Magepunk',
@@ -1660,6 +1894,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 235,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/31/Magepunk_Ares.png/revision/latest?cb=20211119110057',
       rarity: 'Premium',
       bundle: 'Magepunk',
@@ -1667,6 +1902,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 236,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/98/Magepunk_Shock_Gauntlet.png/revision/latest?cb=20211119105506',
       rarity: 'Premium',
       bundle: 'Magepunk',
@@ -1674,6 +1910,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 237,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/ee/Snowfall_Classic.png/revision/latest?cb=20211207184332',
       rarity: 'Deluxe',
       bundle: 'Snowfall',
@@ -1681,6 +1918,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 238,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/76/Snowfall_Judge.png/revision/latest?cb=20211207184337',
       rarity: 'Deluxe',
       bundle: 'Snowfall',
@@ -1688,6 +1926,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 239,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/78/Snowfall_Phantom.png/revision/latest?cb=20211207184341',
       rarity: 'Deluxe',
       bundle: 'Snowfall',
@@ -1695,6 +1934,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 240,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/25/Snowfall_Ares.png/revision/latest?cb=20211207184326',
       rarity: 'Deluxe',
       bundle: 'Snowfall',
@@ -1702,13 +1942,15 @@ const initialState = {
       price: 1275,
     },
     {
-      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Snowfall_Wand.png/revision/latest?cb=20211207184346',
+      id: 241,
+      img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Snowfall_Wand.png/revision/latest?cb=20230523161507',
       rarity: 'Deluxe',
       bundle: 'Snowfall',
       weapon: 'Wand',
       price: 2550,
     },
     {
+      id: 242,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Protocol_781-A_Sheriff.png/revision/latest?cb=20220113063244',
       rarity: 'Ultra',
       bundle: 'Protocol 781-A',
@@ -1716,6 +1958,7 @@ const initialState = {
       price: 2475,
     },
     {
+      id: 243,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e9/Protocol_781-A_Spectre.png/revision/latest?cb=20220113063244',
       rarity: 'Ultra',
       bundle: 'Protocol 781-A',
@@ -1723,6 +1966,7 @@ const initialState = {
       price: 2475,
     },
     {
+      id: 244,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e2/Protocol_781-A_Bulldog.png/revision/latest?cb=20220113063243',
       rarity: 'Ultra',
       bundle: 'Protocol 781-A',
@@ -1730,6 +1974,7 @@ const initialState = {
       price: 2475,
     },
     {
+      id: 245,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ce/Protocol_781-A_Phantom.png/revision/latest?cb=20220113063243',
       rarity: 'Ultra',
       bundle: 'Protocol 781-A',
@@ -1737,6 +1982,7 @@ const initialState = {
       price: 2475,
     },
     {
+      id: 246,
       img_url:
         'https://static.wikia.nocookie.net/valorant/images/8/8a/Protocol_781-A_Personal_Administrative_Melee_Unit.png/revision/latest?cb=20220113063243',
       rarity: 'Ultra',
@@ -1745,6 +1991,7 @@ const initialState = {
       price: 4950,
     },
     {
+      id: 247,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4c/Tigris_Shorty.png/revision/latest?cb=20220201214711',
       rarity: 'Deluxe',
       bundle: 'Tigris',
@@ -1752,6 +1999,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 248,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/68/Tigris_Spectre.png/revision/latest?cb=20220201214714',
       rarity: 'Deluxe',
       bundle: 'Tigris',
@@ -1759,6 +2007,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 249,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/79/Tigris_Phantom.png/revision/latest?cb=20220201214707',
       rarity: 'Deluxe',
       bundle: 'Tigris',
@@ -1766,6 +2015,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 250,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b5/Tigris_Operator.png/revision/latest?cb=20220201214703',
       rarity: 'Deluxe',
       bundle: 'Tigris',
@@ -1773,6 +2023,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 251,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fd/Tigris_Hu_Else.png/revision/latest?cb=20220201214658',
       rarity: 'Deluxe',
       bundle: 'Tigris',
@@ -1780,6 +2031,7 @@ const initialState = {
       price: 2550,
     },
     {
+      id: 252,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/8a/Undercity_Classic.png/revision/latest?cb=20220217141353',
       rarity: 'Premium',
       bundle: 'Undercity',
@@ -1787,6 +2039,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 253,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/37/Undercity_Judge.png/revision/latest?cb=20220217141303',
       rarity: 'Premium',
       bundle: 'Undercity',
@@ -1794,6 +2047,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 254,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/27/Undercity_Bulldog.png/revision/latest?cb=20220217141413',
       rarity: 'Premium',
       bundle: 'Undercity',
@@ -1801,6 +2055,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 255,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d7/Undercity_Phantom.png/revision/latest?cb=20220217141237',
       rarity: 'Premium',
       bundle: 'Undercity',
@@ -1808,6 +2063,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 256,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/15/Undercity_Hack.png/revision/latest?cb=20220217141344',
       rarity: 'Premium',
       bundle: 'Undercity',
@@ -1815,6 +2071,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 257,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/46/Gaia%27s_Vengeance_Ghost.png/revision/latest?cb=20220302170019',
       rarity: 'Premium',
       bundle: "Gaia's Vengeance",
@@ -1822,6 +2079,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 258,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/19/Gaia%27s_Vengeance_Guardian.png/revision/latest?cb=20220302170019',
       rarity: 'Premium',
       bundle: "Gaia's Vengeance",
@@ -1829,6 +2087,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 259,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0c/Gaia%27s_Vengeance_Vandal.png/revision/latest?cb=20220302170020',
       rarity: 'Premium',
       bundle: "Gaia's Vengeance",
@@ -1836,6 +2095,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 260,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c0/Gaia%27s_Vengeance_Marshal.png/revision/latest?cb=20220302170019',
       rarity: 'Premium',
       bundle: "Gaia's Vengeance",
@@ -1843,6 +2103,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 261,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/56/Gaia%27s_Wrath.png/revision/latest?cb=20220302170020',
       rarity: 'Premium',
       bundle: "Gaia's Vengeance",
@@ -1850,6 +2111,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 262,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/62/Team_Ace_Frenzy.png/revision/latest?cb=20220302170021',
       rarity: 'Deluxe',
       bundle: 'Team Ace',
@@ -1857,6 +2119,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 263,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/88/Team_Ace_Judge.png/revision/latest?cb=20220302170021',
       rarity: 'Deluxe',
       bundle: 'Team Ace',
@@ -1864,6 +2127,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 264,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/88/Team_Ace_Phantom.png/revision/latest?cb=20220302170021',
       rarity: 'Deluxe',
       bundle: 'Team Ace',
@@ -1871,6 +2135,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 265,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Team_Ace_Vandal.png/revision/latest?cb=20220302170021',
       rarity: 'Deluxe',
       bundle: 'Team Ace',
@@ -1878,6 +2143,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 266,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ab/Team_Ace_Operator.png/revision/latest?cb=20220302170021',
       rarity: 'Deluxe',
       bundle: 'Team Ace',
@@ -1885,6 +2151,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 267,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/72/Endeavour_Ghost.png/revision/latest?cb=20220323151705',
       rarity: 'Select',
       bundle: 'Endeavour',
@@ -1892,6 +2159,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 268,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Endeavour_Bulldog.png/revision/latest?cb=20220323151642',
       rarity: 'Select',
       bundle: 'Endeavour',
@@ -1899,6 +2167,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 269,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2a/Endeavour_Vandal.png/revision/latest?cb=20220323151611',
       rarity: 'Select',
       bundle: 'Endeavour',
@@ -1906,6 +2175,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 270,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/45/Endeavour_Operator.png/revision/latest?cb=20220323151653',
       rarity: 'Select',
       bundle: 'Endeavour',
@@ -1913,6 +2183,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 271,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/54/Endeavour_Ares.png/revision/latest?cb=20220323151720',
       rarity: 'Select',
       bundle: 'Endeavour',
@@ -1920,6 +2191,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 272,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d5/Doodle_Buds_Shorty.png/revision/latest?cb=20230425140004',
       rarity: 'Premium',
       bundle: 'Doodle Buds',
@@ -1927,6 +2199,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 273,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ca/Doodle_Buds_Stinger.png/revision/latest?cb=20220415131722',
       rarity: 'Premium',
       bundle: 'Doodle Buds',
@@ -1934,6 +2207,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 274,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/59/Doodle_Buds_Phantom.png/revision/latest?cb=20220415131700',
       rarity: 'Premium',
       bundle: 'Doodle Buds',
@@ -1941,6 +2215,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 275,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f8/Doodle_Buds_Marshal.png/revision/latest?cb=20220415131423',
       rarity: 'Premium',
       bundle: 'Doodle Buds',
@@ -1948,6 +2223,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 276,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/be/Doodle_Buds_Ares.png/revision/latest?cb=20220415131311',
       rarity: 'Premium',
       bundle: 'Doodle Buds',
@@ -1955,6 +2231,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 277,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/87/RGX_11z_Pro_Classic.png/revision/latest?cb=20220427142733',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
@@ -1962,6 +2239,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 278,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7b/RGX_11z_Pro_Spectre.png/revision/latest?cb=20220427142747',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
@@ -1969,6 +2247,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 279,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/bb/RGX_11z_Pro_Phantom.png/revision/latest?cb=20220427142744',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
@@ -1976,6 +2255,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 280,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4c/RGX_11z_Pro_Operator.png/revision/latest?cb=20220427142740',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
@@ -1983,6 +2263,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 281,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/da/RGX_11z_Pro_Firefly.png/revision/latest?cb=20220427142737',
       rarity: 'Exclusive',
       bundle: 'RGX 11z Pro',
@@ -1990,6 +2271,7 @@ const initialState = {
       price: 4350,
     },
     {
+      id: 282,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d0/Titanmail_Frenzy.png/revision/latest?cb=20220510155559',
       rarity: 'Deluxe',
       bundle: 'Titanmail',
@@ -1997,6 +2279,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 283,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/46/Titanmail_Bucky.png/revision/latest?cb=20220510155558',
       rarity: 'Deluxe',
       bundle: 'Titanmail',
@@ -2004,6 +2287,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 284,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/09/Titanmail_Vandal.png/revision/latest?cb=20220510155601',
       rarity: 'Deluxe',
       bundle: 'Titanmail',
@@ -2011,6 +2295,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 285,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/93/Titanmail_Ares.png/revision/latest?cb=20220510155557',
       rarity: 'Deluxe',
       bundle: 'Titanmail',
@@ -2018,6 +2303,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 286,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/60/Titanmail_Mace.png/revision/latest?cb=20220510155600',
       rarity: 'Deluxe',
       bundle: 'Titanmail',
@@ -2025,6 +2311,7 @@ const initialState = {
       price: 2550,
     },
     {
+      id: 287,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/48/Neptune_Shorty.png/revision/latest?cb=20220524173532',
       rarity: 'Premium',
       bundle: 'Neptune',
@@ -2032,6 +2319,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 288,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4e/Neptune_Spectre.png/revision/latest?cb=20220524173534',
       rarity: 'Premium',
       bundle: 'Neptune',
@@ -2039,6 +2327,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 289,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a5/Neptune_Guardian.png/revision/latest?cb=20220524173530',
       rarity: 'Premium',
       bundle: 'Neptune',
@@ -2046,6 +2335,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 290,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fe/Neptune_Vandal.png/revision/latest?cb=20220524173536',
       rarity: 'Premium',
       bundle: 'Neptune',
@@ -2053,6 +2343,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 291,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/90/Neptune_Anchor.png/revision/latest?cb=20220524173527',
       rarity: 'Premium',
       bundle: 'Neptune',
@@ -2060,6 +2351,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 292,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/17/Xenohunter_Frenzy.png/revision/latest?cb=20220607160039',
       rarity: 'Premium',
       bundle: 'Xenohunter',
@@ -2067,6 +2359,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 293,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Xenohunter_Bucky.png/revision/latest?cb=20220607160040',
       rarity: 'Premium',
       bundle: 'Xenohunter',
@@ -2074,6 +2367,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 294,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0a/Xenohunter_Phantom.png/revision/latest?cb=20220607160043',
       rarity: 'Premium',
       bundle: 'Xenohunter',
@@ -2081,6 +2375,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 295,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/70/Xenohunter_Odin.png/revision/latest?cb=20220607160044',
       rarity: 'Premium',
       bundle: 'Xenohunter',
@@ -2088,6 +2383,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 296,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d0/Xenohunter_Knife.png/revision/latest?cb=20220607160041',
       rarity: 'Premium',
       bundle: 'Xenohunter',
@@ -2095,6 +2391,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 297,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/78/Prelude_to_Chaos_Shorty.png/revision/latest?cb=20220622133017',
       rarity: 'Exclusive',
       bundle: 'Prelude to Chaos',
@@ -2102,6 +2399,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 298,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/88/Prelude_to_Chaos_Stinger.png/revision/latest?cb=20220622133021',
       rarity: 'Exclusive',
       bundle: 'Prelude to Chaos',
@@ -2109,6 +2407,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 299,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a8/Prelude_to_Chaos_Vandal.png/revision/latest?cb=20220622133025',
       rarity: 'Exclusive',
       bundle: 'Prelude to Chaos',
@@ -2116,6 +2415,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 300,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/48/Prelude_to_Chaos_Operator.png/revision/latest?cb=20220622133013',
       rarity: 'Exclusive',
       bundle: 'Prelude to Chaos',
@@ -2123,6 +2423,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 301,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4b/Blade_of_Chaos.png/revision/latest?cb=20220622133010',
       rarity: 'Exclusive',
       bundle: 'Prelude to Chaos',
@@ -2130,6 +2431,7 @@ const initialState = {
       price: 4350,
     },
     {
+      id: 302,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d1/Sarmad_Frenzy.png/revision/latest?cb=20220712164224',
       rarity: 'Deluxe',
       bundle: 'Sarmad',
@@ -2137,6 +2439,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 303,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b0/Sarmad_Spectre.png/revision/latest?cb=20220712164226',
       rarity: 'Deluxe',
       bundle: 'Sarmad',
@@ -2144,6 +2447,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 304,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fa/Sarmad_Phantom.png/revision/latest?cb=20220712164225',
       rarity: 'Deluxe',
       bundle: 'Sarmad',
@@ -2151,6 +2455,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 305,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/70/Sarmad_Vandal.png/revision/latest?cb=20220712164227',
       rarity: 'Deluxe',
       bundle: 'Sarmad',
@@ -2158,6 +2463,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 306,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d3/Blade_of_Serket.png/revision/latest?cb=20220712164222',
       rarity: 'Deluxe',
       bundle: 'Sarmad',
@@ -2165,6 +2471,7 @@ const initialState = {
       price: 2550,
     },
     {
+      id: 307,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/94/Reaver%2C_EP_5_Ghost.png/revision/latest?cb=20220809131733',
       rarity: 'Premium',
       bundle: 'Reaver, EP 5',
@@ -2172,6 +2479,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 308,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/1e/Reaver%2C_EP_5_Spectre.png/revision/latest?cb=20220809131747',
       rarity: 'Premium',
       bundle: 'Reaver, EP 5',
@@ -2179,6 +2487,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 309,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/7a/Reaver%2C_EP_5_Phantom.png/revision/latest?cb=20220809131744',
       rarity: 'Premium',
       bundle: 'Reaver, EP 5',
@@ -2186,6 +2495,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 310,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5c/Reaver%2C_EP_5_Odin.png/revision/latest?cb=20220809131740',
       rarity: 'Premium',
       bundle: 'Reaver, EP 5',
@@ -2193,6 +2503,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 311,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0d/Reaver%2C_EP_5_Karambit.png/revision/latest?cb=20220809131737',
       rarity: 'Premium',
       bundle: 'Reaver, EP 5',
@@ -2200,6 +2511,7 @@ const initialState = {
       price: 4350,
     },
     {
+      id: 312,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/95/Kohaku_%26_Matsuba_Classic.png/revision/latest?cb=20220907171539',
       rarity: 'Deluxe',
       bundle: 'Kohaku & Matsuba',
@@ -2207,6 +2519,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 313,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/77/Kohaku_%26_Matsuba_Judge.png/revision/latest?cb=20220907171541',
       rarity: 'Deluxe',
       bundle: 'Kohaku & Matsuba',
@@ -2214,6 +2527,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 314,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/2c/Kohaku_%26_Matsuba_Phantom.png/revision/latest?cb=20220907171545',
       rarity: 'Deluxe',
       bundle: 'Kohaku & Matsuba',
@@ -2221,6 +2535,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 315,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3b/Kohaku_%26_Matsuba_Operator.png/revision/latest?cb=20220907171543',
       rarity: 'Deluxe',
       bundle: 'Kohaku & Matsuba',
@@ -2228,6 +2543,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 316,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/81/Equilibrium.png/revision/latest?cb=20220907171537',
       rarity: 'Deluxe',
       bundle: 'Kohaku & Matsuba',
@@ -2235,6 +2551,7 @@ const initialState = {
       price: 2550,
     },
     {
+      id: 317,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/69/ChronoVoid_Sheriff.png/revision/latest?cb=20220920131634',
       rarity: 'Exclusive',
       bundle: 'ChronoVoid',
@@ -2242,6 +2559,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 318,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/ae/ChronoVoid_Judge.png/revision/latest?cb=20220920131626',
       rarity: 'Exclusive',
       bundle: 'ChronoVoid',
@@ -2249,6 +2567,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 319,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/ca/ChronoVoid_Phantom.png/revision/latest?cb=20220920131630',
       rarity: 'Exclusive',
       bundle: 'ChronoVoid',
@@ -2256,6 +2575,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 320,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/93/ChronoVoid_Vandal.png/revision/latest?cb=20220920131637',
       rarity: 'Exclusive',
       bundle: 'ChronoVoid',
@@ -2263,6 +2583,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 321,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0d/Terminus_A_Quo.png/revision/latest?cb=20220920131642',
       rarity: 'Exclusive',
       bundle: 'ChronoVoid',
@@ -2270,6 +2591,7 @@ const initialState = {
       price: 4350,
     },
     {
+      id: 322,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/42/Crimsonbeast_Sheriff.png/revision/latest?cb=20221004165139',
       rarity: 'Premium',
       bundle: 'Crimsonbeast',
@@ -2277,6 +2599,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 323,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/79/Crimsonbeast_Judge.png/revision/latest?cb=20221004165137',
       rarity: 'Premium',
       bundle: 'Crimsonbeast',
@@ -2284,6 +2607,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 324,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/cf/Crimsonbeast_Vandal.png/revision/latest?cb=20221004165140',
       rarity: 'Premium',
       bundle: 'Crimsonbeast',
@@ -2291,6 +2615,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 325,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5c/Crimsonbeast_Marshal.png/revision/latest?cb=20221004165138',
       rarity: 'Premium',
       bundle: 'Crimsonbeast',
@@ -2298,6 +2623,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 326,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/42/Crimsonbeast_Hammer.png/revision/latest?cb=20221004165136',
       rarity: 'Premium',
       bundle: 'Crimsonbeast',
@@ -2305,6 +2631,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 327,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9f/Ion_Frenzy.png/revision/latest?cb=20221018133136',
       rarity: 'Premium',
       bundle: 'Ion',
@@ -2312,6 +2639,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 328,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4b/Ion_Spectre.png/revision/latest?cb=20221018133201',
       rarity: 'Premium',
       bundle: 'Ion',
@@ -2319,6 +2647,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 329,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e8/Ion_Vandal.png/revision/latest?cb=20221018133212',
       rarity: 'Premium',
       bundle: 'Ion',
@@ -2326,6 +2655,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 330,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c3/Ion_Ares.png/revision/latest?cb=20221018133123',
       rarity: 'Premium',
       bundle: 'Ion',
@@ -2333,6 +2663,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 331,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a6/Ion_Karambit.png/revision/latest?cb=20221018133149',
       rarity: 'Premium',
       bundle: 'Ion',
@@ -2340,6 +2671,7 @@ const initialState = {
       price: 4350,
     },
     {
+      id: 332,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d7/Soulstrife_Ghost.png/revision/latest?cb=20221101155513',
       rarity: 'Premium',
       bundle: 'Soulstrife',
@@ -2347,6 +2679,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 333,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/9a/Soulstrife_Spectre.png/revision/latest?cb=20221101155517',
       rarity: 'Premium',
       bundle: 'Soulstrife',
@@ -2354,6 +2687,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 334,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/ba/Soulstrife_Guardian.png/revision/latest?cb=20221101155514',
       rarity: 'Premium',
       bundle: 'Soulstrife',
@@ -2361,6 +2695,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 335,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/99/Soulstrife_Phantom.png/revision/latest?cb=20221101155515',
       rarity: 'Premium',
       bundle: 'Soulstrife',
@@ -2368,6 +2703,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 336,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/00/Soulstrife_Scythe.png/revision/latest?cb=20221101155516',
       rarity: 'Premium',
       bundle: 'Soulstrife',
@@ -2375,6 +2711,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 337,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/ec/Abyssal_Sheriff.png/revision/latest?cb=20221115170802',
       rarity: 'Deluxe',
       bundle: 'Abyssal',
@@ -2382,6 +2719,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 338,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/61/Abyssal_Spectre.png/revision/latest?cb=20221115170803',
       rarity: 'Deluxe',
       bundle: 'Abyssal',
@@ -2389,6 +2727,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 339,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a3/Abyssal_Guardian.png/revision/latest?cb=20221115170800',
       rarity: 'Deluxe',
       bundle: 'Abyssal',
@@ -2396,6 +2735,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 340,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/95/Abyssal_Phantom.png/revision/latest?cb=20221115170801',
       rarity: 'Deluxe',
       bundle: 'Abyssal',
@@ -2403,6 +2743,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 341,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/87/Caeruleus.png/revision/latest?cb=20221115170804',
       rarity: 'Deluxe',
       bundle: 'Abyssal',
@@ -2410,6 +2751,7 @@ const initialState = {
       price: 2550,
     },
     {
+      id: 342,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c9/Cryostasis_Classic.png/revision/latest?cb=20221206165303',
       rarity: 'Premium',
       bundle: 'Cryostasis',
@@ -2417,6 +2759,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 343,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/59/Cryostasis_Bulldog.png/revision/latest?cb=20221206165302',
       rarity: 'Premium',
       bundle: 'Cryostasis',
@@ -2424,6 +2767,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 344,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/01/Cryostasis_Vandal.png/revision/latest?cb=20221206165306',
       rarity: 'Premium',
       bundle: 'Cryostasis',
@@ -2431,6 +2775,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 345,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3e/Cryostasis_Operator.png/revision/latest?cb=20221206165305',
       rarity: 'Premium',
       bundle: 'Cryostasis',
@@ -2438,6 +2783,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 346,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/f3/Cryostasis_Impact_Drill.png/revision/latest?cb=20221206165304',
       rarity: 'Premium',
       bundle: 'Cryostasis',
@@ -2445,6 +2791,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 347,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e4/Araxys_Shorty.png/revision/latest?cb=20230110150822',
       rarity: 'Exclusive',
       bundle: 'Araxys',
@@ -2452,6 +2799,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 348,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/2/24/Araxys_Bulldog.png/revision/latest?cb=20230110150814',
       rarity: 'Exclusive',
       bundle: 'Araxys',
@@ -2459,6 +2807,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 349,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e1/Araxys_Vandal.png/revision/latest?cb=20230110150827',
       rarity: 'Exclusive',
       bundle: 'Araxys',
@@ -2466,6 +2815,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 350,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fe/Araxys_Operator.png/revision/latest?cb=20230110150818',
       rarity: 'Exclusive',
       bundle: 'Araxys',
@@ -2473,6 +2823,7 @@ const initialState = {
       price: 2175,
     },
     {
+      id: 351,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/07/Araxys_Bio_Harvester.png/revision/latest?cb=20230110150809',
       rarity: 'Exclusive',
       bundle: 'Araxys',
@@ -2480,6 +2831,7 @@ const initialState = {
       price: 4350,
     },
     {
+      id: 352,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5d/Luna_Ghost.png/revision/latest?cb=20230118182530',
       rarity: 'Deluxe',
       bundle: 'Luna',
@@ -2487,6 +2839,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 353,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/65/Luna_Spectre.png/revision/latest?cb=20230118182534',
       rarity: 'Deluxe',
       bundle: 'Luna',
@@ -2494,6 +2847,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 354,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/06/Luna_Vandal.png/revision/latest?cb=20230118182535',
       rarity: 'Deluxe',
       bundle: 'Luna',
@@ -2501,6 +2855,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 355,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6e/Luna_Marshal.png/revision/latest?cb=20230118182533',
       rarity: 'Deluxe',
       bundle: 'Luna',
@@ -2508,6 +2863,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 356,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a5/Luna%27s_Descent.png/revision/latest?cb=20230118182529',
       rarity: 'Deluxe',
       bundle: 'Luna',
@@ -2515,6 +2871,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 357,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c5/Reverie_Classic.png/revision/latest?cb=20230214163046',
       rarity: 'Select',
       bundle: 'Reverie',
@@ -2522,6 +2879,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 358,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6b/Reverie_Guardian.png/revision/latest?cb=20230214163046',
       rarity: 'Select',
       bundle: 'Reverie',
@@ -2529,6 +2887,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 359,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/c/c2/Reverie_Phantom.png/revision/latest?cb=20230214163048',
       rarity: 'Select',
       bundle: 'Reverie',
@@ -2536,6 +2895,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 360,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/1/19/Reverie_Marshal.png/revision/latest?cb=20230214163047',
       rarity: 'Select',
       bundle: 'Reverie',
@@ -2543,6 +2903,7 @@ const initialState = {
       price: 875,
     },
     {
+      id: 361,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/57/Reverie_Sword.png/revision/latest?cb=20230214163044',
       rarity: 'Select',
       bundle: 'Reverie',
@@ -2550,6 +2911,7 @@ const initialState = {
       price: 1750,
     },
     {
+      id: 362,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/a/a8/Oni_Frenzy.png/revision/latest?cb=20230307165624',
       rarity: 'Premium',
       bundle: 'Oni',
@@ -2557,6 +2919,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 363,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/0b/Oni_Bulldog.png/revision/latest?cb=20230307165619',
       rarity: 'Premium',
       bundle: 'Oni',
@@ -2564,6 +2927,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 364,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/3b/Oni_Vandal.png/revision/latest?cb=20230307165629',
       rarity: 'Premium',
       bundle: 'Oni',
@@ -2571,6 +2935,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 365,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/69/Oni_Ares.png/revision/latest?cb=20230307165614',
       rarity: 'Premium',
       bundle: 'Oni',
@@ -2578,6 +2943,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 366,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/d6/Onimaru_Kunitsuna.png/revision/latest?cb=20230307165634',
       rarity: 'Premium',
       bundle: 'Oni',
@@ -2585,6 +2951,7 @@ const initialState = {
       price: 5350,
     },
     {
+      id: 367,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/eb/Altitude_Sheriff.png/revision/latest?cb=20230328154319',
       rarity: 'Deluxe',
       bundle: 'Altitude',
@@ -2592,6 +2959,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 368,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/d/db/Altitude_Bucky.png/revision/latest?cb=20230328154316',
       rarity: 'Deluxe',
       bundle: 'Altitude',
@@ -2599,6 +2967,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 369,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/8/84/Altitude_Vandal.png/revision/latest?cb=20230328154315',
       rarity: 'Deluxe',
       bundle: 'Altitude',
@@ -2606,6 +2975,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 370,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/f/fc/Altitude_Odin.png/revision/latest?cb=20230328154318',
       rarity: 'Deluxe',
       bundle: 'Altitude',
@@ -2613,6 +2983,7 @@ const initialState = {
       price: 1275,
     },
     {
+      id: 371,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/7/78/Altitude_Knuckle_Knife.png/revision/latest?cb=20230328154317',
       rarity: 'Deluxe',
       bundle: 'Altitude',
@@ -2620,6 +2991,7 @@ const initialState = {
       price: 2550,
     },
     {
+      id: 372,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/e/e8/Black.Market_Classic.png/revision/latest?cb=20230411161450',
       rarity: 'Premium',
       bundle: 'Black.Market',
@@ -2627,6 +2999,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 373,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/4/4b/Black.Market_Bulldog.png/revision/latest?cb=20230411161448',
       rarity: 'Premium',
       bundle: 'Black.Market',
@@ -2634,6 +3007,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 374,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/3/31/Black.Market_Vandal.png/revision/latest?cb=20230411161447',
       rarity: 'Premium',
       bundle: 'Black.Market',
@@ -2641,6 +3015,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 375,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/08/Black.Market_Marshal.png/revision/latest?cb=20230411161451',
       rarity: 'Premium',
       bundle: 'Black.Market',
@@ -2648,6 +3023,7 @@ const initialState = {
       price: 1775,
     },
     {
+      id: 376,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/5f/Black.Market_Butterfly_Knife.png/revision/latest?cb=20230411161449',
       rarity: 'Premium',
       bundle: 'Black.Market',
@@ -2655,6 +3031,7 @@ const initialState = {
       price: 3550,
     },
     {
+      id: 377,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/0/05/Radiant_Entertainment_System_Ghost.png/revision/latest?cb=20230425141049',
       rarity: 'Ultra',
       bundle: 'Radiant Entertainment System',
@@ -2662,6 +3039,7 @@ const initialState = {
       price: 2975,
     },
     {
+      id: 378,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/6/6f/Radiant_Entertainment_System_Bulldog.png/revision/latest?cb=20230425141046',
       rarity: 'Ultra',
       bundle: 'Radiant Entertainment System',
@@ -2669,6 +3047,7 @@ const initialState = {
       price: 2975,
     },
     {
+      id: 379,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/b/b6/Radiant_Entertainment_System_Phantom.png/revision/latest?cb=20230425141004',
       rarity: 'Ultra',
       bundle: 'Radiant Entertainment System',
@@ -2676,6 +3055,7 @@ const initialState = {
       price: 2975,
     },
     {
+      id: 380,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/5/53/Radiant_Entertainment_System_Operator.png/revision/latest?cb=20230425141052',
       rarity: 'Ultra',
       bundle: 'Radiant Entertainment System',
@@ -2683,6 +3063,7 @@ const initialState = {
       price: 2975,
     },
     {
+      id: 381,
       img_url: 'https://static.wikia.nocookie.net/valorant/images/9/98/Power_Fist.png/revision/latest?cb=20230425141042',
       rarity: 'Ultra',
       bundle: 'Radiant Entertainment System',
@@ -2707,21 +3088,19 @@ export const authSlice = createSlice({
       state.user = null
       state.token = null
     },
-    setFavoriteSkins: (state, action) => {
+    setLikedSkins: (state, action) => {
       if (state.user) {
-        state.user.favoriteSkins = action.payload.favoriteSkins
+        state.user.likedSkins = action.payload.likedSkins
       } else {
-        console.error('error in setFavoriteSkins')
+        console.error('error in setLikedSkins')
       }
     },
-    setCart: (state, action) => {
-      state.cart = action.payload.cart
-    },
+
     setLikes: (state, action) => {
       state.likes = action.payload.likes
     },
   },
 })
 
-export const { setMode, setLogin, setLogout, setFavoriteSkins, setCart, setLikes } = authSlice.actions
+export const { setMode, setLogin, setLogout, setLikedSkins, setLikes } = authSlice.actions
 export default authSlice.reducer
