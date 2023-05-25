@@ -3095,7 +3095,6 @@ export const authSlice = createSlice({
         console.error('error in setOwnedSkins')
       }
     },
-
     setLikes: (state, action) => {
       state.likes = action.payload.likes
     },
@@ -3105,9 +3104,16 @@ export const authSlice = createSlice({
     toggleSignUpModalFalse: state => {
       state.openSignUpModal = false
     },
+    setTotalValue: (state, action) => {
+      if (state.user) {
+        state.user.totalValue += action.payload.value
+      } else {
+        console.error('error in setTotalValue')
+      }
+    },
   },
 })
 
-export const { setMode, setLogin, setLogout, setLikedSkins, setOwnedSkins, setLikes, toggleSignUpModalTrue, toggleSignUpModalFalse } =
+export const { setMode, setLogin, setLogout, setLikedSkins, setTotalValue, setOwnedSkins, setLikes, toggleSignUpModalTrue, toggleSignUpModalFalse } =
   authSlice.actions
 export default authSlice.reducer

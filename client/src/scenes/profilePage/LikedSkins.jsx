@@ -6,10 +6,11 @@ import { useNavigate } from 'react-router-dom'
 const LikedSkins = () => {
   const user = useSelector(state => state.user)
   const navigate = useNavigate()
+  const reversedSkins = [...user.likedSkins].reverse()
   return (
     <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(330px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }}>
-      {user.likedSkins.map(skin => (
-        <SkinContainer width={300} name={skin.bundle + ' ' + skin.weapon} price={skin.price} picture={skin.img_url}></SkinContainer>
+      {reversedSkins.map((skin, index) => (
+        <SkinContainer key={index} userId={user._id} skinId={skin}></SkinContainer>
       ))}
       {user.likedSkins.length === 0 && (
         <Stack direction={'column'} width={'100%'} alignItems={'center'} justifyContent={'center'} mt={'1rem'} gap={'0.25rem'}>

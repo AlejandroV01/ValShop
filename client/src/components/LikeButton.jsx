@@ -49,11 +49,10 @@ const LikeButton = ({ userId, skinId }) => {
 
   useEffect(() => {
     if (isAuth) {
-      console.log(user.likedSkins)
       let isALikedSkin = user.likedSkins.includes(skinId.toString())
       setIsLiked(isALikedSkin)
     }
-  }, [isAuth, skinId, user.likedSkins])
+  }, [isAuth, skinId, user?.likedSkins])
   return (
     <>
       <IconButton

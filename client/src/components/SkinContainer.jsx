@@ -8,19 +8,17 @@ import { setLikedSkins } from 'state'
 import useImageColor from 'use-image-color'
 import LikeButton from './LikeButton'
 import OwnButton from './OwnButton'
-const SkinContainer = ({
-  name = 'Reaver Vandal',
-  price = '1775',
-  picture = 'https://static.wikia.nocookie.net/valorant/images/0/00/Radiant_Crisis_001_Phantom.png/revision/latest',
-  width = 350,
-  userId,
-  skinId,
-}) => {
+const SkinContainer = ({ name, price, picture, width = 350, userId, skinId }) => {
   const theme = useTheme()
   const background = theme.palette.background.default
   const neutralLight = theme.palette.neutral.light
-  const dispatch = useDispatch()
-
+  const skins = useSelector(state => state.skins)
+  if (price === undefined) {
+    const requestedSkin = skins[skinId]
+    name = requestedSkin.bundle + ' ' + requestedSkin.weapon
+    price = requestedSkin.price
+    picture = requestedSkin.img_url
+  }
   return (
     <Box
       display='flex'

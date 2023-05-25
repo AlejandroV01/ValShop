@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 import Form from 'scenes/loginPage/Form'
-import { setOwnedSkins, toggleSignUpModal } from 'state'
+import { setOwnedSkins, setTotalValue, toggleSignUpModal } from 'state'
 const OwnButton = ({ userId, skinId }) => {
   const isAuth = Boolean(useSelector(state => state.token))
   const [open, setOpen] = useState(false)
@@ -14,6 +14,15 @@ const OwnButton = ({ userId, skinId }) => {
   const token = useSelector(state => state.token)
   const dispatch = useDispatch()
   const user = useSelector(state => state.user)
+  const skins = useSelector(state => state.skins)
+  const [isOwned, setIsOwned] = useState(false)
+
+  useEffect(() => {
+    if (isAuth) {
+      let isAOwnedSkin = user.ownedSkins.includes(skinId.toString())
+      setIsOwned(isAOwnedSkin)
+    }
+  }, [isAuth, skinId, user?.ownedSkins])
   const addRemoveSkin = async (userId, skinId) => {
     if (!isAuth) {
       toast.error('You are not signed in!', {
@@ -39,27 +48,25 @@ const OwnButton = ({ userId, skinId }) => {
 
     if (addRemoveSkin) {
       dispatch(setOwnedSkins({ ownedSkins: addRemoveSkin }))
+      if (isOwned) {
+        dispatch(setTotalValue({ value: -skins[skinId].price }))
+      } else {
+        dispatch(setTotalValue({ value: skins[skinId].price }))
+      }
+
       toast.success('Successfully Owned Skin!', {
         position: 'bottom-right',
         theme: 'colored',
       })
     }
   }
-  const [isLiked, setIsLiked] = useState(false)
 
-  useEffect(() => {
-    if (isAuth) {
-      console.log(user.ownedSkins)
-      let isALikedSkin = user.ownedSkins.includes(skinId.toString())
-      setIsLiked(isALikedSkin)
-    }
-  }, [isAuth, skinId, user.ownedSkins])
   return (
     <>
       <IconButton
         sx={{
-          color: isLiked ? palette.primary.light : palette.neutral.dark,
-          backgroundColor: isLiked ? palette.primary.dark : palette.background.alt,
+          color: isOwned ? palette.primary.light : palette.neutral.dark,
+          backgroundColor: isOwned ? palette.primary.dark : palette.background.alt,
           '&:hover': { backgroundColor: palette.primary.main },
         }}
         onClick={!isAuth ? handleOpen : () => addRemoveSkin(userId, skinId)}
