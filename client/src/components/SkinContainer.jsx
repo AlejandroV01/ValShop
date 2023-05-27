@@ -8,7 +8,7 @@ import { setLikedSkins } from 'state'
 import useImageColor from 'use-image-color'
 import LikeButton from './LikeButton'
 import OwnButton from './OwnButton'
-const SkinContainer = ({ name, price, picture, width = 350, userId, skinId }) => {
+const SkinContainer = ({ name, price, picture, width = 300, userId, skinId }) => {
   const theme = useTheme()
   const background = theme.palette.background.default
   const neutralLight = theme.palette.neutral.light
@@ -23,7 +23,7 @@ const SkinContainer = ({ name, price, picture, width = 350, userId, skinId }) =>
     <Box
       display='flex'
       flexDirection='column'
-      alignItems='flex-start'
+      alignItems='center'
       justifyContent={'space-evenly'}
       backgroundColor={neutralLight}
       borderRadius='4px'
@@ -31,7 +31,15 @@ const SkinContainer = ({ name, price, picture, width = 350, userId, skinId }) =>
       maxWidth='380px'
       height={'230px'}
     >
-      <img src={picture} alt={name} style={{ borderRadius: '4px', width: `${width}px`, maxHeight: '120px', objectFit: 'contain' }} />
+      <Stack style={{ width: '200px' }} flexDirection={'row'} justifyContent={'center'}>
+        <img
+          src={picture}
+          alt={name}
+          style={{
+            width: '100%',
+          }}
+        />
+      </Stack>
       <Box display='flex' alignItems='center' justifyContent='space-between' width='100%'>
         <Box display='flex' flexDirection='column' overflow='hidden'>
           <Box display='flex' alignItems='center'>
