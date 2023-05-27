@@ -1,6 +1,6 @@
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import { createTheme } from '@mui/material/styles'
-import { useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
@@ -15,6 +15,16 @@ function App() {
   const mode = useSelector(state => state.mode)
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
   const isAuth = Boolean(useSelector(state => state.token))
+  const [skins, setSkins] = useState()
+
+  useEffect(() => {
+    const getSkins = async () => {
+      const valApiResponse = await fetch('https://valorant-api.com/v1/weapons/skins')
+      let valApi = await valApiResponse.json()
+      setSkins(valApi.data)
+    }
+    getSkins()
+  }, [])
   return (
     <div className='app'>
       <BrowserRouter>
@@ -24,7 +34,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='/login' element={<LoginPage />}></Route>
-            <Route path='/' element={<HomePage />}></Route>
+            <Route path='/' element={<HomePage skins={skins} />}></Route>
             <Route path='/profile/:username' element={isAuth ? <ProfilePage /> : <Navigate to='/login' />}></Route>
             <Route path='/explore' element={<ExplorePage />}></Route>
           </Routes>

@@ -3,16 +3,53 @@ import SkinContainer from 'components/SkinContainer'
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-const HomePage = () => {
+const HomePage = ({ skins }) => {
   const theme = useTheme()
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)')
   const navigate = useNavigate()
-  const skins = useSelector(state => state.skins)
-
-  const PEU = skins.filter(skin => {
-    const rarity = skin.rarity
-    return rarity === 'Premium' || rarity === 'Exclusive' || rarity === 'Ultra'
-  })
+  console.log(skins)
+  const PEU = [
+    [
+      'Radiant Entertainment System',
+      'Elderflame',
+      'Protocol 781-A',
+      'SPECTRUM',
+      'Araxys',
+      'BlastX',
+      'ChronoVoid',
+      'Glitchpop',
+      'Prelude to Chaos ',
+      'RGX 11Z Pro',
+      'Ruination',
+      'Sentinels of Light',
+      'Singularity',
+      'Celestial',
+      'Cryostasis',
+      'Doodle Buds',
+      'EGO',
+      'Forsaken ',
+      'Gaia’s Vengeance',
+      'Gravitational Uranium Neuroblaster',
+      'Ion',
+      'Magepunk',
+      'Nebula',
+      'Neptune',
+      'Oni',
+      'Origin',
+      'Prime',
+      'Radiant Crisis 001 ',
+      'Reaver',
+      'Recon',
+      'Prime',
+      'Soulstrife',
+      'Sovereign',
+      'Spline',
+      'Tethered Realms',
+      'Undercity',
+      'Valorant GO!',
+      'Xenohunter',
+    ],
+  ]
   const user = useSelector(state => state.user)
   const [exploreSkins, setExploreSkins] = useState([])
   const [firstSkins, setFirstSkins] = useState([])
@@ -33,59 +70,7 @@ const HomePage = () => {
     setExploreSkins(selectedSkins)
   }
 
-  const getFirstSkins = () => {
-    const selectedSkins = []
-    let randomIndexes = []
-    const baseSkin = PEU[Math.floor(Math.random() * PEU.length)]
-    const collection = PEU.filter(skin => {
-      const bundle = skin.bundle
-      return bundle === baseSkin.bundle
-    })
-
-    for (let i = 0; i < 4; i++) {
-      const randomIndex = Math.floor(Math.random() * collection.length)
-      if (!randomIndexes.includes(randomIndex)) {
-        randomIndexes.push(randomIndex)
-        selectedSkins.push(collection[randomIndex])
-      } else {
-        i--
-      }
-    }
-    setFirstSkins(selectedSkins)
-    return baseSkin.bundle
-  }
-  const getSecondSkins = firstBundle => {
-    const selectedSkins = []
-    let randomIndexes = []
-    const newPEU = PEU.filter(skin => {
-      const bundle = skin.bundle
-      return bundle !== firstBundle
-    })
-    const baseSkin = newPEU[Math.floor(Math.random() * newPEU.length)]
-    const collection = newPEU.filter(skin => {
-      const bundle = skin.bundle
-      return bundle === baseSkin.bundle
-    })
-
-    for (let i = 0; i < 4; i++) {
-      const randomIndex = Math.floor(Math.random() * collection.length)
-      if (!randomIndexes.includes(randomIndex)) {
-        randomIndexes.push(randomIndex)
-        selectedSkins.push(collection[randomIndex])
-      } else {
-        i--
-      }
-    }
-    setSecondSkins(selectedSkins)
-  }
   const isAuth = Boolean(useSelector(state => state.token))
-
-  useEffect(() => {
-    getExploreSkins()
-    let firstBundle = getFirstSkins()
-    getSecondSkins(firstBundle)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [skins])
 
   return (
     <Stack padding='1rem 6%' width={'100%'}>
