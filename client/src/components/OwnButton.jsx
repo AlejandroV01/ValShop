@@ -53,11 +53,17 @@ const OwnButton = ({ userId, skinId }) => {
       } else {
         dispatch(setTotalValue({ value: skins[skinId].price }))
       }
-
-      toast.success('Successfully Owned Skin!', {
-        position: 'bottom-right',
-        theme: 'colored',
-      })
+      if (user.ownedSkins.includes(skinId.toString())) {
+        toast.success('Un-Owned Skin!', {
+          position: 'bottom-right',
+          theme: 'colored',
+        })
+      } else {
+        toast.success('Successfully Owned Skin!', {
+          position: 'bottom-right',
+          theme: 'colored',
+        })
+      }
     }
   }
 

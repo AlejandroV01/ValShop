@@ -52,11 +52,6 @@ const Navbar = () => {
       {/* DESKTOP NAV */}
       {isNonMobileScreens ? (
         <FlexBetween gap='2rem'>
-          <IconButton onClick={() => navigate('/likes')}>
-            <Badge badgeContent={likes.length} color='primary'>
-              <Favorite sx={{ color: dark, fontSize: '25px' }} />
-            </Badge>
-          </IconButton>
           <IconButton onClick={() => navigate('/explore')}>
             <Explore sx={{ color: dark, fontSize: '25px' }} />
           </IconButton>

@@ -136,7 +136,6 @@ const HomePage = () => {
                 key={index}
                 name={skin.bundle + ' ' + skin.weapon}
                 price={skin.price}
-                picture={skin.img_url}
                 userId={isAuth && user._id}
                 skinId={skin.id}
               ></SkinContainer>

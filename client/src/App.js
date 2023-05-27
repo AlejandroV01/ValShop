@@ -7,7 +7,6 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import ExplorePage from 'scenes/explorePage'
 import HomePage from 'scenes/homePage'
-import LikePage from 'scenes/likePage'
 import LoginPage from 'scenes/loginPage'
 import Navbar from 'scenes/navbar'
 import ProfilePage from 'scenes/profilePage'
@@ -27,7 +26,6 @@ function App() {
             <Route path='/login' element={<LoginPage />}></Route>
             <Route path='/' element={<HomePage />}></Route>
             <Route path='/profile/:username' element={isAuth ? <ProfilePage /> : <Navigate to='/login' />}></Route>
-            <Route path='/likes' element={isAuth ? <LikePage /> : <Navigate to='/login' />}></Route>
             <Route path='/explore' element={<ExplorePage />}></Route>
           </Routes>
         </ThemeProvider>

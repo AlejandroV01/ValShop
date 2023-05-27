@@ -39,10 +39,17 @@ const LikeButton = ({ userId, skinId }) => {
 
     if (addRemoveSkin) {
       dispatch(setLikedSkins({ likedSkins: addRemoveSkin }))
-      toast.success('Successfully Liked Skin!', {
-        position: 'bottom-right',
-        theme: 'colored',
-      })
+      if (user.likedSkins.includes(skinId.toString())) {
+        toast.success('Disliked Skin!', {
+          position: 'bottom-right',
+          theme: 'colored',
+        })
+      } else {
+        toast.success('Successfully Liked Skin!', {
+          position: 'bottom-right',
+          theme: 'colored',
+        })
+      }
     }
   }
   const [isLiked, setIsLiked] = useState(false)
