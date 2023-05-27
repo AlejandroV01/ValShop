@@ -1,5 +1,5 @@
-import { Close, DarkMode, Explore, Favorite, LightMode, Menu, Search } from '@mui/icons-material'
-import { Badge, Box, Button, FormControl, IconButton, InputBase, MenuItem, Select, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { AccountBalance, Close, DarkMode, Explore, Favorite, LightMode, Menu, Search } from '@mui/icons-material'
+import { Box, Button, FormControl, IconButton, InputBase, MenuItem, Select, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import FlexBetween from 'components/FlexBetween'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -24,22 +24,26 @@ const Navbar = () => {
 
   // const fullName = `${user.firstName} ${user.lastName}`
   return (
-    <FlexBetween padding={'1rem 6%'} backgroundColor={alt}>
+    <FlexBetween padding={'1rem 6%'} backgroundColor={'transparent'}>
       <FlexBetween gap='1.75rem'>
-        <Typography
-          fontWeight='bold'
-          fontSize='clamp(1rem, 2rem, 2.25rem)'
-          color='primary'
-          onClick={() => navigate('/')}
-          sx={{
-            '&:hover': {
-              color: primaryLight,
-              cursor: 'pointer',
-            },
-          }}
-        >
-          ValShop
-        </Typography>
+        <Stack direction={'row'} alignItems={'center'} gap={'0.3rem'}>
+          <AccountBalance />
+          <Typography
+            fontWeight='bold'
+            fontSize='clamp(1rem, 1.75rem, 2.25rem)'
+            color='primary'
+            onClick={() => navigate('/')}
+            sx={{
+              '&:hover': {
+                color: primaryLight,
+                cursor: 'pointer',
+              },
+            }}
+          >
+            ValoVault
+          </Typography>
+        </Stack>
+
         {isNonMobileScreens && (
           <FlexBetween backgroundColor={neutralLight} borderRadius={'4px'} gap={'3rem'} padding={'0.1rem 1.5rem'}>
             <InputBase placeholder='Search...' />

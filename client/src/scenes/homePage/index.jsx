@@ -1,3 +1,4 @@
+import { NearMe } from '@mui/icons-material'
 import { Badge, Box, Button, Divider, FormControl, IconButton, InputBase, MenuItem, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import SkinContainer from 'components/SkinContainer'
 import { useEffect, useState } from 'react'
@@ -73,110 +74,38 @@ const HomePage = ({ skins }) => {
   const isAuth = Boolean(useSelector(state => state.token))
 
   return (
-    <Stack padding='1rem 6%' width={'100%'}>
-      <Stack direction={'column'} alignItems='center'>
-        <Typography fontWeight={'bold'} fontSize={50} variant='h1'>
-          FEATURED
-        </Typography>
-        <Typography
-          fontWeight={'bold'}
-          letterSpacing={'2px'}
-          variant='h1'
-          fontSize={50}
-          sx={{ WebkitTextStroke: `1px ${theme.palette.neutral.dark}`, color: 'transparent' }}
-        >
-          FEATURED
-        </Typography>
-        <Box position={'relative'} width={'75%'} height={'100%'}>
-          <img
-            src='https://media.valorant-api.com/bundles/3d2fd628-4ceb-0029-a737-9682ce8eb5e9/displayicon.png'
-            alt=''
-            width={'100%'}
-            style={{ borderRadius: '4px' }}
-          />
-          <Box
-            position={'absolute'}
-            width={'100%'}
-            height={'100%'}
-            borderRadius={'4px'}
-            top={0}
-            left={0}
-            sx={{ background: 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6699054621848739) 40%, rgba(255,255,255,0) 100%);' }}
-          ></Box>
-          <Box position={'absolute'} bottom={'3rem'} right={'3rem'}>
-            <Button variant='contained' size='large' onClick={() => navigate('/explore/newBundle')}>
-              Explore Here
-            </Button>
-          </Box>
+    <Stack padding='3rem 6%' width={'100%'} direction={'column'} position={'relative'}>
+      <Stack direction={'row'} width={'100%'} alignItems={'center'} gap={'2rem'}>
+        <Box width={'45%'}>
+          <img src='https://playvalorant.com/static/agents-group-31d7ce5a3637e45d8b25d2fd03159e6c.png' alt='ValAgentWallpaper' width={'100%'} />
         </Box>
-        <Divider textAlign='left' sx={{ width: '100%', margin: '1rem 0' }}>
-          <Typography fontWeight={'bold'} variant='h3'>
-            EXPLORE
+        <Stack direction={'column'} width={'55%'} gap={'3rem'}>
+          <Typography variant='h1' fontSize={'4rem'} fontWeight={'bold'}>
+            BROWSE SKINS FOR YOUR VAULT
           </Typography>
-        </Divider>
-        <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(380px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }} width={'100%'}>
-          {exploreSkins.map((skin, index) => {
-            return (
-              <SkinContainer
-                key={index}
-                name={skin.bundle + ' ' + skin.weapon}
-                price={skin.price}
-                userId={isAuth && user._id}
-                skinId={skin.id}
-              ></SkinContainer>
-            )
-          })}
-        </Box>
-        {isNonMobileScreens && (
-          <>
-            <Divider textAlign='left' sx={{ width: '100%', margin: '1rem 0' }}>
-              <Typography variant='h4'>{firstSkins.length === 4 && firstSkins[0]['bundle']}</Typography>
-            </Divider>
-            <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(380px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }} width={'100%'}>
-              {firstSkins.map((skin, index) => {
-                return (
-                  <SkinContainer
-                    key={index}
-                    name={skin.bundle + ' ' + skin.weapon}
-                    price={skin.price}
-                    picture={skin.img_url}
-                    userId={isAuth && user._id}
-                    skinId={skin.id}
-                  ></SkinContainer>
-                )
-              })}
-            </Box>
-            <Divider textAlign='left' sx={{ width: '100%', margin: '1rem 0' }}>
-              <Typography variant='h4'>{secondSkins.length === 4 && secondSkins[0]['bundle']}</Typography>
-            </Divider>
-            <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(380px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }} width={'100%'}>
-              {secondSkins.map((skin, index) => {
-                return (
-                  <SkinContainer
-                    key={index}
-                    name={skin.bundle + ' ' + skin.weapon}
-                    price={skin.price}
-                    picture={skin.img_url}
-                    userId={isAuth && user._id}
-                    skinId={skin.id}
-                  ></SkinContainer>
-                )
-              })}
-            </Box>
-          </>
-        )}
-        <Box width={'20%'} display={'flex'} justifyContent={'center'}>
-          <Button
-            variant='contained'
-            size='large'
-            sx={{ margin: '1rem 0', padding: '1rem 0', minWidth: '200px' }}
-            fullWidth
-            onClick={() => navigate('/explore')}
-          >
-            EXPLORE MORE
-          </Button>
-        </Box>
+          <Typography variant='p' fontSize={'1.2rem'} color={theme.palette.neutral.medium}>
+            Personal Valorant skin vaults to keep track of your skins as well as others!
+          </Typography>
+          <Stack direction={'row'}>
+            <Button variant='contained' startIcon={<NearMe />} size='large'>
+              <Typography fontWeight={'bold'}>GO TO MARKET</Typography>
+            </Button>
+            <Button size='large'>TO OWN VAULT</Button>
+          </Stack>
+        </Stack>
       </Stack>
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          width: 10,
+          height: 10,
+          backgroundColor: 'red',
+          boxShadow: '0px 0px 300px 200px rgba(132,94,247,0.77)',
+          zIndex: -1,
+        }}
+      ></div>
     </Stack>
   )
 }
