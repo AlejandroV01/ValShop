@@ -39,23 +39,22 @@ const SkinContainer = ({ name, price, width = 300, userId, skinId }) => {
       display='flex'
       flexDirection='column'
       alignItems='center'
-      justifyContent={'space-around'}
+      justifyContent={'space-evenly'}
       backgroundColor={neutralLight}
       borderRadius='4px'
       padding='1rem 1rem'
       width='375px'
       height={'230px'}
     >
-      <img
-        src={picture}
-        alt={name}
-        style={{
-          width: `${width}px`,
-          maxHeight: '140px',
-          objectFit: 'contain',
-        }}
-      />
-
+      <Stack style={{ width: '200px' }} flexDirection={'row'} justifyContent={'center'}>
+        <img
+          src={picture}
+          alt={name}
+          style={{
+            width: '100%',
+          }}
+        />
+      </Stack>
       <Box display='flex' alignItems='center' justifyContent='space-between' width='100%'>
         <Box display='flex' flexDirection='column' overflow='hidden'>
           <Box display='flex' alignItems='center'>
