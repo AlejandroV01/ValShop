@@ -43,7 +43,7 @@ const Navbar = () => {
             ValoVault
           </Typography>
         </Stack>
-
+        {}
         {isNonMobileScreens && (
           <FlexBetween backgroundColor={neutralLight} borderRadius={'4px'} gap={'3rem'} padding={'0.1rem 1.5rem'}>
             <InputBase placeholder='Search...' />
