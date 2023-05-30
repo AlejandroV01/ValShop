@@ -1,10 +1,23 @@
 import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material'
-import { Badge, Box, Button, Checkbox, Divider, FormControl, Icon, IconButton, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
+import {
+  Badge,
+  Box,
+  Button,
+  Checkbox,
+  Divider,
+  FormControlLabel,
+  IconButton,
+  RadioGroup,
+  Stack,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material'
 import React, { useState } from 'react'
 
-const SideBar = () => {
+const SideBar = ({ handleWeaponFilter }) => {
   const [expandWeapons, setExpandWeapons] = useState(false)
-  const [expandSkins, setExpandSkins] = useState(false)
+  const [expandRarity, setExpandRarity] = useState(false)
   const theme = useTheme()
 
   const sideBarContent = {
@@ -28,7 +41,7 @@ const SideBar = () => {
       'Odin',
       'Knife',
     ],
-    SkinRarity: ['ULTRA', 'EXCLUSIVE', 'PREMIUM', 'DELUXE', 'SELECT', 'BATTLE PASS'],
+    SkinRarity: ['Ultra', 'Exclusive', 'Premium', 'Deluxe', 'Select', 'Battle Pass'],
     Skins: [
       //ULTRA
       ['Radiant Entertainment System', 'Elderflame', 'Protocol 781-A', 'SPECTRUM'],
@@ -140,12 +153,124 @@ const SideBar = () => {
       ],
     ],
   }
-  const background = theme.palette.background.alt
-
+  const [filteredWeapons, setFilteredWeapons] = useState([])
+  const [filteredRarity, setFilteredRarity] = useState([])
+  const [Ultra, setUltra] = useState(false)
+  const [Exclusive, setExclusive] = useState(false)
+  const [Premium, setPremium] = useState(false)
+  const [Deluxe, setDeluxe] = useState(false)
+  const [Select, setSelect] = useState(false)
+  const [BattlePass, setBattlePass] = useState(false)
+  const isChecked = name => {
+    if (name === 'Ultra') return Ultra
+    if (name === 'Exclusive') return Exclusive
+    if (name === 'Premium') return Premium
+    if (name === 'Deluxe') return Deluxe
+    if (name === 'Select') return Select
+    if (name === 'Battle Pass') return BattlePass
+  }
+  const changeChecked = name => {
+    if (name === 'Ultra' && Ultra === true) {
+      setUltra(false)
+      return
+    }
+    if (name === 'Exclusive' && Exclusive === true) {
+      setExclusive(false)
+      return
+    }
+    if (name === 'Premium' && Premium === true) {
+      setPremium(false)
+      return
+    }
+    if (name === 'Deluxe' && Deluxe === true) {
+      setDeluxe(false)
+      return
+    }
+    if (name === 'Select' && Select === true) {
+      setSelect(false)
+      return
+    }
+    if (name === 'Battle Pass' && BattlePass === true) {
+      setBattlePass(false)
+      return
+    }
+    if (name === 'Ultra') {
+      setUltra(true)
+      setExclusive(false)
+      setPremium(false)
+      setDeluxe(false)
+      setSelect(false)
+      setBattlePass(false)
+    }
+    if (name === 'Exclusive') {
+      setUltra(false)
+      setExclusive(true)
+      setPremium(false)
+      setDeluxe(false)
+      setSelect(false)
+      setBattlePass(false)
+    }
+    if (name === 'Premium') {
+      setUltra(false)
+      setExclusive(false)
+      setPremium(true)
+      setDeluxe(false)
+      setSelect(false)
+      setBattlePass(false)
+    }
+    if (name === 'Deluxe') {
+      setUltra(false)
+      setExclusive(false)
+      setPremium(false)
+      setDeluxe(true)
+      setSelect(false)
+      setBattlePass(false)
+    }
+    if (name === 'Select') {
+      setUltra(false)
+      setExclusive(false)
+      setPremium(false)
+      setDeluxe(false)
+      setSelect(true)
+      setBattlePass(false)
+    }
+    if (name === 'Battle Pass') {
+      setUltra(false)
+      setExclusive(false)
+      setPremium(false)
+      setDeluxe(false)
+      setSelect(false)
+      setBattlePass(true)
+    }
+  }
+  const returnChecked = () => {
+    if (Ultra) return ['Ultra']
+    if (Exclusive) return ['Exclusive']
+    if (Premium) return ['Premium']
+    if (Deluxe) return ['Deluxe']
+    if (Select) return ['Select']
+    if (BattlePass) return ['Battle Pass']
+    return []
+  }
   return (
-    <Stack divider={<Divider />} direction={'column'} flexGrow={0.05} sx={{ backgroundColor: background }} borderRadius={'0.25rem'}>
-      <Typography variant='h5'>Filter</Typography>
-      <Stack direction={'column'}>
+    <Stack divider={<Divider />} direction={'column'} flexGrow={0.05} borderRadius={'0.25rem'} height={'fit-content'} width={'170px'}>
+      <Stack direction={'row'} justifyContent={'space-between'} padding={'0.5rem 0'}>
+        <Typography variant='h6' fontWeight={'bold'}>
+          Filter by
+        </Typography>
+        <Typography
+          variant='h6'
+          color={theme.palette.primary.main}
+          sx={{
+            '&:hover': {
+              cursor: 'pointer',
+            },
+          }}
+        >
+          Reset Filters
+        </Typography>
+      </Stack>
+      <Stack direction={'column'} padding={'0.5rem 0'}>
         <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
           <Typography variant='h5'>Weapons</Typography>
           {!expandWeapons ? (
@@ -160,42 +285,61 @@ const SideBar = () => {
         </Stack>
         <Stack direction={'column'}>
           {!expandWeapons
-            ? sideBarContent.Weapons.slice(0, 5).map(name => (
-                <Stack direction={'row'} alignItems={'center'}>
+            ? sideBarContent.Weapons.slice(0, 0).map((name, index) => (
+                <Stack direction={'row'} alignItems={'center'} key={index}>
                   <Checkbox />
                   <Typography variant='h6'>{name}</Typography>
                 </Stack>
               ))
-            : sideBarContent.Weapons.map(name => (
-                <Stack direction={'row'} alignItems={'center'}>
-                  <Checkbox />
+            : sideBarContent.Weapons.map((name, index) => (
+                <Stack direction={'row'} alignItems={'center'} key={index}>
+                  <Checkbox
+                    onChange={() => {
+                      const updatedWeapons = filteredWeapons.includes(name)
+                        ? filteredWeapons.filter(item => item !== name)
+                        : [...filteredWeapons, name]
+                      setFilteredWeapons(updatedWeapons)
+                      handleWeaponFilter(updatedWeapons, filteredRarity)
+                    }}
+                  />
                   <Typography variant='h6'>{name}</Typography>
                 </Stack>
               ))}
         </Stack>
+      </Stack>
+      <Stack direction={'column'} padding={'0.5rem 0'}>
         <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
-          <Typography variant='h5'>Skins</Typography>
-          {!expandSkins ? (
-            <IconButton onClick={() => setExpandSkins(true)} sx={{ cursor: 'pointer' }}>
+          <Typography variant='h5'>Rarity</Typography>
+          {!expandRarity ? (
+            <IconButton onClick={() => setExpandRarity(true)} sx={{ cursor: 'pointer' }}>
               <ArrowDropUp />
             </IconButton>
           ) : (
-            <IconButton onClick={() => setExpandSkins(false)} sx={{ cursor: 'pointer' }}>
+            <IconButton onClick={() => setExpandRarity(false)} sx={{ cursor: 'pointer' }}>
               <ArrowDropDown />
             </IconButton>
           )}
         </Stack>
         <Stack direction={'column'}>
-          {!expandSkins
-            ? sideBarContent.SkinRarity.map(name => (
-                <Stack direction={'row'} alignItems={'center'}>
+          {!expandRarity
+            ? sideBarContent.SkinRarity.slice(0, 0).map((name, index) => (
+                <Stack direction={'row'} alignItems={'center'} key={index}>
                   <Checkbox />
                   <Typography variant='h6'>{name}</Typography>
                 </Stack>
               ))
-            : sideBarContent.SkinRarity.map(name => (
-                <Stack direction={'row'} alignItems={'center'}>
-                  <Checkbox />
+            : sideBarContent.SkinRarity.map((name, index) => (
+                <Stack direction={'row'} alignItems={'center'} key={index}>
+                  <Checkbox
+                    checked={isChecked(name)}
+                    onChange={() => {
+                      changeChecked(name)
+                      const rarity = returnChecked()
+                      console.log(rarity)
+                      setFilteredRarity(rarity)
+                      handleWeaponFilter(filteredWeapons, filteredRarity)
+                    }}
+                  />
                   <Typography variant='h6'>{name}</Typography>
                 </Stack>
               ))}

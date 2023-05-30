@@ -8,9 +8,9 @@ import {
   Divider,
   FormControl,
   Icon,
-  IconButton,
   InputBase,
   MenuItem,
+  Pagination,
   Select,
   Stack,
   Typography,
@@ -19,7 +19,7 @@ import {
 } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2' // Grid version 2
 import SkinContainer from 'components/SkinContainer'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import SideBar from './SideBar'
@@ -28,22 +28,78 @@ const ExplorePage = () => {
   const theme = useTheme()
   const navigate = useNavigate()
   const neutralLight = theme.palette.neutral.light
-  const dark = theme.palette.neutral.dark
-  const background = theme.palette.background.default
-  const primaryLight = theme.palette.primary.light
-  const alt = theme.palette.background.alt
+
   const user = useSelector(state => state.user)
   const skins = useSelector(state => state.skins)
-  const marketSkins = []
+  const [marketSkins, setMarketSkins] = useState(() => {
+    return Array.from({ length: skins.length }, (_, index) => index).reverse()
+  })
+  const allSkins = []
   for (let i = skins.length - 1; i >= 0; i--) {
-    marketSkins.push(i)
+    allSkins.push(i)
   }
+
+  if (currentSort === 'Highest Price') {
+    marketSkins.sort((a, b) => {
+      if (skins[b].price !== skins[a].price) {
+        return skins[b].price - skins[a].price
+      }
+      return marketSkins.indexOf(a) - marketSkins.indexOf(b)
+    })
+  } else if (currentSort === 'Lowest Price') {
+    marketSkins.sort((a, b) => {
+      if (skins[b].price !== skins[a].price) {
+        return skins[a].price - skins[b].price
+      }
+      return marketSkins.indexOf(a) - marketSkins.indexOf(b)
+    })
+  }
+  const handlePaginationChange = (e, value) => {
+    const lower = (value - 1) * 12
+    const higher = lower + 12
+    setLowerPagination(lower)
+    setHigherPagination(higher)
+  }
+  const [lowerPagination, setLowerPagination] = useState(0)
+  const [higherPagination, setHigherPagination] = useState(12)
+  const itemCount = Math.min(marketSkins.length - lowerPagination, 12)
+  const handleWeaponFilter = (filteredWeapons, filteredRarity) => {
+    if (filteredWeapons.length === 0 && filteredRarity.length === 0) {
+      setMarketSkins(allSkins)
+      return
+    }
+    console.log(filteredWeapons, filteredRarity)
+    let filteredID = allSkins.filter(id => {
+      if (filteredRarity.length === 0 && filteredWeapons.length > 0) {
+        if (filteredWeapons.includes(skins[id].weapon)) {
+          console.log('a')
+          return true
+        }
+      } else if (filteredRarity.length === 0 && filteredWeapons.length === 0) {
+        if (filteredRarity.includes(skins[id].rarity)) {
+          console.log('b')
+          return true
+        }
+      } else if (filteredRarity.length > 0 && filteredWeapons.length > 0) {
+        if (filteredRarity.includes(skins[id].rarity) && filteredWeapons.includes(skins[id].weapon)) {
+          console.log('c')
+          return true
+        }
+      }
+
+      return false
+    })
+    setMarketSkins(filteredID)
+  }
+
   return (
-    <Stack direction={'row'} padding={'1rem 6%'} gap={'1rem'}>
-      <SideBar />
+    <Stack direction={'row'} padding={'1rem 6%'} gap={'1rem'} divider={<Divider orientation='vertical' flexItem />}>
+      <SideBar handleWeaponFilter={handleWeaponFilter} />
       <Stack flexGrow={0.95} direction={'column'} gap={'1rem'}>
         <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
-          <Typography>Showing 9 results from a total 37</Typography>
+          <Typography>
+            Showing {itemCount} results from a total {marketSkins.length}
+          </Typography>
           <Stack direction={'row'} alignItems={'center'} gap='1rem'>
             <Typography>Sort By:</Typography>
             <FormControl variant='standard' value={currentSort}>
@@ -84,7 +140,7 @@ const ExplorePage = () => {
           </Stack>
         </Stack>
         <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(365px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }}>
-          {marketSkins.map((skin, index) => (
+          {marketSkins.slice(lowerPagination, higherPagination).map((skin, index) => (
             <SkinContainer
               key={index}
               userId={user._id}
@@ -95,8 +151,10 @@ const ExplorePage = () => {
             ></SkinContainer>
           ))}
         </Box>
+        <Stack width={'100%'} direction={'row'} justifyContent={'center'}>
+          <Pagination count={Math.ceil(marketSkins.length / 12)} variant='outlined' color='primary' onChange={handlePaginationChange} />
+        </Stack>
       </Stack>
-      {/**START A GRID IMPLEMENT */}
     </Stack>
   )
 }
