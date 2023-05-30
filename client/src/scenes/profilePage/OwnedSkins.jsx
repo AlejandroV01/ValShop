@@ -5,14 +5,22 @@ import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 const OwnedSkins = () => {
   const user = useSelector(state => state.user)
+  const skins = useSelector(state => state.skins)
   const navigate = useNavigate()
   const reversedSkins = [...user.ownedSkins].reverse()
   return (
     <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(330px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }}>
       {reversedSkins.map((skin, index) => (
-        <SkinContainer key={index} userId={user._id} skinId={skin}></SkinContainer>
+        <SkinContainer
+          key={index}
+          userId={user._id}
+          skinId={skin}
+          name={skins[skin].bundle + ' ' + skins[skin].weapon}
+          price={skins[skin].price}
+          picture={skins[skin].img_url}
+        ></SkinContainer>
       ))}
-      {user.likedSkins.length === 0 && (
+      {user.ownedSkins.length === 0 && (
         <Stack direction={'column'} width={'100%'} alignItems={'center'} justifyContent={'center'} mt={'1rem'} gap={'0.25rem'}>
           <Typography variant='h2'>Nothing's Here!</Typography>
           <Typography variant='h6'>Start adding skins!</Typography>
