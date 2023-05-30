@@ -27,7 +27,7 @@ function App() {
             <Route path='/login' element={<LoginPage />}></Route>
             <Route path='/' element={<HomePage />}></Route>
             <Route path='/profile/:username' element={isAuth ? <ProfilePage /> : <Navigate to='/login' />}></Route>
-            <Route path='/explore' element={<ExplorePage />}></Route>
+            <Route path='/market' element={<ExplorePage />}></Route>
           </Routes>
         </ThemeProvider>
       </BrowserRouter>

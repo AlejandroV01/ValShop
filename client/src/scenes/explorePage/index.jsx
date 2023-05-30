@@ -20,7 +20,7 @@ import {
 import Grid from '@mui/material/Unstable_Grid2' // Grid version 2
 import SkinContainer from 'components/SkinContainer'
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import SideBar from './SideBar'
 const ExplorePage = () => {
@@ -32,7 +32,12 @@ const ExplorePage = () => {
   const background = theme.palette.background.default
   const primaryLight = theme.palette.primary.light
   const alt = theme.palette.background.alt
-
+  const user = useSelector(state => state.user)
+  const skins = useSelector(state => state.skins)
+  const marketSkins = []
+  for (let i = skins.length - 1; i >= 0; i--) {
+    marketSkins.push(i)
+  }
   return (
     <Stack direction={'row'} padding={'1rem 6%'} gap={'1rem'}>
       <SideBar />
@@ -78,23 +83,18 @@ const ExplorePage = () => {
             <Chip label='Deletable' onDelete={() => console.log('deleted')} />
           </Stack>
         </Stack>
-        <Grid container spacing={'1rem'}>
-          <Grid xs={3}>
-            <SkinContainer width={300}></SkinContainer>
-          </Grid>
-          <Grid xs={3}>
-            <SkinContainer width={300}></SkinContainer>
-          </Grid>
-          <Grid xs={3}>
-            <SkinContainer width={300}></SkinContainer>
-          </Grid>
-          <Grid xs={3}>
-            <SkinContainer width={300}></SkinContainer>
-          </Grid>
-          <Grid xs={3}>
-            <SkinContainer width={300}></SkinContainer>
-          </Grid>
-        </Grid>
+        <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(365px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }}>
+          {marketSkins.map((skin, index) => (
+            <SkinContainer
+              key={index}
+              userId={user._id}
+              skinId={skin}
+              name={skins[skin].bundle + ' ' + skins[skin].weapon}
+              price={skins[skin].price}
+              picture={skins[skin].img_url}
+            ></SkinContainer>
+          ))}
+        </Box>
       </Stack>
       {/**START A GRID IMPLEMENT */}
     </Stack>

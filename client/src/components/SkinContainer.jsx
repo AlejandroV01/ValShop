@@ -8,7 +8,14 @@ import { setLikedSkins } from 'state'
 import useImageColor from 'use-image-color'
 import LikeButton from './LikeButton'
 import OwnButton from './OwnButton'
-const SkinContainer = ({ name, price, picture, width = 350, userId, skinId }) => {
+const SkinContainer = ({
+  name = 'Placeholder',
+  price = 404,
+  picture = 'https://static.wikia.nocookie.net/valorant/images/0/05/Convex_Spectre.png',
+  width = 300,
+  userId,
+  skinId,
+}) => {
   const theme = useTheme()
   const background = theme.palette.background.default
   const neutralLight = theme.palette.neutral.light
