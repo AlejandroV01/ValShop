@@ -8,37 +8,16 @@ import { setLikedSkins } from 'state'
 import useImageColor from 'use-image-color'
 import LikeButton from './LikeButton'
 import OwnButton from './OwnButton'
-const SkinContainer = ({ name, price, width = 300, userId, skinId }) => {
+const SkinContainer = ({ name, price, picture, width = 350, userId, skinId }) => {
   const theme = useTheme()
   const background = theme.palette.background.default
   const neutralLight = theme.palette.neutral.light
   const skins = useSelector(state => state.skins)
-  const [picture, setPicture] = useState(null)
-  if (price === undefined) {
-    const requestedSkin = skins[skinId]
-    name = requestedSkin.bundle + ' ' + requestedSkin.weapon
-    price = requestedSkin.price
-    setPicture(requestedSkin.img_url)
-  }
-  const getPictureUrl = async () => {
-    const valApiResponse = await fetch('https://valorant-api.com/v1/weapons/skins')
-    let valApi = await valApiResponse.json()
-    valApi = valApi.data
-    for (let i = 0; i < valApi.length; i++) {
-      if (valApi[i].displayName === name) {
-        console.log(valApi[i])
-        setPicture(valApi[i].displayIcon)
-        console.log(picture)
-        break
-      }
-    }
-  }
-  getPictureUrl()
   return (
     <Box
       display='flex'
       flexDirection='column'
-      alignItems='center'
+      alignItems='flex-start'
       justifyContent={'space-evenly'}
       backgroundColor={neutralLight}
       borderRadius='4px'
@@ -46,15 +25,7 @@ const SkinContainer = ({ name, price, width = 300, userId, skinId }) => {
       width='375px'
       height={'230px'}
     >
-      <Stack style={{ width: '200px' }} flexDirection={'row'} justifyContent={'center'}>
-        <img
-          src={picture}
-          alt={name}
-          style={{
-            width: '100%',
-          }}
-        />
-      </Stack>
+      <img src={picture} alt={name} style={{ borderRadius: '4px', width: `${width}px`, maxHeight: '120px', objectFit: 'contain' }} />
       <Box display='flex' alignItems='center' justifyContent='space-between' width='100%'>
         <Box display='flex' flexDirection='column' overflow='hidden'>
           <Box display='flex' alignItems='center'>
