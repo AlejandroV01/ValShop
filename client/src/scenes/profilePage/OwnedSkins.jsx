@@ -9,7 +9,7 @@ const OwnedSkins = () => {
   const navigate = useNavigate()
   const reversedSkins = [...user.ownedSkins].reverse()
   return (
-    <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(330px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }}>
+    <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(365px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }}>
       {reversedSkins.map((skin, index) => (
         <SkinContainer
           key={index}

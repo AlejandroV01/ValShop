@@ -74,7 +74,7 @@ const HomePage = ({ skins }) => {
   const isAuth = Boolean(useSelector(state => state.token))
 
   return (
-    <Stack padding='3rem 6%' width={'100%'} direction={'column'} position={'relative'}>
+    <Stack padding='3rem 6%' width={'100%'} direction={'column'}>
       <Stack direction={'row'} width={'100%'} alignItems={'center'} gap={'2rem'}>
         <Box width={'45%'}>
           <img src='https://playvalorant.com/static/agents-group-31d7ce5a3637e45d8b25d2fd03159e6c.png' alt='ValAgentWallpaper' width={'100%'} />
@@ -88,9 +88,13 @@ const HomePage = ({ skins }) => {
           </Typography>
           <Stack direction={'row'}>
             <Button variant='contained' startIcon={<NearMe />} size='large'>
-              <Typography fontWeight={'bold'}>GO TO MARKET</Typography>
+              <Typography fontWeight={'bold'} onClick={() => navigate('/market')}>
+                GO TO MARKET
+              </Typography>
             </Button>
-            <Button size='large'>TO OWN VAULT</Button>
+            <Button size='large' onClick={() => navigate(`/profile/${user.username}`)}>
+              TO OWN VAULT
+            </Button>
           </Stack>
         </Stack>
       </Stack>
@@ -99,10 +103,7 @@ const HomePage = ({ skins }) => {
           position: 'absolute',
           top: 0,
           right: 0,
-          width: 10,
-          height: 10,
-          backgroundColor: 'red',
-          boxShadow: '0px 0px 300px 200px rgba(132,94,247,0.77)',
+          boxShadow: '0px 0px 300px 300px rgba(132,94,247,0.77)',
           zIndex: -1,
         }}
       ></div>
