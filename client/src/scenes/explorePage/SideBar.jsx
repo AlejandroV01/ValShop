@@ -15,7 +15,7 @@ import {
 } from '@mui/material'
 import React, { useState } from 'react'
 
-const SideBar = ({ handleWeaponFilter }) => {
+const SideBar = ({ handleWeaponFilter, handleIfChecked }) => {
   const [expandWeapons, setExpandWeapons] = useState(false)
   const [expandRarity, setExpandRarity] = useState(false)
   const theme = useTheme()
@@ -192,7 +192,7 @@ const SideBar = ({ handleWeaponFilter }) => {
             sideBarContent.Weapons.map((name, index) => (
               <Stack direction={'row'} alignItems={'center'} key={index}>
                 <Checkbox
-                  checked={filteredWeapons.includes(name)}
+                  checked={handleIfChecked(name)}
                   onChange={() => {
                     const updatedWeapons = filteredWeapons.includes(name) ? filteredWeapons.filter(item => item !== name) : [...filteredWeapons, name]
                     setFilteredWeapons(updatedWeapons)
@@ -222,7 +222,7 @@ const SideBar = ({ handleWeaponFilter }) => {
             sideBarContent.SkinRarity.map((name, index) => (
               <Stack direction={'row'} alignItems={'center'} key={index}>
                 <Checkbox
-                  checked={filteredRarity.includes(name)}
+                  checked={handleIfChecked(name)}
                   onChange={() => {
                     const updatedRarity = filteredRarity.includes(name) ? filteredRarity.filter(item => item !== name) : [...filteredRarity, name]
                     setFilteredRarity(updatedRarity)

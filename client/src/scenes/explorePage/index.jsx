@@ -64,6 +64,7 @@ const ExplorePage = () => {
   const [lowerPagination, setLowerPagination] = useState(0)
   const [higherPagination, setHigherPagination] = useState(12)
   const itemCount = Math.min(marketSkins.length - lowerPagination, 12)
+
   const handleWeaponFilter = (filteredWeapons, filteredRarity) => {
     const chipArr = [...filteredWeapons, ...filteredRarity]
     setFilterChips(chipArr)
@@ -101,15 +102,43 @@ const ExplorePage = () => {
     })
     setMarketSkins(filteredID)
   }
+
   const handleChipDelete = chip => {
     const newArr = filterChips.filter(stateChip => {
       return stateChip !== chip
     })
     setFilterChips(newArr)
+    let weaponArr = []
+    let rarityArr = []
+    console.log(newArr)
+    for (let i = 0; i < newArr.length; i++) {
+      if (
+        newArr[i] === 'Ultra' ||
+        newArr[i] === 'Exclusive' ||
+        newArr[i] === 'Premium' ||
+        newArr[i] === 'Deluxe' ||
+        newArr[i] === 'Select' ||
+        newArr[i] === 'Battle Pass'
+      ) {
+        rarityArr.push(newArr[i])
+      } else {
+        weaponArr.push(newArr[i])
+      }
+    }
+    console.log(weaponArr, rarityArr)
+    handleWeaponFilter(weaponArr, rarityArr)
   }
+
+  const handleIfChecked = name => {
+    if (filterChips.includes(name)) return true
+    return false
+  }
+  useEffect(() => {
+    console.log(filterChips, 'EFFECT')
+  }, [filterChips])
   return (
     <Stack direction={'row'} padding={'1rem 6%'} gap={'1rem'} divider={<Divider orientation='vertical' flexItem />}>
-      <SideBar handleWeaponFilter={handleWeaponFilter} />
+      <SideBar handleWeaponFilter={handleWeaponFilter} handleIfChecked={handleIfChecked} />
       <Stack flexGrow={0.95} direction={'column'} gap={'1rem'}>
         <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
           <Typography>
