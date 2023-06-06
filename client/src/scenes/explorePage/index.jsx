@@ -102,7 +102,12 @@ const ExplorePage = () => {
     })
     setMarketSkins(filteredID)
   }
-
+  const handleReset = () => {
+    setFilterChips([])
+    handleWeaponFilter([], [])
+  }
+  const [filteredWeapons, setFilteredWeapons] = useState([])
+  const [filteredRarity, setFilteredRarity] = useState([])
   const handleChipDelete = chip => {
     const newArr = filterChips.filter(stateChip => {
       return stateChip !== chip
@@ -125,6 +130,8 @@ const ExplorePage = () => {
         weaponArr.push(newArr[i])
       }
     }
+    setFilteredWeapons(weaponArr)
+    setFilteredRarity(rarityArr)
     console.log(weaponArr, rarityArr)
     handleWeaponFilter(weaponArr, rarityArr)
   }
@@ -134,9 +141,25 @@ const ExplorePage = () => {
     return false
   }
 
+  const handleCheckBoxRarity = name => {
+    const updatedRarity = filteredRarity.includes(name) ? filteredRarity.filter(item => item !== name) : [...filteredRarity, name]
+    setFilteredRarity(updatedRarity)
+    handleWeaponFilter(filteredWeapons, updatedRarity)
+  }
+  const handleCheckBoxWeapon = name => {
+    const updatedWeapons = filteredWeapons.includes(name) ? filteredWeapons.filter(item => item !== name) : [...filteredWeapons, name]
+    setFilteredWeapons(updatedWeapons)
+    handleWeaponFilter(updatedWeapons, filteredRarity)
+  }
   return (
     <Stack direction={'row'} padding={'1rem 6%'} gap={'1rem'} divider={<Divider orientation='vertical' flexItem />}>
-      <SideBar handleWeaponFilter={handleWeaponFilter} handleIfChecked={handleIfChecked} />
+      <SideBar
+        handleWeaponFilter={handleWeaponFilter}
+        handleIfChecked={handleIfChecked}
+        handleReset={handleReset}
+        handleCheckBoxRarity={handleCheckBoxRarity}
+        handleCheckBoxWeapon={handleCheckBoxWeapon}
+      />
       <Stack flexGrow={0.95} direction={'column'} gap={'1rem'}>
         <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
           <Typography>

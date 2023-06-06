@@ -15,7 +15,7 @@ import {
 } from '@mui/material'
 import React, { useState } from 'react'
 
-const SideBar = ({ handleWeaponFilter, handleIfChecked }) => {
+const SideBar = ({ handleWeaponFilter, handleIfChecked, handleReset, handleCheckBoxRarity, handleCheckBoxWeapon }) => {
   const [expandWeapons, setExpandWeapons] = useState(false)
   const [expandRarity, setExpandRarity] = useState(false)
   const theme = useTheme()
@@ -153,8 +153,6 @@ const SideBar = ({ handleWeaponFilter, handleIfChecked }) => {
       ],
     ],
   }
-  const [filteredWeapons, setFilteredWeapons] = useState([])
-  const [filteredRarity, setFilteredRarity] = useState([])
 
   return (
     <Stack divider={<Divider />} direction={'column'} flexGrow={0.05} borderRadius={'0.25rem'} height={'fit-content'} width={'170px'}>
@@ -170,6 +168,7 @@ const SideBar = ({ handleWeaponFilter, handleIfChecked }) => {
               cursor: 'pointer',
             },
           }}
+          onClick={handleReset}
         >
           Reset Filters
         </Typography>
@@ -191,14 +190,7 @@ const SideBar = ({ handleWeaponFilter, handleIfChecked }) => {
           {expandWeapons &&
             sideBarContent.Weapons.map((name, index) => (
               <Stack direction={'row'} alignItems={'center'} key={index}>
-                <Checkbox
-                  checked={handleIfChecked(name)}
-                  onChange={() => {
-                    const updatedWeapons = filteredWeapons.includes(name) ? filteredWeapons.filter(item => item !== name) : [...filteredWeapons, name]
-                    setFilteredWeapons(updatedWeapons)
-                    handleWeaponFilter(updatedWeapons, filteredRarity)
-                  }}
-                />
+                <Checkbox checked={handleIfChecked(name)} onChange={() => handleCheckBoxWeapon(name)} />
                 <Typography variant='h6'>{name}</Typography>
               </Stack>
             ))}
@@ -221,14 +213,7 @@ const SideBar = ({ handleWeaponFilter, handleIfChecked }) => {
           {!expandRarity &&
             sideBarContent.SkinRarity.map((name, index) => (
               <Stack direction={'row'} alignItems={'center'} key={index}>
-                <Checkbox
-                  checked={handleIfChecked(name)}
-                  onChange={() => {
-                    const updatedRarity = filteredRarity.includes(name) ? filteredRarity.filter(item => item !== name) : [...filteredRarity, name]
-                    setFilteredRarity(updatedRarity)
-                    handleWeaponFilter(filteredWeapons, updatedRarity)
-                  }}
-                />
+                <Checkbox checked={handleIfChecked(name)} onChange={() => handleCheckBoxRarity(name)} />
                 <Typography variant='h6'>{name}</Typography>
               </Stack>
             ))}
