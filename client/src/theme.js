@@ -43,11 +43,13 @@ export const themeSettings = mode => {
               light: colorTokens.primary[800],
             },
             neutral: {
+              black: 'white',
               dark: colorTokens.grey[100],
               main: colorTokens.grey[200],
               mediumMain: colorTokens.grey[300],
               medium: colorTokens.grey[400],
               light: colorTokens.grey[700],
+              white: 'black',
             },
             background: {
               default: colorTokens.grey[900],
@@ -62,11 +64,13 @@ export const themeSettings = mode => {
               light: colorTokens.primary[50],
             },
             neutral: {
+              black: 'black',
               dark: colorTokens.grey[700],
               main: colorTokens.grey[500],
               mediumMain: colorTokens.grey[400],
               medium: colorTokens.grey[300],
               light: colorTokens.grey[50],
+              white: 'white',
             },
             background: {
               default: colorTokens.grey[10],
@@ -75,30 +79,30 @@ export const themeSettings = mode => {
           }),
     },
     typography: {
-      fontFamily: ['Rubik', 'sans-serif'].join(','),
+      fontFamily: ['Inter', 'sans-serif'].join(','),
       fontSize: 12,
       h1: {
-        fontFamily: ['Rubik', 'sans-serif'].join(','),
+        fontFamily: ['Inter', 'sans-serif'].join(','),
         fontSize: 40,
       },
       h2: {
-        fontFamily: ['Rubik', 'sans-serif'].join(','),
+        fontFamily: ['Inter', 'sans-serif'].join(','),
         fontSize: 32,
       },
       h3: {
-        fontFamily: ['Rubik', 'sans-serif'].join(','),
+        fontFamily: ['Inter', 'sans-serif'].join(','),
         fontSize: 24,
       },
       h4: {
-        fontFamily: ['Rubik', 'sans-serif'].join(','),
+        fontFamily: ['Inter', 'sans-serif'].join(','),
         fontSize: 20,
       },
       h5: {
-        fontFamily: ['Rubik', 'sans-serif'].join(','),
+        fontFamily: ['Inter', 'sans-serif'].join(','),
         fontSize: 16,
       },
       h6: {
-        fontFamily: ['Rubik', 'sans-serif'].join(','),
+        fontFamily: ['Inter', 'sans-serif'].join(','),
         fontSize: 14,
       },
     },

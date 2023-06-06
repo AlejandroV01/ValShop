@@ -1,11 +1,23 @@
-import { AccountBalance, Close, DarkMode, Explore, Favorite, LightMode, Menu, Search } from '@mui/icons-material'
+import {
+  AccountBalance,
+  ArrowForward,
+  ArrowRightAltSharp,
+  Close,
+  DarkMode,
+  Explore,
+  Favorite,
+  LightMode,
+  Menu,
+  Person,
+  Search,
+} from '@mui/icons-material'
 import { Box, Button, FormControl, IconButton, InputBase, MenuItem, Select, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { PrimaryButton, SecondaryButton } from 'components/Buttons'
 import FlexBetween from 'components/FlexBetween'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { setCart, setLogout, setMode } from 'state'
-
 const Navbar = () => {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false)
   const dispatch = useDispatch()
@@ -24,80 +36,55 @@ const Navbar = () => {
 
   // const fullName = `${user.firstName} ${user.lastName}`
   return (
-    <FlexBetween padding={'1rem 6%'} backgroundColor={'transparent'}>
-      <FlexBetween gap='1.75rem'>
-        <Stack direction={'row'} alignItems={'center'} gap={'0.3rem'}>
-          <AccountBalance />
-          <Typography
-            fontWeight='bold'
-            fontSize='clamp(1rem, 1.75rem, 2.25rem)'
-            color='primary'
-            onClick={() => navigate('/')}
-            sx={{
-              '&:hover': {
-                color: primaryLight,
-                cursor: 'pointer',
-              },
-            }}
-          >
-            ValoVault
-          </Typography>
-        </Stack>
-        {}
-        {isNonMobileScreens && (
-          <FlexBetween backgroundColor={neutralLight} borderRadius={'4px'} gap={'3rem'} padding={'0.1rem 1.5rem'}>
-            <InputBase placeholder='Search...' />
-            <IconButton>
-              <Search />
-            </IconButton>
-          </FlexBetween>
-        )}
-      </FlexBetween>
+    <FlexBetween padding={'1rem 6%'} backgroundColor={'#78787819'} sx={{ backdropFilter: 'blur(5px)' }}>
+      <Stack>
+        <Typography
+          fontWeight='bold'
+          fontSize='clamp(1rem, 2rem, 2.25rem)'
+          color={theme.palette.neutral.dark}
+          onClick={() => navigate('/')}
+          fontFamily={"'Righteous', cursive"}
+          sx={{
+            '&:hover': {
+              color: primaryLight,
+              cursor: 'pointer',
+            },
+          }}
+        >
+          ValoVault
+        </Typography>
+      </Stack>
       {/* DESKTOP NAV */}
-      {isNonMobileScreens ? (
-        <FlexBetween gap='2rem'>
-          <IconButton onClick={() => navigate('/explore')}>
-            <Explore sx={{ color: dark, fontSize: '25px' }} />
-          </IconButton>
-          <IconButton onClick={() => dispatch(setMode())}>
-            {theme.palette.mode === 'dark' ? (
-              <LightMode sx={{ color: dark, fontSize: '25px' }} />
-            ) : (
-              <DarkMode sx={{ color: dark, fontSize: '25px' }} />
-            )}
-          </IconButton>
-          {isAuth ? (
-            <FormControl variant='standard' value={user.username}>
-              <Select
-                value={user.username}
-                sx={{
-                  backgroundColor: neutralLight,
-                  width: '150px',
-                  borderRadius: '0.25rem',
-                  p: '0.25rem 1rem',
-                  '& .MuiSvgIcon-root': {
-                    pr: '0.25rem',
-                    width: '3rem',
-                  },
-                  '& .MuiSelect-select:focus': {
-                    backgroundColor: neutralLight,
-                  },
-                }}
-                input={<InputBase />}
-              >
-                <MenuItem value={user.username} onClick={() => navigate(`/profile/${user.username}`)}>
-                  <Typography>{user.username}</Typography>
-                </MenuItem>
-                <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
-              </Select>
-            </FormControl>
-          ) : (
-            <Button onClick={() => navigate('/login')} variant='contained'>
-              Login
-            </Button>
-          )}
+      {isNonMobileScreens && (
+        <FlexBetween gap={'1rem'} variant='p'>
+          <a href='/market' onClick={e => e.preventDefault()} style={{ textDecoration: 'none', color: 'unset' }}>
+            <Typography variant='h5' sx={{ cursor: 'pointer' }} onClick={() => navigate('/market')}>
+              MARKET
+            </Typography>
+          </a>
+          <a href='/market' onClick={e => e.preventDefault()} style={{ textDecoration: 'none', color: 'unset' }}>
+            <Typography variant='h5' sx={{ cursor: 'pointer' }} onClick={() => navigate('/market')}>
+              SOCIAL
+            </Typography>
+          </a>
         </FlexBetween>
-      ) : (
+      )}
+      {isNonMobileScreens && !isAuth && (
+        <FlexBetween gap={'1rem'} variant='p'>
+          <SecondaryButton>SIGN IN </SecondaryButton>
+          <PrimaryButton>
+            LOG IN HERE
+            <ArrowForward fontSize='medium' />
+          </PrimaryButton>
+        </FlexBetween>
+      )}
+      {isNonMobileScreens && isAuth && (
+        <PrimaryButton to={`profile/${user.username}`}>
+          <Person />
+          <Typography variant='p'>Profile</Typography>
+        </PrimaryButton>
+      )}
+      {!isNonMobileScreens && (
         <IconButton onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}>
           <Menu sx={{ fontSize: '25px' }} />
         </IconButton>
