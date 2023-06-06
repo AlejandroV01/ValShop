@@ -155,103 +155,7 @@ const SideBar = ({ handleWeaponFilter }) => {
   }
   const [filteredWeapons, setFilteredWeapons] = useState([])
   const [filteredRarity, setFilteredRarity] = useState([])
-  const [Ultra, setUltra] = useState(false)
-  const [Exclusive, setExclusive] = useState(false)
-  const [Premium, setPremium] = useState(false)
-  const [Deluxe, setDeluxe] = useState(false)
-  const [Select, setSelect] = useState(false)
-  const [BattlePass, setBattlePass] = useState(false)
-  const isChecked = name => {
-    if (name === 'Ultra') return Ultra
-    if (name === 'Exclusive') return Exclusive
-    if (name === 'Premium') return Premium
-    if (name === 'Deluxe') return Deluxe
-    if (name === 'Select') return Select
-    if (name === 'Battle Pass') return BattlePass
-  }
-  const changeChecked = name => {
-    if (name === 'Ultra' && Ultra === true) {
-      setUltra(false)
-      return
-    }
-    if (name === 'Exclusive' && Exclusive === true) {
-      setExclusive(false)
-      return
-    }
-    if (name === 'Premium' && Premium === true) {
-      setPremium(false)
-      return
-    }
-    if (name === 'Deluxe' && Deluxe === true) {
-      setDeluxe(false)
-      return
-    }
-    if (name === 'Select' && Select === true) {
-      setSelect(false)
-      return
-    }
-    if (name === 'Battle Pass' && BattlePass === true) {
-      setBattlePass(false)
-      return
-    }
-    if (name === 'Ultra') {
-      setUltra(true)
-      setExclusive(false)
-      setPremium(false)
-      setDeluxe(false)
-      setSelect(false)
-      setBattlePass(false)
-    }
-    if (name === 'Exclusive') {
-      setUltra(false)
-      setExclusive(true)
-      setPremium(false)
-      setDeluxe(false)
-      setSelect(false)
-      setBattlePass(false)
-    }
-    if (name === 'Premium') {
-      setUltra(false)
-      setExclusive(false)
-      setPremium(true)
-      setDeluxe(false)
-      setSelect(false)
-      setBattlePass(false)
-    }
-    if (name === 'Deluxe') {
-      setUltra(false)
-      setExclusive(false)
-      setPremium(false)
-      setDeluxe(true)
-      setSelect(false)
-      setBattlePass(false)
-    }
-    if (name === 'Select') {
-      setUltra(false)
-      setExclusive(false)
-      setPremium(false)
-      setDeluxe(false)
-      setSelect(true)
-      setBattlePass(false)
-    }
-    if (name === 'Battle Pass') {
-      setUltra(false)
-      setExclusive(false)
-      setPremium(false)
-      setDeluxe(false)
-      setSelect(false)
-      setBattlePass(true)
-    }
-  }
-  const returnChecked = () => {
-    if (Ultra) return ['Ultra']
-    if (Exclusive) return ['Exclusive']
-    if (Premium) return ['Premium']
-    if (Deluxe) return ['Deluxe']
-    if (Select) return ['Select']
-    if (BattlePass) return ['Battle Pass']
-    return []
-  }
+
   return (
     <Stack divider={<Divider />} direction={'column'} flexGrow={0.05} borderRadius={'0.25rem'} height={'fit-content'} width={'170px'}>
       <Stack direction={'row'} justifyContent={'space-between'} padding={'0.5rem 0'}>
@@ -288,6 +192,7 @@ const SideBar = ({ handleWeaponFilter }) => {
             sideBarContent.Weapons.map((name, index) => (
               <Stack direction={'row'} alignItems={'center'} key={index}>
                 <Checkbox
+                  checked={filteredWeapons.includes(name)}
                   onChange={() => {
                     const updatedWeapons = filteredWeapons.includes(name) ? filteredWeapons.filter(item => item !== name) : [...filteredWeapons, name]
                     setFilteredWeapons(updatedWeapons)
@@ -313,17 +218,15 @@ const SideBar = ({ handleWeaponFilter }) => {
           )}
         </Stack>
         <Stack direction={'column'}>
-          {expandRarity &&
+          {!expandRarity &&
             sideBarContent.SkinRarity.map((name, index) => (
               <Stack direction={'row'} alignItems={'center'} key={index}>
                 <Checkbox
-                  checked={isChecked(name)}
+                  checked={filteredRarity.includes(name)}
                   onChange={() => {
-                    changeChecked(name)
-                    const rarity = returnChecked()
-                    console.log(rarity)
-                    setFilteredRarity(rarity)
-                    handleWeaponFilter(filteredWeapons, filteredRarity)
+                    const updatedRarity = filteredRarity.includes(name) ? filteredRarity.filter(item => item !== name) : [...filteredRarity, name]
+                    setFilteredRarity(updatedRarity)
+                    handleWeaponFilter(filteredWeapons, updatedRarity)
                   }}
                 />
                 <Typography variant='h6'>{name}</Typography>

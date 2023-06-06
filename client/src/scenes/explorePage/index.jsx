@@ -24,18 +24,19 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import SideBar from './SideBar'
 const ExplorePage = () => {
-  const [currentSort, setCurrentSort] = useState('Recent')
+  const [currentSort, setCurrentSort] = useState('Highest Price')
   const theme = useTheme()
   const navigate = useNavigate()
   const neutralLight = theme.palette.neutral.light
 
   const user = useSelector(state => state.user)
   const skins = useSelector(state => state.skins)
+  const [filterChips, setFilterChips] = useState([])
   const [marketSkins, setMarketSkins] = useState(() => {
-    return Array.from({ length: skins.length }, (_, index) => index).reverse()
+    return Array.from({ length: skins.length }, (_, index) => index)
   })
   const allSkins = []
-  for (let i = skins.length - 1; i >= 0; i--) {
+  for (let i = 0; i < skins.length; i++) {
     allSkins.push(i)
   }
 
@@ -64,6 +65,8 @@ const ExplorePage = () => {
   const [higherPagination, setHigherPagination] = useState(12)
   const itemCount = Math.min(marketSkins.length - lowerPagination, 12)
   const handleWeaponFilter = (filteredWeapons, filteredRarity) => {
+    const chipArr = [...filteredWeapons, ...filteredRarity]
+    setFilterChips(chipArr)
     if (filteredWeapons.length === 0 && filteredRarity.length === 0) {
       setMarketSkins(allSkins)
       return
@@ -85,13 +88,25 @@ const ExplorePage = () => {
           console.log('c')
           return true
         }
+      } else if (filteredRarity.length > 0 && filteredWeapons.length === 0) {
+        if (filteredRarity.includes(skins[id].price)) {
+          return true
+        }
+        if (filteredRarity.includes(skins[id].rarity)) {
+          return true
+        }
       }
 
       return false
     })
     setMarketSkins(filteredID)
   }
-
+  const handleChipDelete = chip => {
+    const newArr = filterChips.filter(stateChip => {
+      return stateChip !== chip
+    })
+    setFilterChips(newArr)
+  }
   return (
     <Stack direction={'row'} padding={'1rem 6%'} gap={'1rem'} divider={<Divider orientation='vertical' flexItem />}>
       <SideBar handleWeaponFilter={handleWeaponFilter} />
@@ -120,9 +135,6 @@ const ExplorePage = () => {
                 }}
                 input={<InputBase />}
               >
-                <MenuItem value='Recent' onClick={() => setCurrentSort('Recent')}>
-                  <Typography>Recent</Typography>
-                </MenuItem>
                 <MenuItem value='Highest Price' onClick={() => setCurrentSort('Highest Price')}>
                   <Typography>Highest Price</Typography>
                 </MenuItem>
@@ -135,8 +147,8 @@ const ExplorePage = () => {
         </Stack>
         <Stack direction={'row'} alignItems={'center'} gap={'1rem'}>
           <Typography>Applied Filters: </Typography>
-          <Stack direction={'row'}>
-            <Chip label='Deletable' onDelete={() => console.log('deleted')} />
+          <Stack direction={'row'} gap={'0.5rem'}>
+            {filterChips && filterChips.map((chip, index) => <Chip key={index} label={chip} onDelete={() => handleChipDelete(chip)} />)}
           </Stack>
         </Stack>
         <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(365px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }}>
