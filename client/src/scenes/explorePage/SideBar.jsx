@@ -284,27 +284,19 @@ const SideBar = ({ handleWeaponFilter }) => {
           )}
         </Stack>
         <Stack direction={'column'}>
-          {!expandWeapons
-            ? sideBarContent.Weapons.slice(0, 0).map((name, index) => (
-                <Stack direction={'row'} alignItems={'center'} key={index}>
-                  <Checkbox />
-                  <Typography variant='h6'>{name}</Typography>
-                </Stack>
-              ))
-            : sideBarContent.Weapons.map((name, index) => (
-                <Stack direction={'row'} alignItems={'center'} key={index}>
-                  <Checkbox
-                    onChange={() => {
-                      const updatedWeapons = filteredWeapons.includes(name)
-                        ? filteredWeapons.filter(item => item !== name)
-                        : [...filteredWeapons, name]
-                      setFilteredWeapons(updatedWeapons)
-                      handleWeaponFilter(updatedWeapons, filteredRarity)
-                    }}
-                  />
-                  <Typography variant='h6'>{name}</Typography>
-                </Stack>
-              ))}
+          {expandWeapons &&
+            sideBarContent.Weapons.map((name, index) => (
+              <Stack direction={'row'} alignItems={'center'} key={index}>
+                <Checkbox
+                  onChange={() => {
+                    const updatedWeapons = filteredWeapons.includes(name) ? filteredWeapons.filter(item => item !== name) : [...filteredWeapons, name]
+                    setFilteredWeapons(updatedWeapons)
+                    handleWeaponFilter(updatedWeapons, filteredRarity)
+                  }}
+                />
+                <Typography variant='h6'>{name}</Typography>
+              </Stack>
+            ))}
         </Stack>
       </Stack>
       <Stack direction={'column'} padding={'0.5rem 0'}>
@@ -321,28 +313,22 @@ const SideBar = ({ handleWeaponFilter }) => {
           )}
         </Stack>
         <Stack direction={'column'}>
-          {!expandRarity
-            ? sideBarContent.SkinRarity.slice(0, 0).map((name, index) => (
-                <Stack direction={'row'} alignItems={'center'} key={index}>
-                  <Checkbox />
-                  <Typography variant='h6'>{name}</Typography>
-                </Stack>
-              ))
-            : sideBarContent.SkinRarity.map((name, index) => (
-                <Stack direction={'row'} alignItems={'center'} key={index}>
-                  <Checkbox
-                    checked={isChecked(name)}
-                    onChange={() => {
-                      changeChecked(name)
-                      const rarity = returnChecked()
-                      console.log(rarity)
-                      setFilteredRarity(rarity)
-                      handleWeaponFilter(filteredWeapons, filteredRarity)
-                    }}
-                  />
-                  <Typography variant='h6'>{name}</Typography>
-                </Stack>
-              ))}
+          {expandRarity &&
+            sideBarContent.SkinRarity.map((name, index) => (
+              <Stack direction={'row'} alignItems={'center'} key={index}>
+                <Checkbox
+                  checked={isChecked(name)}
+                  onChange={() => {
+                    changeChecked(name)
+                    const rarity = returnChecked()
+                    console.log(rarity)
+                    setFilteredRarity(rarity)
+                    handleWeaponFilter(filteredWeapons, filteredRarity)
+                  }}
+                />
+                <Typography variant='h6'>{name}</Typography>
+              </Stack>
+            ))}
         </Stack>
       </Stack>
     </Stack>

@@ -36,7 +36,7 @@ const Navbar = () => {
 
   // const fullName = `${user.firstName} ${user.lastName}`
   return (
-    <FlexBetween padding={'1rem 6%'} backgroundColor={'#78787819'} sx={{ backdropFilter: 'blur(5px)' }}>
+    <FlexBetween padding={'1rem 6%'} backgroundColor={'#0000005c'} sx={{ backdropFilter: 'blur(7px)' }} top={0} position={'sticky'} zIndex={10}>
       <Stack>
         <Typography
           fontWeight='bold'
@@ -70,19 +70,19 @@ const Navbar = () => {
         </FlexBetween>
       )}
       {isNonMobileScreens && !isAuth && (
-        <FlexBetween gap={'1rem'} variant='p'>
-          <SecondaryButton>SIGN IN </SecondaryButton>
-          <PrimaryButton>
-            LOG IN HERE
-            <ArrowForward fontSize='medium' />
-          </PrimaryButton>
-        </FlexBetween>
+        <PrimaryButton to='login'>
+          LOG IN HERE
+          <ArrowForward fontSize='medium' />
+        </PrimaryButton>
       )}
       {isNonMobileScreens && isAuth && (
-        <PrimaryButton to={`profile/${user.username}`}>
-          <Person />
-          <Typography variant='p'>Profile</Typography>
-        </PrimaryButton>
+        <FlexBetween gap={'1rem'}>
+          <PrimaryButton to={`profile/${user.username}`}>
+            <Person />
+            <Typography variant='p'>Profile</Typography>
+          </PrimaryButton>
+          <SecondaryButton onClick={() => dispatch(setLogout())}>Log Out</SecondaryButton>
+        </FlexBetween>
       )}
       {!isNonMobileScreens && (
         <IconButton onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}>
