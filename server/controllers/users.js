@@ -45,7 +45,7 @@ export const addRemoveLikedSkins = async (req, res) => {
   console.log('triggered')
   try {
     const { id, skinId } = req.params
-    if (skinId > 381) return res.status(404).json({ message: 'That skin does not exist yet!' })
+
     const user = await User.findById(id)
     if (user.likedSkins.includes(skinId)) {
       user.likedSkins = user.likedSkins.filter(item => item !== skinId)
@@ -64,7 +64,7 @@ export const addRemoveOwnedSkins = async (req, res) => {
   console.log('triggered')
   try {
     const { id, skinId } = req.params
-    if (skinId > 381) return res.status(404).json({ message: 'That skin does not exist yet!' })
+
     const user = await User.findById(id)
     if (user.ownedSkins.includes(skinId)) {
       user.ownedSkins = user.ownedSkins.filter(item => item !== skinId)

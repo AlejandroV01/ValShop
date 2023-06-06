@@ -12,26 +12,24 @@ import {
   Search,
 } from '@mui/icons-material'
 import { Box, Button, FormControl, IconButton, InputBase, MenuItem, Select, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
-import { PrimaryButton, SecondaryButton } from 'components/Buttons'
+import { PrimaryButton, SecondaryButton, SecondaryButtonNoLink } from 'components/Buttons'
 import FlexBetween from 'components/FlexBetween'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { setCart, setLogout, setMode } from 'state'
+import { toast } from 'react-toastify'
+import { setLogout, setMode } from 'state'
 const Navbar = () => {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false)
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const user = useSelector(state => state.user)
-  const likes = useSelector(state => state.likes)
-  const cart = useSelector(state => state.cart)
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)')
   const theme = useTheme()
   const neutralLight = theme.palette.neutral.light
   const dark = theme.palette.neutral.dark
   const background = theme.palette.background.default
   const primaryLight = theme.palette.primary.light
-  const alt = theme.palette.background.alt
   const isAuth = Boolean(useSelector(state => state.token))
 
   // const fullName = `${user.firstName} ${user.lastName}`
@@ -81,7 +79,17 @@ const Navbar = () => {
             <Person />
             <Typography variant='p'>Profile</Typography>
           </PrimaryButton>
-          <SecondaryButton onClick={() => dispatch(setLogout())}>Log Out</SecondaryButton>
+          <SecondaryButtonNoLink
+            onClick={() => {
+              dispatch(setLogout())
+              toast.success('Successfully Logged Out!', {
+                theme: 'dark',
+                position: 'bottom-right',
+              })
+            }}
+          >
+            Log Out
+          </SecondaryButtonNoLink>
         </FlexBetween>
       )}
       {!isNonMobileScreens && (
@@ -97,7 +105,12 @@ const Navbar = () => {
             </IconButton>
           </Box>
           <FlexBetween gap='3rem' display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
-            <IconButton onClick={() => dispatch(setMode())} sx={{ fontSize: '25px' }}>
+            <IconButton
+              onClick={() => {
+                dispatch(setMode())
+              }}
+              sx={{ fontSize: '25px' }}
+            >
               {theme.palette.mode === 'dark' ? <DarkMode sx={{ fontSize: '25px' }} /> : <LightMode sx={{ color: dark, fontSize: '25px' }} />}
             </IconButton>
             <FormControl variant='standard' value={user.username}>

@@ -4,7 +4,8 @@ const initialState = {
   mode: 'dark',
   user: null,
   token: null,
-  likes: [],
+  likedSkins: [],
+  ownedSkins: [],
   openSignUpModal: false,
   skins: [
     {

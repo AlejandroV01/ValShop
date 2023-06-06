@@ -18,7 +18,7 @@ const LikeButton = ({ userId, skinId }) => {
     if (!isAuth) {
       toast.error('You are not signed in!', {
         position: 'bottom-right',
-        theme: 'colored',
+        theme: 'dark',
       })
       return
     }
@@ -32,7 +32,7 @@ const LikeButton = ({ userId, skinId }) => {
     if (addRemoveSkin.msg === 'That skin does not exist yet!') {
       toast.error('That skin does not exist yet!', {
         position: 'bottom-right',
-        theme: 'colored',
+        theme: 'dark',
       })
       return
     }
@@ -42,12 +42,12 @@ const LikeButton = ({ userId, skinId }) => {
       if (user.likedSkins.includes(skinId.toString())) {
         toast.success('Disliked Skin!', {
           position: 'bottom-right',
-          theme: 'colored',
+          theme: 'dark',
         })
       } else {
         toast.success('Successfully Liked Skin!', {
           position: 'bottom-right',
-          theme: 'colored',
+          theme: 'dark',
         })
       }
     }

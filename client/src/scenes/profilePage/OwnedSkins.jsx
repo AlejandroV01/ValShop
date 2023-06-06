@@ -24,7 +24,7 @@ const OwnedSkins = () => {
         <Stack direction={'column'} width={'100%'} alignItems={'center'} justifyContent={'center'} mt={'1rem'} gap={'0.25rem'}>
           <Typography variant='h2'>Nothing's Here!</Typography>
           <Typography variant='h6'>Start adding skins!</Typography>
-          <Button variant='contained' onClick={() => navigate('/explore')}>
+          <Button variant='contained' onClick={() => navigate('/market')}>
             Explore Here
           </Button>
         </Stack>

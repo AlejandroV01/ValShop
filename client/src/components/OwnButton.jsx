@@ -27,7 +27,7 @@ const OwnButton = ({ userId, skinId }) => {
     if (!isAuth) {
       toast.error('You are not signed in!', {
         position: 'bottom-right',
-        theme: 'colored',
+        theme: 'dark',
       })
       return
     }
@@ -41,7 +41,7 @@ const OwnButton = ({ userId, skinId }) => {
     if (addRemoveSkin.msg === 'That skin does not exist yet!') {
       toast.error('That skin does not exist yet!', {
         position: 'bottom-right',
-        theme: 'colored',
+        theme: 'dark',
       })
       return
     }
@@ -49,19 +49,23 @@ const OwnButton = ({ userId, skinId }) => {
     if (addRemoveSkin) {
       dispatch(setOwnedSkins({ ownedSkins: addRemoveSkin }))
       if (isOwned) {
-        dispatch(setTotalValue({ value: -skins[skinId].price }))
+        if (typeof skins[skinId].price === 'number') {
+          dispatch(setTotalValue({ value: -skins[skinId].price }))
+        }
       } else {
-        dispatch(setTotalValue({ value: skins[skinId].price }))
+        if (typeof skins[skinId].price === 'number') {
+          dispatch(setTotalValue({ value: skins[skinId].price }))
+        }
       }
       if (user.ownedSkins.includes(skinId.toString())) {
         toast.success('Un-Owned Skin!', {
           position: 'bottom-right',
-          theme: 'colored',
+          theme: 'dark',
         })
       } else {
         toast.success('Successfully Owned Skin!', {
           position: 'bottom-right',
-          theme: 'colored',
+          theme: 'dark',
         })
       }
     }

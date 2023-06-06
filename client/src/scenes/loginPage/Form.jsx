@@ -74,14 +74,14 @@ const Form = () => {
     if (savedUserResponse.status === 500) {
       toast.error(savedUserResponse.statusText, {
         position: 'bottom-right',
-        theme: 'colored',
+        theme: 'dark',
       })
       return
     }
     if (savedUser.msg === 'An account with that email already exists.') {
       toast.error('An account with that email already exists.', {
         position: 'bottom-right',
-        theme: 'colored',
+        theme: 'dark',
       })
       return
     }
@@ -90,7 +90,7 @@ const Form = () => {
       setIsLogin(true)
       toast.success('Account Registered Successfully!', {
         position: 'bottom-right',
-        theme: 'colored',
+        theme: 'dark',
       })
     }
   }
@@ -105,14 +105,14 @@ const Form = () => {
     if (loggedIn.msg === 'Invalid credentials.') {
       toast.error('Invalid credentials.', {
         position: 'bottom-right',
-        theme: 'colored',
+        theme: 'dark',
       })
       return
     }
     if (loggedIn.msg === 'User does not exist.') {
       toast.error('User does not exist.', {
         position: 'bottom-right',
-        theme: 'colored',
+        theme: 'dark',
       })
       return
     }
@@ -121,7 +121,7 @@ const Form = () => {
       dispatch(setLogin({ user: loggedIn.user, token: loggedIn.token }))
       toast.success('Successfully Logged In!', {
         position: 'bottom-right',
-        theme: 'colored',
+        theme: 'dark',
       })
       navigate('/')
     }

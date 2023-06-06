@@ -133,9 +133,7 @@ const ExplorePage = () => {
     if (filterChips.includes(name)) return true
     return false
   }
-  useEffect(() => {
-    console.log(filterChips, 'EFFECT')
-  }, [filterChips])
+
   return (
     <Stack direction={'row'} padding={'1rem 6%'} gap={'1rem'} divider={<Divider orientation='vertical' flexItem />}>
       <SideBar handleWeaponFilter={handleWeaponFilter} handleIfChecked={handleIfChecked} />
