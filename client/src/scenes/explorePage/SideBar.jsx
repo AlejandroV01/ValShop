@@ -1,5 +1,5 @@
 import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material'
-import { Checkbox, Divider, IconButton, Stack, Typography, useTheme } from '@mui/material'
+import { Checkbox, Divider, IconButton, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React, { useState } from 'react'
 
 const SideBar = ({ handleWeaponFilter, handleIfChecked, handleReset, handleCheckBoxRarity, handleCheckBoxWeapon }) => {
@@ -140,9 +140,17 @@ const SideBar = ({ handleWeaponFilter, handleIfChecked, handleReset, handleCheck
       ],
     ],
   }
+  const isNonMobile = useMediaQuery('(min-width: 800px)')
 
   return (
-    <Stack divider={<Divider />} direction={'column'} flexGrow={0.05} borderRadius={'0.25rem'} height={'fit-content'} width={'170px'}>
+    <Stack
+      divider={<Divider />}
+      direction={'column'}
+      flexGrow={0.05}
+      borderRadius={'0.25rem'}
+      height={'fit-content'}
+      width={isNonMobile ? '170px' : '100%'}
+    >
       <Stack direction={'row'} justifyContent={'space-between'} padding={'0.5rem 0'}>
         <Typography variant='h6' fontWeight={'bold'}>
           Filter by
@@ -197,7 +205,7 @@ const SideBar = ({ handleWeaponFilter, handleIfChecked, handleReset, handleCheck
           )}
         </Stack>
         <Stack direction={'column'}>
-          {!expandRarity &&
+          {expandRarity &&
             sideBarContent.SkinRarity.map((name, index) => (
               <Stack direction={'row'} alignItems={'center'} key={index}>
                 <Checkbox checked={handleIfChecked(name)} onChange={() => handleCheckBoxRarity(name)} />

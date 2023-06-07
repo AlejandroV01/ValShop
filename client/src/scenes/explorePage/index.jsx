@@ -1,4 +1,4 @@
-import { Box, Chip, Divider, FormControl, InputBase, MenuItem, Pagination, Select, Stack, Typography, useTheme } from '@mui/material'
+import { Box, Chip, Divider, FormControl, InputBase, MenuItem, Pagination, Select, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import SkinContainer from 'components/SkinContainer'
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
@@ -115,6 +115,7 @@ const ExplorePage = () => {
     console.log(weaponArr, rarityArr)
     handleWeaponFilter(weaponArr, rarityArr)
   }
+  const isNonMobile = useMediaQuery('(min-width: 800px)')
 
   const handleIfChecked = name => {
     if (filterChips.includes(name)) return true
@@ -131,12 +132,14 @@ const ExplorePage = () => {
     setFilteredWeapons(updatedWeapons)
     handleWeaponFilter(updatedWeapons, filteredRarity)
   }
+  const isAuth = Boolean(useSelector(state => state.token))
+
   return (
     <Stack direction={'column'} padding={'1rem 6%'}>
       <Stack flexDirection={'row'} justifyContent={'center'} margin={'2rem 0'}>
         <Typography variant='h1'>THE MARKET</Typography>
       </Stack>
-      <Stack flexDirection={'row'} divider={<Divider orientation='vertical' flexItem />} gap={'1rem'}>
+      <Stack flexDirection={isNonMobile ? 'row' : 'column'} divider={<Divider orientation='vertical' flexItem />} gap={'1rem'}>
         <SideBar
           handleWeaponFilter={handleWeaponFilter}
           handleIfChecked={handleIfChecked}
@@ -145,7 +148,7 @@ const ExplorePage = () => {
           handleCheckBoxWeapon={handleCheckBoxWeapon}
         />
         <Stack flexGrow={0.95} direction={'column'} gap={'1rem'}>
-          <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
+          <Stack direction={isNonMobile ? 'row' : 'column'} justifyContent={'space-between'} alignItems={isNonMobile ? 'center' : 'flex-start'}>
             <Typography>
               Showing {itemCount} results from a total {marketSkins.length}
             </Typography>
@@ -189,7 +192,7 @@ const ExplorePage = () => {
             {marketSkins.slice(lowerPagination, higherPagination).map((skin, index) => (
               <SkinContainer
                 key={index}
-                userId={user._id}
+                userId={isAuth && user._id}
                 skinId={skin}
                 name={skins[skin].bundle + ' ' + skins[skin].weapon}
                 price={skins[skin].price}

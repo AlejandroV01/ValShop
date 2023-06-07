@@ -19,6 +19,7 @@ export const PrimaryButton = ({ children, to, sx }) => {
           borderRadius: '5rem',
           fontSize: '0.85rem',
           position: 'relative',
+
           '&:before': {
             content: '""',
             zIndex: -1,
@@ -87,7 +88,7 @@ export const SecondaryButton = ({ children, to }) => {
       <Button
         variant='contained'
         sx={{
-          backgroundColor: '#78787851',
+          backgroundColor: '#616161b9',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -116,7 +117,7 @@ export const SecondaryButtonNoLink = ({ children, sx, onClick }) => {
     <Button
       variant='contained'
       sx={{
-        backgroundColor: '#78787851',
+        backgroundColor: '#616161b9',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -126,7 +127,7 @@ export const SecondaryButtonNoLink = ({ children, sx, onClick }) => {
         borderRadius: '5rem',
         fontSize: '0.85rem',
         position: 'relative',
-
+        minWidth: 'fit-content',
         '&:hover': {
           backgroundColor: palette.neutral.light,
         },
