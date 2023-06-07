@@ -132,69 +132,74 @@ const ExplorePage = () => {
     handleWeaponFilter(updatedWeapons, filteredRarity)
   }
   return (
-    <Stack direction={'row'} padding={'1rem 6%'} gap={'1rem'} divider={<Divider orientation='vertical' flexItem />}>
-      <SideBar
-        handleWeaponFilter={handleWeaponFilter}
-        handleIfChecked={handleIfChecked}
-        handleReset={handleReset}
-        handleCheckBoxRarity={handleCheckBoxRarity}
-        handleCheckBoxWeapon={handleCheckBoxWeapon}
-      />
-      <Stack flexGrow={0.95} direction={'column'} gap={'1rem'}>
-        <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
-          <Typography>
-            Showing {itemCount} results from a total {marketSkins.length}
-          </Typography>
-          <Stack direction={'row'} alignItems={'center'} gap='1rem'>
-            <Typography>Sort By:</Typography>
-            <FormControl variant='standard' value={currentSort}>
-              <Select
-                value={currentSort}
-                sx={{
-                  backgroundColor: neutralLight,
-                  width: '150px',
-                  borderRadius: '0.25rem',
-                  p: '0.25rem 1rem',
-                  '& .MuiSvgIcon-root': {
-                    pr: '0.25rem',
-                    width: '3rem',
-                  },
-                  '& .MuiSelect-select:focus': {
+    <Stack direction={'column'} padding={'1rem 6%'}>
+      <Stack flexDirection={'row'} justifyContent={'center'} margin={'2rem 0'}>
+        <Typography variant='h1'>THE MARKET</Typography>
+      </Stack>
+      <Stack flexDirection={'row'} divider={<Divider orientation='vertical' flexItem />} gap={'1rem'}>
+        <SideBar
+          handleWeaponFilter={handleWeaponFilter}
+          handleIfChecked={handleIfChecked}
+          handleReset={handleReset}
+          handleCheckBoxRarity={handleCheckBoxRarity}
+          handleCheckBoxWeapon={handleCheckBoxWeapon}
+        />
+        <Stack flexGrow={0.95} direction={'column'} gap={'1rem'}>
+          <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
+            <Typography>
+              Showing {itemCount} results from a total {marketSkins.length}
+            </Typography>
+            <Stack direction={'row'} alignItems={'center'} gap='1rem'>
+              <Typography>Sort By:</Typography>
+              <FormControl variant='standard' value={currentSort}>
+                <Select
+                  value={currentSort}
+                  sx={{
                     backgroundColor: neutralLight,
-                  },
-                }}
-                input={<InputBase />}
-              >
-                <MenuItem value='Highest Price' onClick={() => setCurrentSort('Highest Price')}>
-                  <Typography>Highest Price</Typography>
-                </MenuItem>
-                <MenuItem value='Lowest Price' onClick={() => setCurrentSort('Lowest Price')}>
-                  <Typography>Lowest Price</Typography>
-                </MenuItem>
-              </Select>
-            </FormControl>
+                    width: '150px',
+                    borderRadius: '0.25rem',
+                    p: '0.25rem 1rem',
+                    '& .MuiSvgIcon-root': {
+                      pr: '0.25rem',
+                      width: '3rem',
+                    },
+                    '& .MuiSelect-select:focus': {
+                      backgroundColor: neutralLight,
+                    },
+                  }}
+                  input={<InputBase />}
+                >
+                  <MenuItem value='Highest Price' onClick={() => setCurrentSort('Highest Price')}>
+                    <Typography>Highest Price</Typography>
+                  </MenuItem>
+                  <MenuItem value='Lowest Price' onClick={() => setCurrentSort('Lowest Price')}>
+                    <Typography>Lowest Price</Typography>
+                  </MenuItem>
+                </Select>
+              </FormControl>
+            </Stack>
           </Stack>
-        </Stack>
-        <Stack direction={'row'} alignItems={'center'} gap={'1rem'}>
-          <Typography>Applied Filters: </Typography>
-          <Stack direction={'row'} gap={'0.5rem'}>
-            {filterChips && filterChips.map((chip, index) => <Chip key={index} label={chip} onDelete={() => handleChipDelete(chip)} />)}
+          <Stack direction={'row'} alignItems={'center'} gap={'1rem'}>
+            <Typography>Applied Filters: </Typography>
+            <Stack direction={'row'} gap={'0.5rem'}>
+              {filterChips && filterChips.map((chip, index) => <Chip key={index} label={chip} onDelete={() => handleChipDelete(chip)} />)}
+            </Stack>
           </Stack>
-        </Stack>
-        <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(365px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }}>
-          {marketSkins.slice(lowerPagination, higherPagination).map((skin, index) => (
-            <SkinContainer
-              key={index}
-              userId={user._id}
-              skinId={skin}
-              name={skins[skin].bundle + ' ' + skins[skin].weapon}
-              price={skins[skin].price}
-              picture={skins[skin].img_url}
-            ></SkinContainer>
-          ))}
-        </Box>
-        <Stack width={'100%'} direction={'row'} justifyContent={'center'}>
-          <Pagination count={Math.ceil(marketSkins.length / 12)} variant='outlined' color='primary' onChange={handlePaginationChange} />
+          <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(365px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }}>
+            {marketSkins.slice(lowerPagination, higherPagination).map((skin, index) => (
+              <SkinContainer
+                key={index}
+                userId={user._id}
+                skinId={skin}
+                name={skins[skin].bundle + ' ' + skins[skin].weapon}
+                price={skins[skin].price}
+                picture={skins[skin].img_url}
+              ></SkinContainer>
+            ))}
+          </Box>
+          <Stack width={'100%'} direction={'row'} justifyContent={'center'}>
+            <Pagination count={Math.ceil(marketSkins.length / 12)} variant='outlined' color='primary' onChange={handlePaginationChange} />
+          </Stack>
         </Stack>
       </Stack>
     </Stack>

@@ -31,22 +31,19 @@ const ProfilePage = () => {
 
     return formattedDate // Output: May 23, 2023
   }
-  return (
-    <>
-      <Box
-        width='100%'
-        sx={{ backgroundImage: "url('/assets/tokyo.jpg')", backgroundPosition: 'center bottom', position: 'relative' }}
-        height={350}
-        marginBottom='2rem'
-      >
-        <Box position='absolute' bottom={-35} left='6%' border={`5px solid ${background}`} borderRadius='4px' backgroundColor={background}>
-          <Avatar variant='rounded' src={user.picturePath} sx={{ width: 70, height: 70 }}></Avatar>
-        </Box>
-      </Box>
 
+  return (
+    <Box width={'100%'} paddingTop={'1rem'} paddingBottom={'1rem'}>
+      <Stack flexDirection={'row'} justifyContent={'center'} margin={'2rem 0'}>
+        <Typography variant='h1'>THE VAULT</Typography>
+      </Stack>
       <Box width='100%' display='flex' padding={'1rem 6%'} flexWrap='wrap' gap='2rem'>
         <Box flexGrow={0.2} height='100%' display='flex' flexDirection='column' gap='1rem'>
-          <Typography variant='h2'>{user.username}</Typography>
+          <Stack flexDirection={'row'} alignItems={'center'} gap={'2rem'}>
+            <Avatar variant='rounded' src={user.picturePath} sx={{ width: 70, height: 70 }}></Avatar>
+
+            <Typography variant='h2'>{user.username}</Typography>
+          </Stack>
           <Box
             display='grid'
             gridTemplateColumns='repeat(auto-fit, minmax(175px, 1fr))'
@@ -119,7 +116,7 @@ const ProfilePage = () => {
           {ownedSkinTab ? <OwnedSkins /> : <LikedSkins />}
         </Box>
       </Box>
-    </>
+    </Box>
   )
 }
 
