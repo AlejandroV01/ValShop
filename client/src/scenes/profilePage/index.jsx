@@ -6,7 +6,6 @@ import LikedSkins from './LikedSkins'
 import OwnedSkins from './OwnedSkins'
 const ProfilePage = () => {
   const theme = useTheme()
-  const background = theme.palette.background.default
   const gridStacked = useMediaQuery('(max-width: 1396px)')
   const [ownedSkinTab, setOwnedSkinTab] = useState(true)
   const [favoriteSkinTab, setFavoriteSkinTab] = useState(false)
