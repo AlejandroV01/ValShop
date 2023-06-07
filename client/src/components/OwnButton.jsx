@@ -31,7 +31,7 @@ const OwnButton = ({ userId, skinId }) => {
       })
       return
     }
-    const addRemoveSkinResponse = await fetch(`http://localhost:3001/users/${userId}/${skinId}/addRemoveOwnedSkins`, {
+    const addRemoveSkinResponse = await fetch(`https://valovault.onrender.com/users/${userId}/${skinId}/addRemoveOwnedSkins`, {
       method: 'PATCH',
       headers: {
         Authorization: `Bearer ${token}`,

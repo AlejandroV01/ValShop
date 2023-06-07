@@ -22,7 +22,7 @@ const LikeButton = ({ userId, skinId }) => {
       })
       return
     }
-    const addRemoveSkinResponse = await fetch(`http://localhost:3001/users/${userId}/${skinId}/addRemoveLikedSkins`, {
+    const addRemoveSkinResponse = await fetch(`https://valovault.onrender.com/users/${userId}/${skinId}/addRemoveLikedSkins`, {
       method: 'PATCH',
       headers: {
         Authorization: `Bearer ${token}`,
