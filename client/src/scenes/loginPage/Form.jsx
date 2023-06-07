@@ -1,21 +1,5 @@
-import { BorderColor, Email, Key, RememberMe, Visibility, VisibilityOff } from '@mui/icons-material'
-import {
-  Box,
-  Button,
-  FormControl,
-  Icon,
-  IconButton,
-  InputAdornment,
-  InputLabel,
-  Link,
-  OutlinedInput,
-  Stack,
-  TextField,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material'
-import FlexBetween from 'components/FlexBetween'
+import { BorderColor } from '@mui/icons-material'
+import { Box, Button, Stack, TextField, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { Formik } from 'formik'
 import React, { useState } from 'react'
 import Dropzone from 'react-dropzone'
@@ -24,7 +8,6 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { setLogin } from 'state'
 import * as yup from 'yup'
-import { colorTokens } from '../../theme'
 const loginSchema = yup.object().shape({
   email: yup.string().email('invalid email').required('required'),
   password: yup.string().required('required'),

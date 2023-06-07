@@ -1,10 +1,10 @@
 import { Favorite } from '@mui/icons-material'
-import { Box, IconButton, Modal, Stack, Typography, useTheme } from '@mui/material'
+import { Box, IconButton, Modal, useTheme } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 import Form from 'scenes/loginPage/Form'
-import { setLikedSkins, toggleSignUpModal } from 'state'
+import { setLikedSkins } from 'state'
 const LikeButton = ({ userId, skinId }) => {
   const isAuth = Boolean(useSelector(state => state.token))
   const [open, setOpen] = useState(false)

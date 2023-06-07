@@ -1,76 +1,14 @@
 import { NearMe } from '@mui/icons-material'
-import { Badge, Box, Button, Divider, FormControl, IconButton, InputBase, MenuItem, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Stack, Typography, useTheme } from '@mui/material'
 import { PrimaryButton, SecondaryButton } from 'components/Buttons'
-import SkinContainer from 'components/SkinContainer'
-import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 const HomePage = ({ skins }) => {
   const theme = useTheme()
-  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)')
   const navigate = useNavigate()
   console.log(skins)
-  const PEU = [
-    [
-      'Radiant Entertainment System',
-      'Elderflame',
-      'Protocol 781-A',
-      'SPECTRUM',
-      'Araxys',
-      'BlastX',
-      'ChronoVoid',
-      'Glitchpop',
-      'Prelude to Chaos ',
-      'RGX 11Z Pro',
-      'Ruination',
-      'Sentinels of Light',
-      'Singularity',
-      'Celestial',
-      'Cryostasis',
-      'Doodle Buds',
-      'EGO',
-      'Forsaken ',
-      'Gaia’s Vengeance',
-      'Gravitational Uranium Neuroblaster',
-      'Ion',
-      'Magepunk',
-      'Nebula',
-      'Neptune',
-      'Oni',
-      'Origin',
-      'Prime',
-      'Radiant Crisis 001 ',
-      'Reaver',
-      'Recon',
-      'Prime',
-      'Soulstrife',
-      'Sovereign',
-      'Spline',
-      'Tethered Realms',
-      'Undercity',
-      'Valorant GO!',
-      'Xenohunter',
-    ],
-  ]
-  const user = useSelector(state => state.user)
-  const [exploreSkins, setExploreSkins] = useState([])
-  const [firstSkins, setFirstSkins] = useState([])
-  const [secondSkins, setSecondSkins] = useState([])
 
-  const getExploreSkins = () => {
-    const selectedSkins = []
-    let randomIndexes = []
-    for (let i = 0; i < 4; i++) {
-      const randomIndex = Math.floor(Math.random() * skins.length)
-      if (!randomIndexes.includes(randomIndex)) {
-        randomIndexes.push(randomIndex)
-        selectedSkins.push(skins[randomIndex])
-      } else {
-        i--
-      }
-    }
-    setExploreSkins(selectedSkins)
-  }
+  const user = useSelector(state => state.user)
 
   const isAuth = Boolean(useSelector(state => state.token))
 

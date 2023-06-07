@@ -1,14 +1,12 @@
 import { CalendarMonth } from '@mui/icons-material'
-import { Avatar, Box, Chip, Divider, InputBase, Item, MenuItem, Paper, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
-import UserAvatar from 'components/UserAvatar'
+import { Avatar, Box, Chip, Divider, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import LikedSkins from './LikedSkins'
 import OwnedSkins from './OwnedSkins'
 const ProfilePage = () => {
   const theme = useTheme()
   const background = theme.palette.background.default
-  const dark = theme.palette.neutral.dark
   const gridStacked = useMediaQuery('(max-width: 1396px)')
   const [ownedSkinTab, setOwnedSkinTab] = useState(true)
   const [favoriteSkinTab, setFavoriteSkinTab] = useState(false)

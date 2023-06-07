@@ -1,11 +1,5 @@
-import { Close, DarkMode, Favorite, LightMode, Menu, Search, ShoppingCart } from '@mui/icons-material'
-import { Badge, Box, FormControl, IconButton, InputBase, MenuItem, Select, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
-import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
-import { setLikedSkins } from 'state'
-import useImageColor from 'use-image-color'
+import { Box, Stack, Typography, useTheme } from '@mui/material'
+import React from 'react'
 import LikeButton from './LikeButton'
 import OwnButton from './OwnButton'
 const SkinContainer = ({
@@ -17,9 +11,7 @@ const SkinContainer = ({
   skinId,
 }) => {
   const theme = useTheme()
-  const background = theme.palette.background.default
   const neutralLight = theme.palette.neutral.light
-  const skins = useSelector(state => state.skins)
   return (
     <Box
       display='flex'

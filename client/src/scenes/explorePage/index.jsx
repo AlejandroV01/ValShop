@@ -1,32 +1,12 @@
-import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material'
-import {
-  Badge,
-  Box,
-  Button,
-  Checkbox,
-  Chip,
-  Divider,
-  FormControl,
-  Icon,
-  InputBase,
-  MenuItem,
-  Pagination,
-  Select,
-  Stack,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2' // Grid version 2
+import { Box, Chip, Divider, FormControl, InputBase, MenuItem, Pagination, Select, Stack, Typography, useTheme } from '@mui/material'
 import SkinContainer from 'components/SkinContainer'
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 import SideBar from './SideBar'
 const ExplorePage = () => {
   const [currentSort, setCurrentSort] = useState('Highest Price')
   const theme = useTheme()
-  const navigate = useNavigate()
+
   const neutralLight = theme.palette.neutral.light
 
   const user = useSelector(state => state.user)

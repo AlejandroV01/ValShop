@@ -1,18 +1,5 @@
 import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material'
-import {
-  Badge,
-  Box,
-  Button,
-  Checkbox,
-  Divider,
-  FormControlLabel,
-  IconButton,
-  RadioGroup,
-  Stack,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material'
+import { Checkbox, Divider, IconButton, Stack, Typography, useTheme } from '@mui/material'
 import React, { useState } from 'react'
 
 const SideBar = ({ handleWeaponFilter, handleIfChecked, handleReset, handleCheckBoxRarity, handleCheckBoxWeapon }) => {

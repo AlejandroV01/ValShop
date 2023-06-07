@@ -1,18 +1,6 @@
-import {
-  AccountBalance,
-  ArrowForward,
-  ArrowRightAltSharp,
-  Close,
-  DarkMode,
-  Explore,
-  Favorite,
-  LightMode,
-  Menu,
-  Person,
-  Search,
-} from '@mui/icons-material'
-import { Box, Button, FormControl, IconButton, InputBase, MenuItem, Select, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
-import { PrimaryButton, SecondaryButton, SecondaryButtonNoLink } from 'components/Buttons'
+import { ArrowForward, Close, DarkMode, LightMode, Menu, Person } from '@mui/icons-material'
+import { Box, FormControl, IconButton, InputBase, MenuItem, Select, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { PrimaryButton, SecondaryButtonNoLink } from 'components/Buttons'
 import FlexBetween from 'components/FlexBetween'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
