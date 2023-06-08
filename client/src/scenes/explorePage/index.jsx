@@ -36,6 +36,7 @@ const ExplorePage = () => {
     })
   }
   const handlePaginationChange = (e, value) => {
+    console.log(value)
     const lower = (value - 1) * 12
     const higher = lower + 12
     setLowerPagination(lower)
@@ -44,7 +45,7 @@ const ExplorePage = () => {
   const [lowerPagination, setLowerPagination] = useState(0)
   const [higherPagination, setHigherPagination] = useState(12)
   const itemCount = Math.min(marketSkins.length - lowerPagination, 12)
-
+  const [currentPage, setCurrentPage] = useState(1)
   const handleWeaponFilter = (filteredWeapons, filteredRarity) => {
     const chipArr = [...filteredWeapons, ...filteredRarity]
     setFilterChips(chipArr)
@@ -82,12 +83,17 @@ const ExplorePage = () => {
     })
     setMarketSkins(filteredID)
   }
+
+  const [filteredWeapons, setFilteredWeapons] = useState([])
+  const [filteredRarity, setFilteredRarity] = useState([])
   const handleReset = () => {
     setFilterChips([])
     handleWeaponFilter([], [])
+    setFilteredRarity([])
+    setFilteredWeapons([])
+    handlePaginationChange(null, 1)
+    setCurrentPage(1)
   }
-  const [filteredWeapons, setFilteredWeapons] = useState([])
-  const [filteredRarity, setFilteredRarity] = useState([])
   const handleChipDelete = chip => {
     const newArr = filterChips.filter(stateChip => {
       return stateChip !== chip
@@ -114,6 +120,7 @@ const ExplorePage = () => {
     setFilteredRarity(rarityArr)
     console.log(weaponArr, rarityArr)
     handleWeaponFilter(weaponArr, rarityArr)
+    setCurrentPage(1)
   }
   const isNonMobile = useMediaQuery('(min-width: 800px)')
 
@@ -123,11 +130,20 @@ const ExplorePage = () => {
   }
 
   const handleCheckBoxRarity = name => {
+    if (filteredRarity.includes(name)) {
+      handlePaginationChange(null, 1)
+      setCurrentPage(1)
+    }
     const updatedRarity = filteredRarity.includes(name) ? filteredRarity.filter(item => item !== name) : [...filteredRarity, name]
+
     setFilteredRarity(updatedRarity)
     handleWeaponFilter(filteredWeapons, updatedRarity)
   }
   const handleCheckBoxWeapon = name => {
+    if (filteredWeapons.includes(name)) {
+      handlePaginationChange(null, 1)
+      setCurrentPage(1)
+    }
     const updatedWeapons = filteredWeapons.includes(name) ? filteredWeapons.filter(item => item !== name) : [...filteredWeapons, name]
     setFilteredWeapons(updatedWeapons)
     handleWeaponFilter(updatedWeapons, filteredRarity)
@@ -172,10 +188,24 @@ const ExplorePage = () => {
                   }}
                   input={<InputBase />}
                 >
-                  <MenuItem value='Highest Price' onClick={() => setCurrentSort('Highest Price')}>
+                  <MenuItem
+                    value='Highest Price'
+                    onClick={() => {
+                      setCurrentSort('Highest Price')
+                      handlePaginationChange(null, 1)
+                      setCurrentPage(1)
+                    }}
+                  >
                     <Typography>Highest Price</Typography>
                   </MenuItem>
-                  <MenuItem value='Lowest Price' onClick={() => setCurrentSort('Lowest Price')}>
+                  <MenuItem
+                    value='Lowest Price'
+                    onClick={() => {
+                      setCurrentSort('Lowest Price')
+                      handlePaginationChange(null, 1)
+                      setCurrentPage(1)
+                    }}
+                  >
                     <Typography>Lowest Price</Typography>
                   </MenuItem>
                 </Select>
@@ -187,6 +217,18 @@ const ExplorePage = () => {
             <Stack direction={'row'} gap={'0.5rem'}>
               {filterChips && filterChips.map((chip, index) => <Chip key={index} label={chip} onDelete={() => handleChipDelete(chip)} />)}
             </Stack>
+          </Stack>
+          <Stack width={'100%'} direction={'row'} justifyContent={'center'}>
+            <Pagination
+              count={Math.ceil(marketSkins.length / 12)}
+              variant='outlined'
+              color='primary'
+              onChange={(e, page) => {
+                handlePaginationChange(e, page)
+                setCurrentPage(prev => (prev = page))
+              }}
+              page={currentPage}
+            />
           </Stack>
           <Box display='grid' gridTemplateColumns='repeat(auto-fit, minmax(365px, 1fr))' gap='1rem' sx={{ placeItems: 'center' }}>
             {marketSkins.slice(lowerPagination, higherPagination).map((skin, index) => (
@@ -201,7 +243,16 @@ const ExplorePage = () => {
             ))}
           </Box>
           <Stack width={'100%'} direction={'row'} justifyContent={'center'}>
-            <Pagination count={Math.ceil(marketSkins.length / 12)} variant='outlined' color='primary' onChange={handlePaginationChange} />
+            <Pagination
+              count={Math.ceil(marketSkins.length / 12)}
+              variant='outlined'
+              color='primary'
+              onChange={(e, page) => {
+                handlePaginationChange(e, page)
+                setCurrentPage(prev => (prev = page))
+              }}
+              page={currentPage}
+            />
           </Stack>
         </Stack>
       </Stack>

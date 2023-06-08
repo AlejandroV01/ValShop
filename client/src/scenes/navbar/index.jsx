@@ -92,11 +92,12 @@ const Navbar = () => {
             </IconButton>
           </Box>
           <FlexBetween gap='3rem' display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
-            <a href='/market' onClick={e => e.preventDefault()} style={{ textDecoration: 'none', color: 'unset' }}>
+            {/* <a href='/market' onClick={e => e.preventDefault()} style={{ textDecoration: 'none', color: 'unset' }}>
               <Typography variant='h5' sx={{ cursor: 'pointer' }} onClick={() => navigate('/market')}>
                 MARKET
               </Typography>
-            </a>
+            </a> */}
+            <div></div>
             {isAuth && (
               <PrimaryButton to={`profile/${user.username}`}>
                 <Person />
